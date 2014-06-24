@@ -1,0 +1,339 @@
+Cmp-Mod V01 Created by Cvpcb (2014-jan-25)-product   date = Tue 24 Jun 2014 12:01:18 AM EDT
+
+BeginCmp
+TimeStamp = /53A8FE24;
+Reference = P1;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8F43E;
+Reference = P2;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8FD59;
+Reference = P3;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8FDA3;
+Reference = P4;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8E719;
+Reference = P5;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8F45A;
+Reference = P6;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8FD75;
+Reference = P7;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8FDBF;
+Reference = P8;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A908B6;
+Reference = P9;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A90900;
+Reference = P10;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A90943;
+Reference = P11;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A9098D;
+Reference = P12;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A908D2;
+Reference = P13;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A9091C;
+Reference = P14;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A9095F;
+Reference = P15;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A909A9;
+Reference = P16;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91C66;
+Reference = P17;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91CB0;
+Reference = P18;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91CF3;
+Reference = P19;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91D3D;
+Reference = P20;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91C82;
+Reference = P21;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91CCC;
+Reference = P22;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91D0F;
+Reference = P23;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91D59;
+Reference = P24;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8EAAB;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:Resistor_SMD0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8F479;
+Reference = R2;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:Resistor_SMD0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8FD94;
+Reference = R3;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:Resistor_SMD0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8FDDE;
+Reference = R4;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:Resistor_SMD0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A908F1;
+Reference = R5;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:Resistor_SMD0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A9093B;
+Reference = R6;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:Resistor_SMD0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A9097E;
+Reference = R7;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:Resistor_SMD0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A909C8;
+Reference = R8;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:Resistor_SMD0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91CA1;
+Reference = R9;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:Resistor_SMD0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91CEB;
+Reference = R10;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:Resistor_SMD0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91D2E;
+Reference = R11;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:Resistor_SMD0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91D78;
+Reference = R12;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:Resistor_SMD0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8E425;
+Reference = U1;
+ValeurCmp = TLC590;
+IdModule  = TLC5940:SSOP-28H;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8F454;
+Reference = U2;
+ValeurCmp = TLC590;
+IdModule  = TLC5940:SSOP-28H;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8FD6F;
+Reference = U3;
+ValeurCmp = TLC590;
+IdModule  = TLC5940:SSOP-28H;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8FDB9;
+Reference = U4;
+ValeurCmp = TLC590;
+IdModule  = TLC5940:SSOP-28H;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A908CC;
+Reference = U5;
+ValeurCmp = TLC590;
+IdModule  = TLC5940:SSOP-28H;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A90916;
+Reference = U6;
+ValeurCmp = TLC590;
+IdModule  = TLC5940:SSOP-28H;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A90959;
+Reference = U7;
+ValeurCmp = TLC590;
+IdModule  = TLC5940:SSOP-28H;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A909A3;
+Reference = U8;
+ValeurCmp = TLC590;
+IdModule  = TLC5940:SSOP-28H;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91C7C;
+Reference = U9;
+ValeurCmp = TLC590;
+IdModule  = TLC5940:SSOP-28H;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91CC6;
+Reference = U10;
+ValeurCmp = TLC590;
+IdModule  = TLC5940:SSOP-28H;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91D09;
+Reference = U11;
+ValeurCmp = TLC590;
+IdModule  = TLC5940:SSOP-28H;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A91D53;
+Reference = U12;
+ValeurCmp = TLC590;
+IdModule  = TLC5940:SSOP-28H;
+EndCmp
+
+EndListe
