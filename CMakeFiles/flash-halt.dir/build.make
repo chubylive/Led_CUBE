@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/chuby/local_prj/umd-lpc1769/Led_CUBE
 include CMakeFiles/flash-halt.dir/progress.make
 
 CMakeFiles/flash-halt:
-	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/bin/crt_emu_cm3_nxp -wire=winusb -pLPC1769 -vendor=NXP -2 -flash-load="/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Skeleton.axf"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/bin/crt_emu_cm3_nxp -wire=winusb -pLPC1769 -vendor=NXP -2 -flash-load="/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf"
 
 flash-halt: CMakeFiles/flash-halt
 flash-halt: CMakeFiles/flash-halt.dir/build.make

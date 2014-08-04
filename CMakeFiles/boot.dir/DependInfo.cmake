@@ -18,6 +18,9 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
   "../CMSISv2p00_LPC17xx/inc"
+  "Software/FastPWM"
+  "Software/TLC5940"
+  "Software/liblpc-inc"
   "../UMD_LPC1769/inc"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

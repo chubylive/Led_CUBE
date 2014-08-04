@@ -96,7 +96,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm
 CMAKE_OBJDUMP:FILEPATH=/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Skeleton
+CMAKE_PROJECT_NAME:STATIC=Led_CUBE
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-ranlib
@@ -137,6 +137,12 @@ CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+
+//Value Computed by CMake
+Led_CUBE_BINARY_DIR:STATIC=/home/chuby/local_prj/umd-lpc1769/Led_CUBE
+
+//Value Computed by CMake
+Led_CUBE_SOURCE_DIR:STATIC=/home/chuby/local_prj/umd-lpc1769/Led_CUBE
 
 //Value Computed by CMake
 Skeleton_BINARY_DIR:STATIC=/home/chuby/local_prj/umd-lpc1769/Led_CUBE

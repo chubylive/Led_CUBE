@@ -45,8 +45,8 @@ CMAKE_BINARY_DIR = /home/chuby/local_prj/umd-lpc1769/Led_CUBE
 # Include the progress variables for this target.
 include CMakeFiles/bin.dir/progress.make
 
-CMakeFiles/bin: bin/Skeleton.axf
-	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-objcopy -Obinary /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Skeleton.axf /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Skeleton.bin
+CMakeFiles/bin: bin/Led_CUBE.axf
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-objcopy -Obinary /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.bin
 
 bin: CMakeFiles/bin
 bin: CMakeFiles/bin.dir/build.make

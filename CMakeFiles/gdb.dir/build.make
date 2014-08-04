@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/chuby/local_prj/umd-lpc1769/Led_CUBE
 include CMakeFiles/gdb.dir/progress.make
 
 CMakeFiles/gdb:
-	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gdb --eval-command="target extended-remote | /usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/bin/crt_emu_cm3_nxp -wire=winusb -pLPC1769 -vendor=NXP -2 -g" --eval-command="set remotetimeout 5000" --eval-command="set mem inaccessible-by-default off" --eval-command="mon ondisconnect cont" --eval-command="set arm force-mode thumb" --eval-command="mon semihosting ena" --exec="/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Skeleton.axf" --symbols="/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Skeleton.axf.debug"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gdb --eval-command="target extended-remote | /usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/bin/crt_emu_cm3_nxp -wire=winusb -pLPC1769 -vendor=NXP -2 -g" --eval-command="set remotetimeout 5000" --eval-command="set mem inaccessible-by-default off" --eval-command="mon ondisconnect cont" --eval-command="set arm force-mode thumb" --eval-command="mon semihosting ena" --exec="/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf" --symbols="/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf.debug"
 
 gdb: CMakeFiles/gdb
 gdb: CMakeFiles/gdb.dir/build.make

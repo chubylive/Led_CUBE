@@ -99,17 +99,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Skeleton.axf
+# Target rules for targets named Led_CUBE.axf
 
 # Build rule for target.
-Skeleton.axf: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Skeleton.axf
-.PHONY : Skeleton.axf
+Led_CUBE.axf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Led_CUBE.axf
+.PHONY : Led_CUBE.axf
 
 # fast build rule for target.
-Skeleton.axf/fast:
-	$(MAKE) -f CMakeFiles/Skeleton.axf.dir/build.make CMakeFiles/Skeleton.axf.dir/build
-.PHONY : Skeleton.axf/fast
+Led_CUBE.axf/fast:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/build
+.PHONY : Led_CUBE.axf/fast
 
 #=============================================================================
 # Target rules for targets named bin
@@ -202,12 +202,204 @@ lst/fast:
 	$(MAKE) -f CMakeFiles/lst.dir/build.make CMakeFiles/lst.dir/build
 .PHONY : lst/fast
 
+Software/FastPWM/FastPWM.obj: Software/FastPWM/FastPWM.c.obj
+.PHONY : Software/FastPWM/FastPWM.obj
+
+# target to build an object file
+Software/FastPWM/FastPWM.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/FastPWM/FastPWM.c.obj
+.PHONY : Software/FastPWM/FastPWM.c.obj
+
+Software/FastPWM/FastPWM.i: Software/FastPWM/FastPWM.c.i
+.PHONY : Software/FastPWM/FastPWM.i
+
+# target to preprocess a source file
+Software/FastPWM/FastPWM.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/FastPWM/FastPWM.c.i
+.PHONY : Software/FastPWM/FastPWM.c.i
+
+Software/FastPWM/FastPWM.s: Software/FastPWM/FastPWM.c.s
+.PHONY : Software/FastPWM/FastPWM.s
+
+# target to generate assembly for a file
+Software/FastPWM/FastPWM.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/FastPWM/FastPWM.c.s
+.PHONY : Software/FastPWM/FastPWM.c.s
+
+Software/TLC5940/TLC5940.obj: Software/TLC5940/TLC5940.c.obj
+.PHONY : Software/TLC5940/TLC5940.obj
+
+# target to build an object file
+Software/TLC5940/TLC5940.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj
+.PHONY : Software/TLC5940/TLC5940.c.obj
+
+Software/TLC5940/TLC5940.i: Software/TLC5940/TLC5940.c.i
+.PHONY : Software/TLC5940/TLC5940.i
+
+# target to preprocess a source file
+Software/TLC5940/TLC5940.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.i
+.PHONY : Software/TLC5940/TLC5940.c.i
+
+Software/TLC5940/TLC5940.s: Software/TLC5940/TLC5940.c.s
+.PHONY : Software/TLC5940/TLC5940.s
+
+# target to generate assembly for a file
+Software/TLC5940/TLC5940.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.s
+.PHONY : Software/TLC5940/TLC5940.c.s
+
+Software/liblpc-src/lpc17xx_clkpwr.obj: Software/liblpc-src/lpc17xx_clkpwr.c.obj
+.PHONY : Software/liblpc-src/lpc17xx_clkpwr.obj
+
+# target to build an object file
+Software/liblpc-src/lpc17xx_clkpwr.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_clkpwr.c.obj
+.PHONY : Software/liblpc-src/lpc17xx_clkpwr.c.obj
+
+Software/liblpc-src/lpc17xx_clkpwr.i: Software/liblpc-src/lpc17xx_clkpwr.c.i
+.PHONY : Software/liblpc-src/lpc17xx_clkpwr.i
+
+# target to preprocess a source file
+Software/liblpc-src/lpc17xx_clkpwr.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_clkpwr.c.i
+.PHONY : Software/liblpc-src/lpc17xx_clkpwr.c.i
+
+Software/liblpc-src/lpc17xx_clkpwr.s: Software/liblpc-src/lpc17xx_clkpwr.c.s
+.PHONY : Software/liblpc-src/lpc17xx_clkpwr.s
+
+# target to generate assembly for a file
+Software/liblpc-src/lpc17xx_clkpwr.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_clkpwr.c.s
+.PHONY : Software/liblpc-src/lpc17xx_clkpwr.c.s
+
+Software/liblpc-src/lpc17xx_gpdma.obj: Software/liblpc-src/lpc17xx_gpdma.c.obj
+.PHONY : Software/liblpc-src/lpc17xx_gpdma.obj
+
+# target to build an object file
+Software/liblpc-src/lpc17xx_gpdma.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_gpdma.c.obj
+.PHONY : Software/liblpc-src/lpc17xx_gpdma.c.obj
+
+Software/liblpc-src/lpc17xx_gpdma.i: Software/liblpc-src/lpc17xx_gpdma.c.i
+.PHONY : Software/liblpc-src/lpc17xx_gpdma.i
+
+# target to preprocess a source file
+Software/liblpc-src/lpc17xx_gpdma.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_gpdma.c.i
+.PHONY : Software/liblpc-src/lpc17xx_gpdma.c.i
+
+Software/liblpc-src/lpc17xx_gpdma.s: Software/liblpc-src/lpc17xx_gpdma.c.s
+.PHONY : Software/liblpc-src/lpc17xx_gpdma.s
+
+# target to generate assembly for a file
+Software/liblpc-src/lpc17xx_gpdma.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_gpdma.c.s
+.PHONY : Software/liblpc-src/lpc17xx_gpdma.c.s
+
+Software/liblpc-src/lpc17xx_libcfg_default.obj: Software/liblpc-src/lpc17xx_libcfg_default.c.obj
+.PHONY : Software/liblpc-src/lpc17xx_libcfg_default.obj
+
+# target to build an object file
+Software/liblpc-src/lpc17xx_libcfg_default.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_libcfg_default.c.obj
+.PHONY : Software/liblpc-src/lpc17xx_libcfg_default.c.obj
+
+Software/liblpc-src/lpc17xx_libcfg_default.i: Software/liblpc-src/lpc17xx_libcfg_default.c.i
+.PHONY : Software/liblpc-src/lpc17xx_libcfg_default.i
+
+# target to preprocess a source file
+Software/liblpc-src/lpc17xx_libcfg_default.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_libcfg_default.c.i
+.PHONY : Software/liblpc-src/lpc17xx_libcfg_default.c.i
+
+Software/liblpc-src/lpc17xx_libcfg_default.s: Software/liblpc-src/lpc17xx_libcfg_default.c.s
+.PHONY : Software/liblpc-src/lpc17xx_libcfg_default.s
+
+# target to generate assembly for a file
+Software/liblpc-src/lpc17xx_libcfg_default.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_libcfg_default.c.s
+.PHONY : Software/liblpc-src/lpc17xx_libcfg_default.c.s
+
+Software/liblpc-src/lpc17xx_pinsel.obj: Software/liblpc-src/lpc17xx_pinsel.c.obj
+.PHONY : Software/liblpc-src/lpc17xx_pinsel.obj
+
+# target to build an object file
+Software/liblpc-src/lpc17xx_pinsel.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_pinsel.c.obj
+.PHONY : Software/liblpc-src/lpc17xx_pinsel.c.obj
+
+Software/liblpc-src/lpc17xx_pinsel.i: Software/liblpc-src/lpc17xx_pinsel.c.i
+.PHONY : Software/liblpc-src/lpc17xx_pinsel.i
+
+# target to preprocess a source file
+Software/liblpc-src/lpc17xx_pinsel.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_pinsel.c.i
+.PHONY : Software/liblpc-src/lpc17xx_pinsel.c.i
+
+Software/liblpc-src/lpc17xx_pinsel.s: Software/liblpc-src/lpc17xx_pinsel.c.s
+.PHONY : Software/liblpc-src/lpc17xx_pinsel.s
+
+# target to generate assembly for a file
+Software/liblpc-src/lpc17xx_pinsel.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_pinsel.c.s
+.PHONY : Software/liblpc-src/lpc17xx_pinsel.c.s
+
+Software/liblpc-src/lpc17xx_pwm.obj: Software/liblpc-src/lpc17xx_pwm.c.obj
+.PHONY : Software/liblpc-src/lpc17xx_pwm.obj
+
+# target to build an object file
+Software/liblpc-src/lpc17xx_pwm.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_pwm.c.obj
+.PHONY : Software/liblpc-src/lpc17xx_pwm.c.obj
+
+Software/liblpc-src/lpc17xx_pwm.i: Software/liblpc-src/lpc17xx_pwm.c.i
+.PHONY : Software/liblpc-src/lpc17xx_pwm.i
+
+# target to preprocess a source file
+Software/liblpc-src/lpc17xx_pwm.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_pwm.c.i
+.PHONY : Software/liblpc-src/lpc17xx_pwm.c.i
+
+Software/liblpc-src/lpc17xx_pwm.s: Software/liblpc-src/lpc17xx_pwm.c.s
+.PHONY : Software/liblpc-src/lpc17xx_pwm.s
+
+# target to generate assembly for a file
+Software/liblpc-src/lpc17xx_pwm.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_pwm.c.s
+.PHONY : Software/liblpc-src/lpc17xx_pwm.c.s
+
+Software/liblpc-src/lpc17xx_ssp.obj: Software/liblpc-src/lpc17xx_ssp.c.obj
+.PHONY : Software/liblpc-src/lpc17xx_ssp.obj
+
+# target to build an object file
+Software/liblpc-src/lpc17xx_ssp.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_ssp.c.obj
+.PHONY : Software/liblpc-src/lpc17xx_ssp.c.obj
+
+Software/liblpc-src/lpc17xx_ssp.i: Software/liblpc-src/lpc17xx_ssp.c.i
+.PHONY : Software/liblpc-src/lpc17xx_ssp.i
+
+# target to preprocess a source file
+Software/liblpc-src/lpc17xx_ssp.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_ssp.c.i
+.PHONY : Software/liblpc-src/lpc17xx_ssp.c.i
+
+Software/liblpc-src/lpc17xx_ssp.s: Software/liblpc-src/lpc17xx_ssp.c.s
+.PHONY : Software/liblpc-src/lpc17xx_ssp.s
+
+# target to generate assembly for a file
+Software/liblpc-src/lpc17xx_ssp.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_ssp.c.s
+.PHONY : Software/liblpc-src/lpc17xx_ssp.c.s
+
 Software/src/cr_startup_lpc176x.obj: Software/src/cr_startup_lpc176x.c.obj
 .PHONY : Software/src/cr_startup_lpc176x.obj
 
 # target to build an object file
 Software/src/cr_startup_lpc176x.c.obj:
-	$(MAKE) -f CMakeFiles/Skeleton.axf.dir/build.make CMakeFiles/Skeleton.axf.dir/Software/src/cr_startup_lpc176x.c.obj
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/src/cr_startup_lpc176x.c.obj
 .PHONY : Software/src/cr_startup_lpc176x.c.obj
 
 Software/src/cr_startup_lpc176x.i: Software/src/cr_startup_lpc176x.c.i
@@ -215,7 +407,7 @@ Software/src/cr_startup_lpc176x.i: Software/src/cr_startup_lpc176x.c.i
 
 # target to preprocess a source file
 Software/src/cr_startup_lpc176x.c.i:
-	$(MAKE) -f CMakeFiles/Skeleton.axf.dir/build.make CMakeFiles/Skeleton.axf.dir/Software/src/cr_startup_lpc176x.c.i
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/src/cr_startup_lpc176x.c.i
 .PHONY : Software/src/cr_startup_lpc176x.c.i
 
 Software/src/cr_startup_lpc176x.s: Software/src/cr_startup_lpc176x.c.s
@@ -223,7 +415,7 @@ Software/src/cr_startup_lpc176x.s: Software/src/cr_startup_lpc176x.c.s
 
 # target to generate assembly for a file
 Software/src/cr_startup_lpc176x.c.s:
-	$(MAKE) -f CMakeFiles/Skeleton.axf.dir/build.make CMakeFiles/Skeleton.axf.dir/Software/src/cr_startup_lpc176x.c.s
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/src/cr_startup_lpc176x.c.s
 .PHONY : Software/src/cr_startup_lpc176x.c.s
 
 Software/src/main.obj: Software/src/main.c.obj
@@ -231,7 +423,7 @@ Software/src/main.obj: Software/src/main.c.obj
 
 # target to build an object file
 Software/src/main.c.obj:
-	$(MAKE) -f CMakeFiles/Skeleton.axf.dir/build.make CMakeFiles/Skeleton.axf.dir/Software/src/main.c.obj
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj
 .PHONY : Software/src/main.c.obj
 
 Software/src/main.i: Software/src/main.c.i
@@ -239,7 +431,7 @@ Software/src/main.i: Software/src/main.c.i
 
 # target to preprocess a source file
 Software/src/main.c.i:
-	$(MAKE) -f CMakeFiles/Skeleton.axf.dir/build.make CMakeFiles/Skeleton.axf.dir/Software/src/main.c.i
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.i
 .PHONY : Software/src/main.c.i
 
 Software/src/main.s: Software/src/main.c.s
@@ -247,7 +439,7 @@ Software/src/main.s: Software/src/main.c.s
 
 # target to generate assembly for a file
 Software/src/main.c.s:
-	$(MAKE) -f CMakeFiles/Skeleton.axf.dir/build.make CMakeFiles/Skeleton.axf.dir/Software/src/main.c.s
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.s
 .PHONY : Software/src/main.c.s
 
 # Help Target
@@ -256,7 +448,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... Skeleton.axf"
+	@echo "... Led_CUBE.axf"
 	@echo "... bin"
 	@echo "... boot"
 	@echo "... edit_cache"
@@ -266,6 +458,30 @@ help:
 	@echo "... hex"
 	@echo "... lst"
 	@echo "... rebuild_cache"
+	@echo "... Software/FastPWM/FastPWM.obj"
+	@echo "... Software/FastPWM/FastPWM.i"
+	@echo "... Software/FastPWM/FastPWM.s"
+	@echo "... Software/TLC5940/TLC5940.obj"
+	@echo "... Software/TLC5940/TLC5940.i"
+	@echo "... Software/TLC5940/TLC5940.s"
+	@echo "... Software/liblpc-src/lpc17xx_clkpwr.obj"
+	@echo "... Software/liblpc-src/lpc17xx_clkpwr.i"
+	@echo "... Software/liblpc-src/lpc17xx_clkpwr.s"
+	@echo "... Software/liblpc-src/lpc17xx_gpdma.obj"
+	@echo "... Software/liblpc-src/lpc17xx_gpdma.i"
+	@echo "... Software/liblpc-src/lpc17xx_gpdma.s"
+	@echo "... Software/liblpc-src/lpc17xx_libcfg_default.obj"
+	@echo "... Software/liblpc-src/lpc17xx_libcfg_default.i"
+	@echo "... Software/liblpc-src/lpc17xx_libcfg_default.s"
+	@echo "... Software/liblpc-src/lpc17xx_pinsel.obj"
+	@echo "... Software/liblpc-src/lpc17xx_pinsel.i"
+	@echo "... Software/liblpc-src/lpc17xx_pinsel.s"
+	@echo "... Software/liblpc-src/lpc17xx_pwm.obj"
+	@echo "... Software/liblpc-src/lpc17xx_pwm.i"
+	@echo "... Software/liblpc-src/lpc17xx_pwm.s"
+	@echo "... Software/liblpc-src/lpc17xx_ssp.obj"
+	@echo "... Software/liblpc-src/lpc17xx_ssp.i"
+	@echo "... Software/liblpc-src/lpc17xx_ssp.s"
 	@echo "... Software/src/cr_startup_lpc176x.obj"
 	@echo "... Software/src/cr_startup_lpc176x.i"
 	@echo "... Software/src/cr_startup_lpc176x.s"

@@ -36,7 +36,7 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Skeleton.axf.dir/DependInfo.cmake"
+  "CMakeFiles/Led_CUBE.axf.dir/DependInfo.cmake"
   "CMakeFiles/bin.dir/DependInfo.cmake"
   "CMakeFiles/boot.dir/DependInfo.cmake"
   "CMakeFiles/flash.dir/DependInfo.cmake"
