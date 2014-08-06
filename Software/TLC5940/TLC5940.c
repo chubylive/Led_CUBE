@@ -1,19 +1,15 @@
 #include "TLC5940.h"
-// #include "lpc17xx_pwm.h"
+
 #include "lpc17xx_ssp.h"
 
-// static PWM_TIMERCFG_Type pwm_cfg;
-// static PWM_MATCHCFG_Type pwm_mat[7];
-// static PWM_Match_T  mat_t[7];
+Layer layers[SIZE];
 
-
-
+uint8_t rowSelect =0;
 void rit_init(){
     LPC_SC->PCONP |= _BV(16);
     LPC_SC->PCLKSEL0 |= _BV(26);
     LPC_RIT->RICOUNTER = 0;
-
-    
+  
     NVIC_EnableIRQ(RIT_IRQn);
 
 }
@@ -24,15 +20,79 @@ void attach_us(double us){
 
 }
 
+void tlc_init(){
+    pwm_init();
+    rit_init();
+
+    period_us_double(1000000.0/(GSCLK_SPEED * 1.05));
+    write(0.5);
+    start_pwm();
+
+    attach_us((1000000.0/(GSCLK_SPEED * 1.05))* 4096);
+
+
+
+}
+
+void tlcMuxInit(){
+    int idx, jdx ;
+    //initialize the layer gpio shift values
+    for (idx = GPIO1_1_18, jdx = 0 ; idx <= GPIO1_1_25; idx++)
+    {
+        layers[jdx++].gpio_shift = idx;
+        LPC_GPIO1->FIODIR |= _BV(idx);
+        LPC_GPIO1->FIOSET |= _BV(idx);
+
+    }
+    
+    tlc_init();
+}
+
+
+
 void RIT_IRQHandler(){
     //clear interrupt
     LPC_RIT->RICTRL |= _BV(0);
 
     // write(0.0);
+    uint8_t layer = layers[rowSelect].gpio_shift;
 
     LPC_GPIO0->FIOCLR |= _BV(22);
     LPC_GPIO0->FIOSET |= _BV(22);
     LPC_GPIO0->FIOCLR |= _BV(22);
+
+    //select Row to be one
+    if(rowSelect ==  SIZE || rowSelect > SIZE){
+        //set row 
+        //LPC_GPIO1->FIOCLR |= _BV(layer - 1);
+       // LPC_GPIO1->FIOSET |= _BV(layer);
+        //reset row select
+        rowSelect = 0;
+    }else if (rowSelect == 0 )
+    {
+       // LPC_GPIO1->FIOCLR |= _BV(SIZE);
+       // LPC_GPIO1->FIOSET |= _BV(layer);
+
+    }
+
+    else{
+
+       // LPC_GPIO1->FIOCLR |= _BV(layer - 1);
+       // LPC_GPIO1->FIOSET |= _BV(layer);
+
+        rowSelect++;
+    }
+
+}
+
+
+
+
+
+
+
+
+
 
     
   //  write(0);
@@ -55,19 +115,3 @@ void RIT_IRQHandler(){
     //         /* code */
     //     }
     // }
-
-}
-
-void tlc_init(){
-    pwm_init();
-    rit_init();
-
-    period_us_double(1000000.0/(GSCLK_SPEED * 1.05));
-    write(0.5);
-    start_pwm();
-
-    attach_us((1000000.0/(GSCLK_SPEED * 1.05))* 4096);
-
-
-
-}

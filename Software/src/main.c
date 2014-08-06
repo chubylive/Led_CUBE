@@ -13,20 +13,60 @@
 // See crp.h header for more information
 __CRP const unsigned int CRP_WORD = CRP_NO_CRP;
 
+void delay_call(int dl){
+  volatile int delay, i;
 
+  delay = dl *100000;
+  for (i = 0; i < delay; )
+  {
+    i++;
+  }
+}
 
 
 int main(void) {
   
-  
-  // //Setup GPIO pins
+      uint8_t rowSelect = 0;
+      uint8_t layer ;  // //Setup GPIO pins
   LPC_GPIO0->FIODIR |= (1<<22);
   LPC_GPIO0->FIOSET |= (1<<22);
 
-  tlc_init();
+  tlcMuxInit();
 
   while (1) {
-    
+	// layer= layers[rowSelect].gpio_shift;
+
+ //     if(rowSelect ==  SIZE || rowSelect > SIZE){
+ //        //set row 
+ //        delay_call(5);
+        
+ //        //reset row select
+ //        rowSelect = 0;
+ //    }else if (rowSelect == 0 )
+ //    {
+ //    	        delay_call(5);
+
+ //       
+
+ //    }
+
+ //    else{
+ //        delay_call(5);
+
+ //       LPC_GPIO1->FIOCLR |= _BV(layer - 1);
+ //       LPC_GPIO1->FIOSET |= _BV(layer);
+
+ //        rowSelect++;
+ //    }
+		LPC_GPIO1->FIOCLR |= _BV(18);
+		            delay_call(5);
+
+ 	    LPC_GPIO1->FIOSET |= _BV(18);
+		            delay_call(5);
+
+ 	    		LPC_GPIO1->FIOCLR |= _BV(18);
+
+
   }
   return 0;
 }

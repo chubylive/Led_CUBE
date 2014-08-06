@@ -9,8 +9,10 @@
 #define GSCLK_SPEED 2500000
 #define SIZE 8
 #define BLANK_PIN 
+#define GPIO1_1_18 18
+#define GPIO1_1_25 25
 
-#define BLANK_HIGH  LPC_GIO0->FIOSET |= (1<<BLANK_PIN)
+#define BLANK_HIGH  LPC_GPIO0->FIOSET |= (1<<BLANK_PIN)
 typedef struct 
 {
 	uint16_t red : 12;
@@ -21,14 +23,20 @@ typedef struct
 
 typedef struct {
 	Pixel buf[SIZE * SIZE];
+	uint8_t gpio_shift;
+	//essentially initialized this to a set of gpios in init and assign
+	//gpio shift to the BV(n) shift value
 
 }Layer;
 
 extern Layer layers [SIZE];
 
+
 //ie layer[i].buff[j].red
 
 void tlc_init();
+void tlcMuxInit();
+
 void clear();
 void update();
 
