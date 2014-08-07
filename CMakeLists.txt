@@ -8,6 +8,7 @@ include_directories(
 	
 	Software/FastPWM/
 	Software/TLC5940/
+	Software/SPI_SSP/
 	Software/liblpc-inc/
 )
 set(SOURCES
@@ -23,7 +24,7 @@ set(SOURCES
 	Software/liblpc-src/lpc17xx_gpdma.c
 	Software/liblpc-src/lpc17xx_pinsel.c
 	Software/liblpc-src/lpc17xx_libcfg_default.c
-
+	Software/SPI_SSP/spi.c
 	Software/TLC5940/TLC5940.c
 
 )

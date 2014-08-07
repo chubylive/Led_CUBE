@@ -55,33 +55,13 @@ void RIT_IRQHandler(){
     LPC_RIT->RICTRL |= _BV(0);
 
     // write(0.0);
-    uint8_t layer = layers[rowSelect].gpio_shift;
 
     LPC_GPIO0->FIOCLR |= _BV(22);
     LPC_GPIO0->FIOSET |= _BV(22);
     LPC_GPIO0->FIOCLR |= _BV(22);
 
     //select Row to be one
-    if(rowSelect ==  SIZE || rowSelect > SIZE){
-        //set row 
-        //LPC_GPIO1->FIOCLR |= _BV(layer - 1);
-       // LPC_GPIO1->FIOSET |= _BV(layer);
-        //reset row select
-        rowSelect = 0;
-    }else if (rowSelect == 0 )
-    {
-       // LPC_GPIO1->FIOCLR |= _BV(SIZE);
-       // LPC_GPIO1->FIOSET |= _BV(layer);
-
-    }
-
-    else{
-
-       // LPC_GPIO1->FIOCLR |= _BV(layer - 1);
-       // LPC_GPIO1->FIOSET |= _BV(layer);
-
-        rowSelect++;
-    }
+   
 
 }
 

@@ -226,6 +226,30 @@ Software/FastPWM/FastPWM.c.s:
 	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/FastPWM/FastPWM.c.s
 .PHONY : Software/FastPWM/FastPWM.c.s
 
+Software/SPI_SSP/spi.obj: Software/SPI_SSP/spi.c.obj
+.PHONY : Software/SPI_SSP/spi.obj
+
+# target to build an object file
+Software/SPI_SSP/spi.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj
+.PHONY : Software/SPI_SSP/spi.c.obj
+
+Software/SPI_SSP/spi.i: Software/SPI_SSP/spi.c.i
+.PHONY : Software/SPI_SSP/spi.i
+
+# target to preprocess a source file
+Software/SPI_SSP/spi.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.i
+.PHONY : Software/SPI_SSP/spi.c.i
+
+Software/SPI_SSP/spi.s: Software/SPI_SSP/spi.c.s
+.PHONY : Software/SPI_SSP/spi.s
+
+# target to generate assembly for a file
+Software/SPI_SSP/spi.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.s
+.PHONY : Software/SPI_SSP/spi.c.s
+
 Software/TLC5940/TLC5940.obj: Software/TLC5940/TLC5940.c.obj
 .PHONY : Software/TLC5940/TLC5940.obj
 
@@ -461,6 +485,9 @@ help:
 	@echo "... Software/FastPWM/FastPWM.obj"
 	@echo "... Software/FastPWM/FastPWM.i"
 	@echo "... Software/FastPWM/FastPWM.s"
+	@echo "... Software/SPI_SSP/spi.obj"
+	@echo "... Software/SPI_SSP/spi.i"
+	@echo "... Software/SPI_SSP/spi.s"
 	@echo "... Software/TLC5940/TLC5940.obj"
 	@echo "... Software/TLC5940/TLC5940.i"
 	@echo "... Software/TLC5940/TLC5940.s"

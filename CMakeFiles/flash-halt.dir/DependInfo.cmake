@@ -20,6 +20,7 @@ SET(CMAKE_C_TARGET_INCLUDE_PATH
   "../CMSISv2p00_LPC17xx/inc"
   "Software/FastPWM"
   "Software/TLC5940"
+  "Software/SPI_SSP"
   "Software/liblpc-inc"
   "../UMD_LPC1769/inc"
   )

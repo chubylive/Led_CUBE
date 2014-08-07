@@ -256,9 +256,32 @@ CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_libcfg_default.c.obj.pro
 
 CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_libcfg_default.c.obj.provides.build: CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_libcfg_default.c.obj
 
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: CMakeFiles/Led_CUBE.axf.dir/flags.make
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: Software/SPI_SSP/spi.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles $(CMAKE_PROGRESS_10)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj   -c /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/SPI_SSP/spi.c
+
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.i"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/SPI_SSP/spi.c > CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.i
+
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.s"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/SPI_SSP/spi.c -o CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.s
+
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj.requires:
+.PHONY : CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj.requires
+
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj.provides: CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj.requires
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj.provides.build
+.PHONY : CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj.provides
+
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj.provides.build: CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj
+
 CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj: CMakeFiles/Led_CUBE.axf.dir/flags.make
 CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj: Software/TLC5940/TLC5940.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj"
 	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj   -c /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/TLC5940/TLC5940.c
 
@@ -290,6 +313,7 @@ Led_CUBE_axf_OBJECTS = \
 "CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_gpdma.c.obj" \
 "CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_pinsel.c.obj" \
 "CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_libcfg_default.c.obj" \
+"CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj" \
 "CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj"
 
 # External object files for target Led_CUBE.axf
@@ -304,6 +328,7 @@ bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_pwm.c.
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_gpdma.c.obj
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_pinsel.c.obj
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_libcfg_default.c.obj
+bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/build.make
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/link.txt
@@ -325,6 +350,7 @@ CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/liblp
 CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_gpdma.c.obj.requires
 CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_pinsel.c.obj.requires
 CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_libcfg_default.c.obj.requires
+CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj.requires
 CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj.requires
 .PHONY : CMakeFiles/Led_CUBE.axf.dir/requires
 

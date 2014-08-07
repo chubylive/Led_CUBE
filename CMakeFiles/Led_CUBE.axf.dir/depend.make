@@ -9,6 +9,14 @@ CMakeFiles/Led_CUBE.axf.dir/Software/FastPWM/FastPWM.c.obj: ../CMSISv2p00_LPC17x
 CMakeFiles/Led_CUBE.axf.dir/Software/FastPWM/FastPWM.c.obj: Software/FastPWM/FastPWM.c
 CMakeFiles/Led_CUBE.axf.dir/Software/FastPWM/FastPWM.c.obj: Software/FastPWM/FastPWM.h
 
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: ../CMSISv2p00_LPC17xx/inc/LPC17xx.h
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: ../CMSISv2p00_LPC17xx/inc/core_cm3.h
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: ../CMSISv2p00_LPC17xx/inc/core_cmFunc.h
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: ../CMSISv2p00_LPC17xx/inc/core_cmInstr.h
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: ../CMSISv2p00_LPC17xx/inc/system_LPC17xx.h
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: Software/SPI_SSP/spi.c
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: Software/SPI_SSP/spi.h
+
 CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj: ../CMSISv2p00_LPC17xx/inc/LPC17xx.h
 CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj: ../CMSISv2p00_LPC17xx/inc/core_cm3.h
 CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj: ../CMSISv2p00_LPC17xx/inc/core_cmFunc.h

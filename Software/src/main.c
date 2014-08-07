@@ -16,7 +16,7 @@ __CRP const unsigned int CRP_WORD = CRP_NO_CRP;
 void delay_call(int dl){
   volatile int delay, i;
 
-  delay = dl *100000;
+  delay = dl *10000;
   for (i = 0; i < delay; )
   {
     i++;
@@ -34,37 +34,38 @@ int main(void) {
   tlcMuxInit();
 
   while (1) {
-	// layer= layers[rowSelect].gpio_shift;
 
- //     if(rowSelect ==  SIZE || rowSelect > SIZE){
- //        //set row 
- //        delay_call(5);
-        
- //        //reset row select
- //        rowSelect = 0;
- //    }else if (rowSelect == 0 )
- //    {
- //    	        delay_call(5);
+	layer= layers[rowSelect].gpio_shift;
 
- //       
+     if(rowSelect ==  SIZE || rowSelect > SIZE){
+        //set row 
+        //delay_call(5);
+        LPC_GPIO1->FIOPIN = _BV(layer);
+        //reset row select
+        rowSelect = 0;
+    }
 
- //    }
+    else{
+        //delay_call(5);
 
- //    else{
- //        delay_call(5);
+       // LPC_GPIO1->FIOCLR |= _BV(layer - 1);
+       // LPC_GPIO1->FIOSET |= _BV(layer);
+    	LPC_GPIO1->FIOPIN = _BV(layer);
 
- //       LPC_GPIO1->FIOCLR |= _BV(layer - 1);
- //       LPC_GPIO1->FIOSET |= _BV(layer);
 
- //        rowSelect++;
- //    }
-		LPC_GPIO1->FIOCLR |= _BV(18);
-		            delay_call(5);
+        rowSelect++;
+    }
 
- 	    LPC_GPIO1->FIOSET |= _BV(18);
-		            delay_call(5);
+    delay_call(1);
+  // 			            delay_call(5);
 
- 	    		LPC_GPIO1->FIOCLR |= _BV(18);
+		// LPC_GPIO1->FIOPIN  = _BV(18);
+		//             delay_call(5);
+
+ 	//     LPC_GPIO1->FIOPIN = ~_BV(18);
+		//             delay_call(5);
+
+ 	//     		LPC_GPIO1->FIOPIN |= _BV(18);
 
 
   }
