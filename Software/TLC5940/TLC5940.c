@@ -1,10 +1,8 @@
 #include "TLC5940.h"
 
-#include "lpc17xx_ssp.h"
-
 Layer layers[SIZE];
 
-uint8_t rowSelect =0;
+
 void rit_init(){
     LPC_SC->PCONP |= _BV(16);
     LPC_SC->PCLKSEL0 |= _BV(26);
@@ -23,12 +21,13 @@ void attach_us(double us){
 void tlc_init(){
     pwm_init();
     rit_init();
+    spi_init();
 
-    period_us_double(1000000.0/(GSCLK_SPEED * 1.05));
+    period_us_double(1000000.0/(GSCLK_SPEED *2));
     write(0.5);
     start_pwm();
 
-    attach_us((1000000.0/(GSCLK_SPEED * 1.05))* 4096);
+    attach_us((1000000.0/(GSCLK_SPEED *2))* 4096);
 
 
 
@@ -50,20 +49,7 @@ void tlcMuxInit(){
 
 
 
-void RIT_IRQHandler(){
-    //clear interrupt
-    LPC_RIT->RICTRL |= _BV(0);
 
-    // write(0.0);
-
-    LPC_GPIO0->FIOCLR |= _BV(22);
-    LPC_GPIO0->FIOSET |= _BV(22);
-    LPC_GPIO0->FIOCLR |= _BV(22);
-
-    //select Row to be one
-   
-
-}
 
 
 

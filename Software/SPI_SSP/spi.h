@@ -5,7 +5,7 @@
 
 #include <stdlib.h>
 
-#define _BV(n) (1<<(n))
+
 #define SSPSR_TFE		(1 << 0)
 #define SSPSR_TNF		(1 << 1)
 #define SSPSR_RNE		(1 << 2)

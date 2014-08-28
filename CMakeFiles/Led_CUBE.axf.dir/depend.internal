@@ -17,6 +17,8 @@ CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj
  ../CMSISv2p00_LPC17xx/inc/system_LPC17xx.h
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/SPI_SSP/spi.c
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/SPI_SSP/spi.h
+ Software/liblpc-inc/lpc17xx_pinsel.h
+ Software/liblpc-inc/lpc_types.h
 CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj
  ../CMSISv2p00_LPC17xx/inc/LPC17xx.h
  ../CMSISv2p00_LPC17xx/inc/core_cm3.h
@@ -26,8 +28,8 @@ CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/TLC5940/TLC5940.c
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/TLC5940/TLC5940.h
  Software/FastPWM/FastPWM.h
+ Software/SPI_SSP/spi.h
  Software/liblpc-inc/lpc17xx_gpdma.h
- Software/liblpc-inc/lpc17xx_ssp.h
  Software/liblpc-inc/lpc_types.h
 CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_clkpwr.c.obj
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/liblpc-src/lpc17xx_clkpwr.c
@@ -70,7 +72,7 @@ CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.c
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.h
  Software/FastPWM/FastPWM.h
+ Software/SPI_SSP/spi.h
  Software/TLC5940/TLC5940.h
  Software/liblpc-inc/lpc17xx_gpdma.h
- Software/liblpc-inc/lpc17xx_ssp.h
  Software/liblpc-inc/lpc_types.h

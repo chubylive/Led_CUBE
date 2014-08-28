@@ -2,11 +2,12 @@
 #define TLC5940_H
 
 #include "FastPWM.h"
-#include "lpc17xx_ssp.h"
 #include "lpc17xx_gpdma.h"
+#include "spi.h"
+
 
 #define SPI_SPEED 30000000
-#define GSCLK_SPEED 2500000
+#define GSCLK_SPEED 8000000
 #define SIZE 8
 #define BLANK_PIN 
 #define GPIO1_1_18 18

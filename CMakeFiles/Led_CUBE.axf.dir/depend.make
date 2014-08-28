@@ -16,6 +16,8 @@ CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: ../CMSISv2p00_LPC17xx/in
 CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: ../CMSISv2p00_LPC17xx/inc/system_LPC17xx.h
 CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: Software/SPI_SSP/spi.c
 CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: Software/SPI_SSP/spi.h
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: Software/liblpc-inc/lpc17xx_pinsel.h
+CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: Software/liblpc-inc/lpc_types.h
 
 CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj: ../CMSISv2p00_LPC17xx/inc/LPC17xx.h
 CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj: ../CMSISv2p00_LPC17xx/inc/core_cm3.h
@@ -25,8 +27,8 @@ CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj: ../CMSISv2p00_LPC17x
 CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj: Software/TLC5940/TLC5940.c
 CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj: Software/TLC5940/TLC5940.h
 CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj: Software/FastPWM/FastPWM.h
+CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj: Software/SPI_SSP/spi.h
 CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj: Software/liblpc-inc/lpc17xx_gpdma.h
-CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj: Software/liblpc-inc/lpc17xx_ssp.h
 CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj: Software/liblpc-inc/lpc_types.h
 
 CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_clkpwr.c.obj: Software/liblpc-src/lpc17xx_clkpwr.c
@@ -69,8 +71,8 @@ CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: ../CMSISv2p00_LPC17xx/inc/s
 CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: Software/src/main.c
 CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: Software/src/main.h
 CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: Software/FastPWM/FastPWM.h
+CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: Software/SPI_SSP/spi.h
 CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: Software/TLC5940/TLC5940.h
 CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: Software/liblpc-inc/lpc17xx_gpdma.h
-CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: Software/liblpc-inc/lpc17xx_ssp.h
 CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: Software/liblpc-inc/lpc_types.h
 
