@@ -1,0 +1,110 @@
+
+(session driver_board.ses
+  (base_design driver_board.dsn)
+  (placement
+    (resolution um 10)
+    (component Pin_Headers:Pin_Header_Straight_2x04
+      (place P1 1170000 -655000 front 270)
+      (place P2 1170000 -835000 front 270)
+      (place P3 1170000 -1005000 front 270)
+      (place P4 1170000 -1175000 front 270)
+      (place P5 1470000 -655000 front 90)
+      (place P6 1470000 -835000 front 90)
+      (place P7 1470000 -1005000 front 90)
+      (place P8 1470000 -1175000 front 90)
+      (place P9 1545000 -655000 front 270)
+      (place P10 1540000 -835000 front 270)
+      (place P11 1545000 -1005000 front 270)
+      (place P12 1545000 -1175000 front 270)
+      (place P13 1845000 -655000 front 90)
+      (place P14 1845000 -835000 front 90)
+      (place P15 1845000 -1005000 front 90)
+      (place P16 1845000 -1175000 front 90)
+      (place P17 1920000 -655000 front 270)
+      (place P18 1920000 -835000 front 270)
+      (place P19 1920000 -1005000 front 270)
+      (place P20 1920000 -1175000 front 270)
+      (place P21 2215000 -655000 front 90)
+      (place P22 2215000 -835000 front 90)
+      (place P23 2215000 -1005000 front 90)
+      (place P24 2220000 -1175000 front 90)
+    )
+    (component Resistors_SMD:Resistor_SMD0805_HandSoldering
+      (place R1 1320000 -575000 front 0)
+      (place R2 1320000 -745000 front 0)
+      (place R3 1320000 -915000 front 0)
+      (place R4 1320000 -1085000 front 0)
+      (place R5 1695000 -575000 front 0)
+      (place R6 1695000 -745000 front 0)
+      (place R7 1695000 -915000 front 0)
+      (place R8 1695000 -1085000 front 0)
+      (place R9 2070000 -575000 front 0)
+      (place R10 2070000 -745000 front 0)
+      (place R11 2070000 -915000 front 0)
+      (place R12 2070000 -1085000 front 0)
+      (place R13 1160000 -475000 front 0)
+    )
+    (component "TLC5940:SSOP-28H"
+      (place U1 1320000 -660000 front 270)
+      (place U2 1320000 -830000 front 270)
+      (place U3 1320000 -1000000 front 270)
+      (place U4 1320000 -1170000 front 270)
+      (place U5 1695000 -660000 front 270)
+      (place U6 1695000 -830000 front 270)
+      (place U7 1695000 -1000000 front 270)
+      (place U8 1695000 -1170000 front 270)
+      (place U9 2070000 -660000 front 270)
+      (place U10 2070000 -830000 front 270)
+      (place U11 2070000 -1000000 front 270)
+      (place U12 2070000 -1170000 front 270)
+    )
+    (component Capacitors_SMD:c_0805
+      (place C1 1320000 -600000 front 180)
+      (place C2 1320000 -770000 front 180)
+      (place C3 1320000 -940000 front 180)
+      (place C4 1320000 -1110000 front 180)
+      (place C5 1695000 -600000 front 180)
+      (place C6 1695000 -770000 front 180)
+      (place C7 1695000 -940000 front 180)
+      (place C8 1695000 -1110000 front 180)
+      (place C9 2070000 -600000 front 180)
+      (place C10 2070000 -770000 front 180)
+      (place C11 2070000 -940000 front 180)
+      (place C12 2070000 -1110000 front 180)
+    )
+    (component Pin_Headers:Pin_Header_Straight_1x07
+      (place P25 1225000 -510000 front 0)
+    )
+  )
+  (was_is
+  )
+  (routes 
+    (resolution um 10)
+    (parser
+      (host_cad "KiCad's Pcbnew")
+      (host_version "(2014-jan-25)-product")
+    )
+    (library_out 
+      (padstack "Via[0-1]_889:635_um"
+        (shape
+          (circle F.Cu 8890 0 0)
+        )
+        (shape
+          (circle B.Cu 8890 0 0)
+        )
+        (attach off)
+      )
+    )
+    (network_out 
+      (net /ROA1
+        (wire
+          (path B.Cu 2540
+            1182700 -616900
+            1186900 -616900
+          )
+          (type protect)
+        )
+      )
+    )
+  )
+)
