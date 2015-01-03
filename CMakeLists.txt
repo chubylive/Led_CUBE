@@ -10,6 +10,7 @@ include_directories(
 	Software/TLC5940/
 	Software/SPI_SSP/
 	Software/liblpc-inc/
+	Software/LEDCUBE/
 )
 set(SOURCES
 

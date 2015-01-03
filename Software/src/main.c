@@ -17,12 +17,12 @@ __CRP const unsigned int CRP_WORD = CRP_NO_CRP;
   int8_t rowSelect = 0;
 typedef struct 
 {
-  uint16_t red : 12;
+  uint16_t red ;
   
 }px;
 
 typedef struct {
-  px buf[SIZE *2];
+  uint16_t buf[SIZE *2];
 }ly;
 
 
@@ -42,14 +42,12 @@ void set_all(int level1){
   int idx, jdx;
   for (idx = 0; idx < SIZE; ++idx)
   {
-    for(jdx = 0; (jdx < SIZE *2); jdx++){
-
-      if (jdx%2)
-      {
-        /* code */
-      lys[idx].buf[13].red = level1;
-      }
-    }
+    
+        lys[idx].buf[15]= level1;
+        lys[idx].buf[14]= level1;
+        lys[idx].buf[0] = level1;
+      
+    
   }
 }
 
@@ -57,19 +55,49 @@ int level= 0xFFF;
 
 int con = 0;
 int up = 0;
+int idx = 0;
+int vprg_pin =0;
+#define R1 1
+#define G1 2
+#define B1 3
+#define R2 4
+#define G2 5
+#define B2 6
+
 int main(void) {
  
-  uint8_t layer ;  // //Setup GPIO pins
+ /* uint8_t layer ;  // //Setup GPIO pins
   LPC_GPIO0->FIODIR |= (1<<22);
   LPC_GPIO0->FIOSET |= (1<<22);
-
+*/
+/*  
   set_all(level);
   tlcMuxInit();
+  
+spi_txrx((uint16_t* )lys[rowSelect].buf,NULL, 16);*/
+TLC5940_Init();
+TLC5940_SetAllDC(0);
+TLC5940_SetAllGS(0x0);
+TLC5940_SetGS(G1, 0);
+TLC5940_SetGS(R1, 0xFFF);
+TLC5940_SetGS(G1, 2048);
+TLC5940_SetGS(B1, 0x000);
 
-  while (1) {
 
-	layer= layers[rowSelect].gpio_shift;
-      if(rowSelect ==  SIZE || rowSelect > SIZE){
+
+
+TLC5940_ClockInDC();
+vprg_pin = 1;
+
+/*
+PULSE_XLAT_PIN;
+PULSE_SCLK_PIN;
+*/
+while(1){
+ 
+	 /* layer= layers[rowSelect].gpio_shift;
+    
+    if(rowSelect ==  SIZE || rowSelect > SIZE){
         //set row 
         LPC_GPIO1->FIOPIN = _BV(layer);
         //reset row select
@@ -79,26 +107,56 @@ int main(void) {
     else{
        
     	LPC_GPIO1->FIOPIN = _BV(layer);
-      rowSelect++;
+     // rowSelect++;
     }
-     
-    //delay_call(1);
-  }
+    */
+   
+    
+    //
+  
+}
 
   return 0;
 }
+
 void RIT_IRQHandler(){
     //clear interrupt
     LPC_RIT->RICTRL |= _BV(0);
 
-    // write(0.0);
+    static uint8_t xlatNeedsPulse = 0;
 
-    LPC_GPIO0->FIOCLR |= _BV(22);
-    LPC_GPIO0->FIOSET |= _BV(22);
-    LPC_GPIO0->FIOCLR |= _BV(22);
+    BLANK_PIN_SET;
+    if (vprg_pin){
+      VPRG_PIN_CLR;
+      if (xlatNeedsPulse){
+        PULSE_XLAT_PIN;
+        xlatNeedsPulse = 0;
+      }
+      PULSE_SCLK_PIN;
+      vprg_pin =0;
+    }else if (xlatNeedsPulse)
+    {
+      
+      xlatNeedsPulse = 0;
+    }
+    BLANK_PIN_CLR;
+    dcspi_txrx((uint8_t*) gsData, NULL, gsDataSize);
+    PULSE_XLAT_PIN;
+    
+  //   // write(0.0);
+  
+  // BLANK_PIN_SET;
+  // if (t)
+  // {
+  // VPRG_PIN_CLR;
+  // PULSE_XLAT_PIN;
+  // t = 0;
+  //   /* code */
+  // }
+
+  // BLANK_PIN_CLR;
 
     //select Row to be one
-    spi_txrx((uint16_t* )&lys[rowSelect].buf,NULL, 16);
-
+   
 
 }

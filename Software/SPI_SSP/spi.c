@@ -27,7 +27,7 @@ void spi_init(){
 		// set_PinFunc(PINSEL_PORT_0, PINSEL_PIN_18, PINSEL_FUNC_2); //enable RTS on P2.7
 
 	 /* Set DSS data to 12-bit, Frame format SPI, CPOL = 0, CPHA = 0, and SCR is 15 */
-  	LPC_SSP0->CR0 |=  0b1011;
+  	 LPC_SSP0->CR0 |= 0x7 ;
 	// drop clock rate from 12mhz to 150khz
 	LPC_SSP0->CPSR = 2;
 	//master mode and enable ssp0
@@ -68,7 +68,7 @@ void spi_txrx(uint16_t* tx, uint16_t* rx, uint16_t len)
 	 			  dummy = LPC_SSP0->DR;
 	 	}
 	 	else if(tx == NULL && rx != NULL){
-	 		LPC_SSP0->DR = 0xFF;
+	 		LPC_SSP0->DR = 0xFFF;
 	 		/* Wait until the Busy bit is cleared */
 			while ( (LPC_SSP0->SR & (SSPSR_BSY|SSPSR_RNE)) != SSPSR_RNE );
 	 		/*according to manual (software can read data from this register whenever the RNE bit
@@ -84,7 +84,7 @@ void spi_txrx(uint16_t* tx, uint16_t* rx, uint16_t len)
 uint16_t spi_tx(uint16_t tx){
 	uint16_t dummy;
 	while ( (LPC_SSP0->SR & (SSPSR_TNF|SSPSR_BSY)) != SSPSR_TNF );
-		 		LPC_SSP0->DR = tx;
+		 		LPC_SSP0->DR = tx ;
 	 while ( (LPC_SSP0->SR & (SSPSR_BSY|SSPSR_RNE)) != SSPSR_RNE );
 	 /* Whenever a byte is written, MISO FIFO counter increments, Clear FIFO
 		on MISO. Otherwise, when SSP0Receive() is called, previous data byte
@@ -93,3 +93,4 @@ uint16_t spi_tx(uint16_t tx){
 	return dummy;
 
 }
+

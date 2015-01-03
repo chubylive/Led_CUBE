@@ -22,6 +22,7 @@ SET(CMAKE_C_TARGET_INCLUDE_PATH
   "Software/TLC5940"
   "Software/SPI_SSP"
   "Software/liblpc-inc"
+  "Software/LEDCUBE"
   "../UMD_LPC1769/inc"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
