@@ -1,0 +1,87 @@
+
+(rules PCB driver_board
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 3144)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.6)
+    )
+    (layer_rule In1.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.6)
+    )
+  )
+  (rule
+    (width 254.0)
+    (clear 25.6)
+    (clear 127.0 (type smd_to_turn_gap))
+    (clear 6.4 (type smd_smd))
+  )
+  (padstack "Via[0-1]_889:635_um"
+    (shape
+      (circle F.Cu 889.0 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 889.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_889:635_um" "Via[0-1]_889:635_um" default
+  )
+  (via 
+    "Via[0-1]_889:635_um-kicad_default" "Via[0-1]_889:635_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_889:635_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_889:635_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 254.0)
+    )
+    (circuit 
+      (use_layer F.Cu In1.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND "Net-(R1-Pad2)" "Net-(R2-Pad2)" "Net-(R3-Pad2)" "Net-(R4-Pad2)" /ROA1 /ROA2 /ROA3
+    /ROA4 /ROA5 /ROA6 /ROA7 /ROA8 /ROB1 /ROB2 /ROB3
+    /ROB4 /ROB5 /ROB6 /ROB7 /ROB8 /ROC1 /ROC2 /ROC3
+    /ROC4 /ROC5 /ROC6 /ROC7 /ROC8 /ROD1 /ROD2 /ROD3
+    /ROD4 /ROD5 /ROD6 /ROD7 /ROD8 /ROA9 /ROA10 /ROA11
+    /ROA12 /ROA13 /ROA14 /ROA15 /ROA16 /ROB9 /ROB10 /ROB11
+    /ROB12 /ROB13 /ROB14 /ROB15 /ROB16 /ROC9 /ROC10 /ROC11
+    /ROC12 /ROC13 /ROC14 /ROC15 /ROC16 /ROD9 /ROD10 /ROD11
+    /ROD12 /ROD13 /ROD14 /ROD15 /ROD16 /blank /xlat /sclk
+    /sin /xerr "/sin_B" /gsclk "/sin_C" "/sin_D" "/sin_E" +3.3V
+    /L1 /L2 /L3 /L4 /L5 /L6 /L7 /L8
+    /vprg
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 254.0)
+    )
+    (circuit 
+      (use_layer F.Cu In1.Cu)
+    )
+  )
+)

@@ -21,7 +21,7 @@
       )
     )
     (boundary
-      (rect pcb 102944 -44500 227000 -130796)
+      (rect pcb 110500 -44500 250153 -131500)
     )
     (plane GND (polygon In1.Cu 0  110500 -58500  110500 -124500  227000 -124500  227000 -44500
             110500 -44500  110500 -58500))
@@ -34,79 +34,48 @@
     )
   )
   (placement
-    (component Pin_Headers:Pin_Header_Straight_2x04
-      (place P9 164250 -68750 front 270 (PN CONN_4X2))
-      (place P10 168500 -83750 front 270 (PN CONN_4X2))
-      (place P11 168500 -100750 front 270 (PN CONN_4X2))
-      (place P12 168500 -117750 front 270 (PN CONN_4X2))
-      (place P13 178750 -68750 front 90 (PN CONN_4X2))
-      (place P14 183000 -83750 front 90 (PN CONN_4X2))
-      (place P15 183000 -100750 front 90 (PN CONN_4X2))
-      (place P16 183000 -116500 front 90 (PN CONN_4X2))
-      (place P17 193500 -66250 front 270 (PN CONN_4X2))
-      (place P18 197750 -85750 front 270 (PN CONN_4X2))
-      (place P19 198250 -102750 front 270 (PN CONN_4X2))
-      (place P20 198750 -119750 front 270 (PN CONN_4X2))
-      (place P21 208000 -66750 front 90 (PN CONN_4X2))
-      (place P22 212250 -85750 front 90 (PN CONN_4X2))
-      (place P23 212750 -102750 front 90 (PN CONN_4X2))
-      (place P24 213250 -119750 front 90 (PN CONN_4X2))
-      (place P1 108000 -60000 front 270 (PN CONN_4X2))
-      (place P2 108000 -80000 front 270 (PN CONN_4X2))
-      (place P3 108000 -100000 front 270 (PN CONN_4X2))
-      (place P4 108000 -120000 front 270 (PN CONN_4X2))
-      (place P5 142000 -60000 front 90 (PN CONN_4X2))
-      (place P6 142000 -80000 front 90 (PN CONN_4X2))
-      (place P7 142000 -100000 front 90 (PN CONN_4X2))
-      (place P8 142000 -120000 front 90 (PN CONN_4X2))
-      (place P26 153500 -50500 front 0 (PN CONN_4X2))
-      (place P27 170250 -50500 front 0 (PN CONN_4X2))
-    )
     (component Resistors_SMD:Resistor_SMD0805_HandSoldering
-      (place R5 173500 -60000 front 0 (PN R))
-      (place R6 182250 -77000 front 0 (PN R))
-      (place R7 177500 -92000 front 0 (PN R))
-      (place R8 177500 -107750 front 0 (PN R))
-      (place R9 203000 -57500 front 0 (PN R))
-      (place R10 207250 -74250 front 0 (PN R))
-      (place R11 211000 -94000 front 0 (PN R))
-      (place R12 211000 -111000 front 0 (PN R))
-      (place R13 203000 -94000 front 0 (PN R))
-      (place R1 126500 -55500 front 0 (PN R))
-      (place R2 127000 -76500 front 0 (PN R))
-      (place R3 127000 -96000 front 0 (PN R))
-      (place R4 127000 -116000 front 0 (PN R))
+      (place R13 161750 -63500 front 270 (PN R))
+      (place R1 132500 -60000 front 0 (PN R))
+      (place R2 133000 -78500 front 0 (PN R))
+      (place R3 132500 -97500 front 270 (PN R))
+      (place R4 160625 -94625 front 270 (PN R))
     )
-    (component "TLC5940:SSOP-28H"
-      (place U5 171500 -66750 front 270 (PN TLC590))
-      (place U6 175750 -81750 front 270 (PN TLC590))
-      (place U7 175750 -98750 front 270 (PN TLC590))
-      (place U8 175750 -114500 front 270 (PN TLC590))
-      (place U9 200750 -64250 front 270 (PN TLC590))
-      (place U10 205000 -83750 front 270 (PN TLC590))
-      (place U11 205500 -100750 front 270 (PN TLC590))
-      (place U12 206000 -117750 front 270 (PN TLC590))
-      (place U1 125000 -65500 front 270 (PN TLC590))
-      (place U2 124500 -85500 front 270 (PN TLC590))
-      (place U3 124500 -106000 front 270 (PN TLC590))
-      (place U4 124500 -125500 front 270 (PN TLC590))
+    (component Pin_Headers:Pin_Header_Straight_2x04
+      (place P1 118000 -68000 front 270 (PN CONN_4X2))
+      (place P2 118000 -85500 front 270 (PN CONN_4X2))
+      (place P3 117750 -103500 front 270 (PN CONN_4X2))
+      (place P4 155875 -80875 front 180 (PN CONN_4X2))
+      (place P5 143500 -68000 front 90 (PN CONN_4X2))
+      (place P6 143500 -85500 front 90 (PN CONN_4X2))
+      (place P7 143250 -103500 front 90 (PN CONN_4X2))
+      (place P8 155875 -106375 front 0 (PN CONN_4X2))
+      (place P26 168500 -66500 front 270 (PN CONN_4X2))
+      (place P27 168750 -79500 front 270 (PN CONN_4X2))
+      (place P25 155000 -64500 front 180 (PN CONN_4X2))
     )
     (component Capacitors_SMD:c_0805
-      (place C5 169500 -60000 front 180 (PN C))
-      (place C6 169500 -77000 front 180 (PN C))
-      (place C7 169500 -94000 front 180 (PN C))
-      (place C8 169500 -111000 front 180 (PN C))
-      (place C9 207000 -60000 front 180 (PN C))
-      (place C10 207000 -77000 front 180 (PN C))
-      (place C11 207000 -94000 front 180 (PN C))
-      (place C12 207000 -111000 front 180 (PN C))
-      (place C1 122500 -56500 front 90 (PN C))
-      (place C2 122500 -77500 front 90 (PN C))
-      (place C3 122500 -97000 front 90 (PN C))
-      (place C4 122500 -117000 front 90 (PN C))
+      (place C1 128500 -61000 front 90 (PN C))
+      (place C2 128500 -79500 front 90 (PN C))
+      (place C3 128250 -97000 front 90 (PN C))
+      (place C4 161625 -91125 front 180 (PN C))
+    )
+    (component "TLC5940:SSOP-28H"
+      (place U4 153875 -93375 front 180 (PN TLC590))
+      (place U3 130250 -105500 front 270 (PN TLC590))
+      (place U2 130500 -87500 front 270 (PN TLC590))
+      (place U1 131000 -70000 front 270 (PN TLC590))
     )
   )
   (library
+    (image Resistors_SMD:Resistor_SMD0805_HandSoldering
+      (outline (path signal 381  0 1143  -1016 1143))
+      (outline (path signal 381  0 1143  1016 1143))
+      (outline (path signal 381  0 -1143  -1016 -1143))
+      (outline (path signal 381  0 -1143  1016 -1143))
+      (pin Rect[T]Pad_1501.14x1198.88_um 1 -1300.48 0)
+      (pin Rect[T]Pad_1501.14x1198.88_um 2 1300.48 0)
+    )
     (image Pin_Headers:Pin_Header_Straight_2x04
       (outline (path signal 254  -2540 -2540  5080 -2540))
       (outline (path signal 254  5080 -2540  5080 2540))
@@ -125,13 +94,15 @@
       (pin Oval[A]Pad_1727.2x1727.2_um 7 3810 -1270)
       (pin Oval[A]Pad_1727.2x1727.2_um 8 3810 1270)
     )
-    (image Resistors_SMD:Resistor_SMD0805_HandSoldering
-      (outline (path signal 381  0 1143  -1016 1143))
-      (outline (path signal 381  0 1143  1016 1143))
-      (outline (path signal 381  0 -1143  -1016 -1143))
-      (outline (path signal 381  0 -1143  1016 -1143))
-      (pin Rect[T]Pad_1501.14x1198.88_um 1 -1300.48 0)
-      (pin Rect[T]Pad_1501.14x1198.88_um 2 1300.48 0)
+    (image Capacitors_SMD:c_0805
+      (outline (path signal 127  635 635  635 -635))
+      (outline (path signal 127  -635 635  -635 -609.6))
+      (outline (path signal 127  -1016 635  1016 635))
+      (outline (path signal 127  1016 635  1016 -635))
+      (outline (path signal 127  1016 -635  -1016 -635))
+      (outline (path signal 127  -1016 -635  -1016 635))
+      (pin Rect[T]Pad_1300.48x1498.6_um 1 952.5 0)
+      (pin Rect[T]Pad_1300.48x1498.6_um 2 -952.5 0)
     )
     (image "TLC5940:SSOP-28H"
       (outline (path signal 127  -4212.79 -2159  -4230.37 -2270  -4281.39 -2370.14  -4360.86 -2449.61
@@ -174,29 +145,19 @@
       (pin Rect[T]Pad_406.4x1270_um 26 -2895.6 3556)
       (pin Rect[T]Pad_406.4x1270_um 27 -3556 3556)
       (pin Rect[T]Pad_406.4x1270_um 28 -4191 3556)
-      (pin Rect[T]Pad_6170x2400_um 2@1 0 0)
-    )
-    (image Capacitors_SMD:c_0805
-      (outline (path signal 127  635 635  635 -635))
-      (outline (path signal 127  -635 635  -635 -609.6))
-      (outline (path signal 127  -1016 635  1016 635))
-      (outline (path signal 127  1016 635  1016 -635))
-      (outline (path signal 127  1016 -635  -1016 -635))
-      (outline (path signal 127  -1016 -635  -1016 635))
-      (pin Rect[T]Pad_1300.48x1498.6_um 1 952.5 0)
-      (pin Rect[T]Pad_1300.48x1498.6_um 2 -952.5 0)
+      (pin Rect[T]Pad_3780x1200_um 2@1 0 0)
     )
     (padstack Oval[A]Pad_1727.2x1727.2_um
       (shape (path F.Cu 1727.2  0 0  0 0))
       (shape (path In1.Cu 1727.2  0 0  0 0))
       (attach off)
     )
-    (padstack Rect[T]Pad_406.4x1270_um
-      (shape (rect F.Cu -203.2 -635 203.2 635))
+    (padstack Rect[T]Pad_3780x1200_um
+      (shape (rect F.Cu -1890 -600 1890 600))
       (attach off)
     )
-    (padstack Rect[T]Pad_6170x2400_um
-      (shape (rect F.Cu -3085 -1200 3085 1200))
+    (padstack Rect[T]Pad_406.4x1270_um
+      (shape (rect F.Cu -203.2 -635 203.2 635))
       (attach off)
     )
     (padstack Rect[T]Pad_1300.48x1498.6_um
@@ -230,33 +191,6 @@
     )
     (net "Net-(R4-Pad2)"
       (pins R4-2 U4-27)
-    )
-    (net "Net-(R5-Pad2)"
-      (pins R5-2 U5-27)
-    )
-    (net "Net-(R6-Pad2)"
-      (pins R6-2 U6-27)
-    )
-    (net "Net-(R7-Pad2)"
-      (pins R7-2 U7-27)
-    )
-    (net "Net-(R8-Pad2)"
-      (pins R8-2 U8-27)
-    )
-    (net "Net-(R9-Pad2)"
-      (pins R9-2 U9-27)
-    )
-    (net "Net-(R10-Pad2)"
-      (pins R10-2 U10-27)
-    )
-    (net "Net-(R11-Pad2)"
-      (pins R11-2 U11-27)
-    )
-    (net "Net-(R12-Pad2)"
-      (pins R12-2 U12-27)
-    )
-    (net "Net-(U12-Pad24)"
-      (pins U12-24)
     )
     (net /ROA1
       (pins P1-2 U1-7)
@@ -450,452 +384,42 @@
     (net /ROD16
       (pins P8-8 U4-22)
     )
-    (net /GOA1
-      (pins P9-2 U5-7)
-    )
-    (net /GOA2
-      (pins P9-1 U5-8)
-    )
-    (net /GOA3
-      (pins P9-4 U5-9)
-    )
-    (net /GOA4
-      (pins P9-3 U5-10)
-    )
-    (net /GOA5
-      (pins P9-6 U5-11)
-    )
-    (net /GOA6
-      (pins P9-5 U5-12)
-    )
-    (net /GOA7
-      (pins P9-8 U5-13)
-    )
-    (net /GOA8
-      (pins P9-7 U5-14)
-    )
-    (net /GOB1
-      (pins P10-2 U6-7)
-    )
-    (net /GOB2
-      (pins P10-1 U6-8)
-    )
-    (net /GOB3
-      (pins P10-4 U6-9)
-    )
-    (net /GOB4
-      (pins P10-3 U6-10)
-    )
-    (net /GOB5
-      (pins P10-6 U6-11)
-    )
-    (net /GOB6
-      (pins P10-5 U6-12)
-    )
-    (net /GOB7
-      (pins P10-8 U6-13)
-    )
-    (net /GOB8
-      (pins P10-7 U6-14)
-    )
-    (net /GOC1
-      (pins P11-2 U7-7)
-    )
-    (net /GOC2
-      (pins P11-1 U7-8)
-    )
-    (net /GOC3
-      (pins P11-4 U7-9)
-    )
-    (net /GOC4
-      (pins P11-3 U7-10)
-    )
-    (net /GOC5
-      (pins P11-6 U7-11)
-    )
-    (net /GOC6
-      (pins P11-5 U7-12)
-    )
-    (net /GOC7
-      (pins P11-8 U7-13)
-    )
-    (net /GOC8
-      (pins P11-7 U7-14)
-    )
-    (net /GOD1
-      (pins P12-2 U8-7)
-    )
-    (net /GOD2
-      (pins P12-1 U8-8)
-    )
-    (net /GOD3
-      (pins P12-4 U8-9)
-    )
-    (net /GOD4
-      (pins P12-3 U8-10)
-    )
-    (net /GOD5
-      (pins P12-6 U8-11)
-    )
-    (net /GOD6
-      (pins P12-5 U8-12)
-    )
-    (net /GOD7
-      (pins P12-8 U8-13)
-    )
-    (net /GOD8
-      (pins P12-7 U8-14)
-    )
-    (net /GOA9
-      (pins P13-1 U5-15)
-    )
-    (net /GOA10
-      (pins P13-2 U5-16)
-    )
-    (net /GOA11
-      (pins P13-3 U5-17)
-    )
-    (net /GOA12
-      (pins P13-4 U5-18)
-    )
-    (net /GOA13
-      (pins P13-5 U5-19)
-    )
-    (net /GOA14
-      (pins P13-6 U5-20)
-    )
-    (net /GOA15
-      (pins P13-7 U5-21)
-    )
-    (net /GOA16
-      (pins P13-8 U5-22)
-    )
-    (net /GOB9
-      (pins P14-1 U6-15)
-    )
-    (net /GOB10
-      (pins P14-2 U6-16)
-    )
-    (net /GOB11
-      (pins P14-3 U6-17)
-    )
-    (net /GOB12
-      (pins P14-4 U6-18)
-    )
-    (net /GOB13
-      (pins P14-5 U6-19)
-    )
-    (net /GOB14
-      (pins P14-6 U6-20)
-    )
-    (net /GOB15
-      (pins P14-7 U6-21)
-    )
-    (net /GOB16
-      (pins P14-8 U6-22)
-    )
-    (net /GOC9
-      (pins P15-1 U7-15)
-    )
-    (net /GOC10
-      (pins P15-2 U7-16)
-    )
-    (net /GOC11
-      (pins P15-3 U7-17)
-    )
-    (net /GOC12
-      (pins P15-4 U7-18)
-    )
-    (net /GOC13
-      (pins P15-5 U7-19)
-    )
-    (net /GOC14
-      (pins P15-6 U7-20)
-    )
-    (net /GOC15
-      (pins P15-7 U7-21)
-    )
-    (net /GOC16
-      (pins P15-8 U7-22)
-    )
-    (net /GOD9
-      (pins P16-1 U8-15)
-    )
-    (net /GOD10
-      (pins P16-2 U8-16)
-    )
-    (net /GOD11
-      (pins P16-3 U8-17)
-    )
-    (net /GOD12
-      (pins P16-4 U8-18)
-    )
-    (net /GOD13
-      (pins P16-5 U8-19)
-    )
-    (net /GOD14
-      (pins P16-6 U8-20)
-    )
-    (net /GOD15
-      (pins P16-7 U8-21)
-    )
-    (net /GOD16
-      (pins P16-8 U8-22)
-    )
-    (net /BOA1
-      (pins P17-2 U9-7)
-    )
-    (net /BOA2
-      (pins P17-1 U9-8)
-    )
-    (net /BOA3
-      (pins P17-4 U9-9)
-    )
-    (net /BOA4
-      (pins P17-3 U9-10)
-    )
-    (net /BOA5
-      (pins P17-6 U9-11)
-    )
-    (net /BOA6
-      (pins P17-5 U9-12)
-    )
-    (net /BOA7
-      (pins P17-8 U9-13)
-    )
-    (net /BOA8
-      (pins P17-7 U9-14)
-    )
-    (net /BOB1
-      (pins P18-2 U10-7)
-    )
-    (net /BOB2
-      (pins P18-1 U10-8)
-    )
-    (net /BOB3
-      (pins P18-4 U10-9)
-    )
-    (net /BOB4
-      (pins P18-3 U10-10)
-    )
-    (net /BOB5
-      (pins P18-6 U10-11)
-    )
-    (net /BOB6
-      (pins P18-5 U10-12)
-    )
-    (net /BOB7
-      (pins P18-8 U10-13)
-    )
-    (net /BOB8
-      (pins P18-7 U10-14)
-    )
-    (net /BOC1
-      (pins P19-2 U11-7)
-    )
-    (net /BOC2
-      (pins P19-1 U11-8)
-    )
-    (net /BOC3
-      (pins P19-4 U11-9)
-    )
-    (net /BOC4
-      (pins P19-3 U11-10)
-    )
-    (net /BOC5
-      (pins P19-6 U11-11)
-    )
-    (net /BOC6
-      (pins P19-5 U11-12)
-    )
-    (net /BOC7
-      (pins P19-8 U11-13)
-    )
-    (net /BOC8
-      (pins P19-7 U11-14)
-    )
-    (net /BOD1
-      (pins P20-2 U12-7)
-    )
-    (net /BOD2
-      (pins P20-1 U12-8)
-    )
-    (net /BOD3
-      (pins P20-4 U12-9)
-    )
-    (net /BOD4
-      (pins P20-3 U12-10)
-    )
-    (net /BOD5
-      (pins P20-6 U12-11)
-    )
-    (net /BOD6
-      (pins P20-5 U12-12)
-    )
-    (net /BOD7
-      (pins P20-8 U12-13)
-    )
-    (net /BOD8
-      (pins P20-7 U12-14)
-    )
-    (net /BOA9
-      (pins P21-1 U9-15)
-    )
-    (net /BOA10
-      (pins P21-2 U9-16)
-    )
-    (net /BOA11
-      (pins P21-3 U9-17)
-    )
-    (net /BOA12
-      (pins P21-4 U9-18)
-    )
-    (net /BOA13
-      (pins P21-5 U9-19)
-    )
-    (net /BOA14
-      (pins P21-6 U9-20)
-    )
-    (net /BOA15
-      (pins P21-7 U9-21)
-    )
-    (net /BOA16
-      (pins P21-8 U9-22)
-    )
-    (net /BOB9
-      (pins P22-1 U10-15)
-    )
-    (net /BOB10
-      (pins P22-2 U10-16)
-    )
-    (net /BOB11
-      (pins P22-3 U10-17)
-    )
-    (net /BOB12
-      (pins P22-4 U10-18)
-    )
-    (net /BOB13
-      (pins P22-5 U10-19)
-    )
-    (net /BOB14
-      (pins P22-6 U10-20)
-    )
-    (net /BOB15
-      (pins P22-7 U10-21)
-    )
-    (net /BOB16
-      (pins P22-8 U10-22)
-    )
-    (net /BOC9
-      (pins P23-1 U11-15)
-    )
-    (net /BOC10
-      (pins P23-2 U11-16)
-    )
-    (net /BOC11
-      (pins P23-3 U11-17)
-    )
-    (net /BOC12
-      (pins P23-4 U11-18)
-    )
-    (net /BOC13
-      (pins P23-5 U11-19)
-    )
-    (net /BOC14
-      (pins P23-6 U11-20)
-    )
-    (net /BOC15
-      (pins P23-7 U11-21)
-    )
-    (net /BOC16
-      (pins P23-8 U11-22)
-    )
-    (net /BOD9
-      (pins P24-1 U12-15)
-    )
-    (net /BOD10
-      (pins P24-2 U12-16)
-    )
-    (net /BOD11
-      (pins P24-3 U12-17)
-    )
-    (net /BOD12
-      (pins P24-4 U12-18)
-    )
-    (net /BOD13
-      (pins P24-5 U12-19)
-    )
-    (net /BOD14
-      (pins P24-6 U12-20)
-    )
-    (net /BOD15
-      (pins P24-7 U12-21)
-    )
-    (net /BOD16
-      (pins P24-8 U12-22)
-    )
     (net GND
-      (pins R5-1 R6-1 R7-1 R8-1 R9-1 R10-1 R11-1 R12-1 U5-1 U6-1 U7-1 U8-1 U9-1 U10-1
-        U11-1 U12-1 C5-1 C6-1 C7-1 C8-1 C9-1 C10-1 C11-1 C12-1 R1-1 R2-1 R3-1 R4-1
-        U1-1 U2-1 U3-1 U4-1 C1-1 C2-1 C3-1 C4-1)
+      (pins R1-1 R2-1 R3-1 R4-1 C1-1 C2-1 C3-1 C4-1 P25-4 U4-1 U3-1 U2-1 U1-1)
     )
     (net /blank
-      (pins U5-2 U5-2@1 U6-2 U6-2@1 U7-2 U7-2@1 U8-2 U8-2@1 U9-2 U9-2@1 U10-2 U10-2@1
-        U11-2 U11-2@1 U12-2 U12-2@1 R13-1 U1-2 U1-2@1 U2-2 U2-2@1 U3-2 U3-2@1 U4-2
-        U4-2@1)
+      (pins R13-1 P25-1 U4-2 U4-2@1 U3-2 U3-2@1 U2-2 U2-2@1 U1-2 U1-2@1)
     )
     (net /xlat
-      (pins U5-3 U6-3 U7-3 U8-3 U9-3 U10-3 U11-3 U12-3 U1-3 U2-3 U3-3 U4-3)
+      (pins P25-7 U4-3 U3-3 U2-3 U1-3)
     )
     (net /sclk
-      (pins U5-4 U6-4 U7-4 U8-4 U9-4 U10-4 U11-4 U12-4 U1-4 U2-4 U3-4 U4-4)
+      (pins P25-3 U4-4 U3-4 U2-4 U1-4)
     )
     (net /sin
-      (pins U1-5)
+      (pins P25-5 U1-5)
     )
     (net /xerr
-      (pins U5-23 U6-23 U7-23 U8-23 U9-23 U10-23 U11-23 U12-23 U1-23 U2-23 U3-23 U4-23)
+      (pins U4-23 U3-23 U2-23 U1-23)
     )
     (net /sin_B
-      (pins U1-24 U2-5)
+      (pins U2-5 U1-24)
     )
     (net /gsclk
-      (pins U5-25 U6-25 U7-25 U8-25 U9-25 U10-25 U11-25 U12-25 U1-25 U2-25 U3-25 U4-25)
+      (pins P25-2 U4-25 U3-25 U2-25 U1-25)
     )
     (net /sin_C
-      (pins U2-24 U3-5)
+      (pins U3-5 U2-24)
     )
     (net /sin_D
-      (pins U3-24 U4-5)
+      (pins U4-5 U3-24)
     )
     (net /sin_E
-      (pins U5-5 U4-24)
-    )
-    (net /sin_F
-      (pins U5-24 U6-5)
-    )
-    (net /sin_G
-      (pins U6-24 U7-5)
-    )
-    (net /sin_H
-      (pins U7-24 U8-5)
-    )
-    (net /sin_I
-      (pins U8-24 U9-5)
-    )
-    (net /sin_J
-      (pins U9-24 U10-5)
-    )
-    (net /sin_K
-      (pins U10-24 U11-5)
-    )
-    (net /sin_L
-      (pins U11-24 U12-5)
+      (pins P25-8 U4-24)
     )
     (net +3.3V
-      (pins U5-26 U5-28 U6-26 U6-28 U7-26 U7-28 U8-26 U8-28 U9-26 U9-28 U10-26 U10-28
-        U11-26 U11-28 U12-26 U12-28 C5-2 C6-2 C7-2 C8-2 C9-2 C10-2 C11-2 C12-2 R13-2
-        U1-26 U1-28 U2-26 U2-28 U3-26 U3-28 U4-26 U4-28 C1-2 C2-2 C3-2 C4-2)
+      (pins R13-2 C1-2 C2-2 C3-2 C4-2 P25-6 U4-26 U4-28 U3-26 U3-28 U2-26 U2-28 U1-26
+        U1-28)
     )
     (net /L1
       (pins P26-1 P27-1)
@@ -922,7 +446,7 @@
       (pins P26-8 P27-8)
     )
     (net /vprg
-      (pins U5-6 U6-6 U7-6 U8-6 U9-6 U10-6 U11-6 U12-6 U1-6 U2-6 U3-6 U4-6)
+      (pins U4-6 U3-6 U2-6 U1-6)
     )
     (class kicad_default "" +3.3V /BOA1 /BOA10 /BOA11 /BOA12 /BOA13 /BOA14
       /BOA15 /BOA16 /BOA2 /BOA3 /BOA4 /BOA5 /BOA6 /BOA7 /BOA8 /BOA9 /BOB1
@@ -957,5 +481,21 @@
     )
   )
   (wiring
+    (wire (path In1.Cu 254  119447 -81086.5  119447 -81547.9)(net /ROB1)(type protect))
+    (wire (path F.Cu 254  141980 -107310  140862 -107310)(net /ROC10)(type protect))
+    (wire (path F.Cu 254  126694 -102604  126287 -102604)(net /xlat)(type protect))
+    (wire (path F.Cu 254  126944 -84604.4  126518 -84604.4)(net /xlat)(type protect))
+    (wire (path F.Cu 254  133647 -86560.2  134056 -86560.2)(net /xerr)(type protect))
+    (wire (path F.Cu 254  156771 -96931  156771 -96042)(net +3.3V)(type protect))
+    (wire (path F.Cu 254  158066 -96931  158066 -96162.6)(net +3.3V)(type protect))
+    (wire (path F.Cu 254  158066 -96042  156771 -96042)(net +3.3V)(type protect))
+    (wire (path F.Cu 254  158066 -96162.6  158066 -96042)(net +3.3V)(type protect))
+    (wire (path F.Cu 254  134556 -65809  135115 -65809)(net +3.3V)(type protect))
+    (wire (path F.Cu 254  133806 -101309  132917 -101309)(net +3.3V)(type protect))
+    (wire (path F.Cu 254  133806 -102604  132917 -102604)(net +3.3V)(type protect))
+    (wire (path F.Cu 254  132917 -101309  132917 -102604)(net +3.3V)(type protect))
+    (wire (path F.Cu 254  134056 -83309  133167 -83309)(net +3.3V)(type protect))
+    (wire (path F.Cu 254  134056 -84604.4  133167 -84604.4)(net +3.3V)(type protect))
+    (wire (path F.Cu 254  133167 -83309  133167 -84604.4)(net +3.3V)(type protect))
   )
 )
