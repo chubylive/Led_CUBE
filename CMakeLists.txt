@@ -27,6 +27,7 @@ set(SOURCES
 	Software/liblpc-src/lpc17xx_libcfg_default.c
 	Software/SPI_SSP/spi.c
 	Software/TLC5940/TLC5940.c
+	Software/LEDCUBE/ledcube.c
 
 )
 

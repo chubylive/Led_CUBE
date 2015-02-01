@@ -302,6 +302,29 @@ CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj.provides: CMakeFiles/
 
 CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj.provides.build: CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj
 
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj: CMakeFiles/Led_CUBE.axf.dir/flags.make
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj: Software/LEDCUBE/ledcube.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj   -c /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.c
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.i"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.c > CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.i
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.s"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.c -o CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.s
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj.requires:
+.PHONY : CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj.requires
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj.provides: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj.requires
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj.provides.build
+.PHONY : CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj.provides
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj.provides.build: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj
+
 # Object files for target Led_CUBE.axf
 Led_CUBE_axf_OBJECTS = \
 "CMakeFiles/Led_CUBE.axf.dir/Software/src/cr_startup_lpc176x.c.obj" \
@@ -314,7 +337,8 @@ Led_CUBE_axf_OBJECTS = \
 "CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_pinsel.c.obj" \
 "CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_libcfg_default.c.obj" \
 "CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj" \
-"CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj"
+"CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj" \
+"CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj"
 
 # External object files for target Led_CUBE.axf
 Led_CUBE_axf_EXTERNAL_OBJECTS =
@@ -330,6 +354,7 @@ bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_pinsel
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_libcfg_default.c.obj
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj
+bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/build.make
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable bin/Led_CUBE.axf"
@@ -352,6 +377,7 @@ CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/liblp
 CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_libcfg_default.c.obj.requires
 CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj.requires
 CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj.requires
+CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj.requires
 .PHONY : CMakeFiles/Led_CUBE.axf.dir/requires
 
 CMakeFiles/Led_CUBE.axf.dir/clean:

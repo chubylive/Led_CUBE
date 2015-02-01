@@ -7,6 +7,7 @@
 
 #include "main.h"
 #include "TLC5940.h"
+#include "ledcube.h"
 
 
 // Variable to store CRP value in. Will be placed automatically
@@ -14,7 +15,7 @@
 // See crp.h header for more information
 __CRP const unsigned int CRP_WORD = CRP_NO_CRP;
  
-  int8_t rowSelect = 0;
+  int8_t rowSelect = GPIO1_1_18;
 typedef struct 
 {
   uint16_t red ;
@@ -24,7 +25,7 @@ typedef struct
 typedef struct {
   uint16_t buf[SIZE *2];
 }ly;
-
+int count = 0;
 
 ly lys [SIZE];
 
@@ -60,9 +61,12 @@ int vprg_pin =0;
 #define R1 1
 #define G1 2
 #define B1 3
-#define R2 4
-#define G2 5
-#define B2 6
+#define R2 16
+#define G2 17
+#define B2 18
+#define R3 32
+#define G3 33
+#define B3 34
 
 int main(void) {
  
@@ -77,45 +81,64 @@ int main(void) {
 spi_txrx((uint16_t* )lys[rowSelect].buf,NULL, 16);*/
 TLC5940_Init();
 TLC5940_SetAllDC(0);
-TLC5940_SetAllGS(0x0);
-TLC5940_SetGS(G1, 0);
-TLC5940_SetGS(R1, 0xFFF);
-TLC5940_SetGS(G1, 2048);
-TLC5940_SetGS(B1, 0x000);
-
-
-
-
 TLC5940_ClockInDC();
 vprg_pin = 1;
 
+
+
+
+TLC5940_SetAllGS(0x00);
+
+COLOUR cl ;
+cl.r = 255; //green
+cl.g = 255; //blue
+cl.b = 255; //red 
+SetColour3D(0,0,0,cl);
+SetColour3D(2,0,0,cl);
+SetColour3D(4,0,0,cl);
+SetColour3D(6,0,0,cl);
+SetColour3D(8,0,0,cl);
+SetColour3D(10,0,0,cl);
+SetColour3D(12,0,0,cl);
+SetColour3D(14,0,0,cl);
+
+SetColour3D(0 + 1,0,0,cl);
+SetColour3D(2 + 1,0,0,cl);
+SetColour3D(4 + 1,0,0,cl);
+SetColour3D(6 + 1,0,0,cl);
+SetColour3D(8 + 1,0,0,cl);
+SetColour3D(10 + 1,0,0,cl);
+SetColour3D(12 + 1,0,0,cl);
+SetColour3D(14 + 1,0,0,cl);
+
+ 
+// TLC5940_SetGS(R1, 0,0xFFF);
+// TLC5940_SetGS(G1,0, 0xFFF);
+// TLC5940_SetGS(B1, 0, 0xFFF);
 /*
+TLC5940_SetGS(0, 0,0xFFF);
+TLC5940_SetGS(16,0, 0xFFF);
+TLC5940_SetGS(32, 0, 0xFFF);*/
+
+
+
+
+
+
+
 PULSE_XLAT_PIN;
 PULSE_SCLK_PIN;
-*/
+VPRG_PIN_CLR;
+      
+ NVIC_EnableIRQ(RIT_IRQn);
+
 while(1){
  
-	 /* layer= layers[rowSelect].gpio_shift;
-    
-    if(rowSelect ==  SIZE || rowSelect > SIZE){
-        //set row 
-        LPC_GPIO1->FIOPIN = _BV(layer);
-        //reset row select
-        rowSelect = 0;
-    }
 
-    else{
-       
-    	LPC_GPIO1->FIOPIN = _BV(layer);
-     // rowSelect++;
-    }
-    */
    
-    
-    //
   
-}
 
+}
   return 0;
 }
 
@@ -123,11 +146,13 @@ void RIT_IRQHandler(){
     //clear interrupt
     LPC_RIT->RICTRL |= _BV(0);
 
-    static uint8_t xlatNeedsPulse = 0;
+ 
+    
+    //static uint8_t xlatNeedsPulse = 0;
 
     BLANK_PIN_SET;
-    if (vprg_pin){
-      VPRG_PIN_CLR;
+    /*if (vprg_pin){
+      
       if (xlatNeedsPulse){
         PULSE_XLAT_PIN;
         xlatNeedsPulse = 0;
@@ -138,9 +163,41 @@ void RIT_IRQHandler(){
     {
       
       xlatNeedsPulse = 0;
-    }
+    }*/
     BLANK_PIN_CLR;
-    dcspi_txrx((uint8_t*) gsData, NULL, gsDataSize);
+
+    #if MUX 
+      dcspi_txrx((uint8_t*) gsData[0], NULL, gsDataSize);
+    #else
+      dcspi_txrx((uint8_t*) gsData, NULL, gsDataSize);
+      
+   if(rowSelect > GPIO1_1_25){
+        //set row 
+        rowSelect = GPIO1_1_18;
+        LPC_GPIO1->FIOPIN = _BV(rowSelect++);
+        //reset row select
+        
+      }else{
+       
+       LPC_GPIO1->FIOPIN = _BV(rowSelect++);
+     
+      }
+     // if(count % 1 == 0){
+      // if(rowSelect > GPIO1_1_25){
+      //   //set row 
+      //   rowSelect = GPIO1_1_18;
+      //   LPC_GPIO1->FIOPIN = _BV(rowSelect);
+      //   //reset row select
+        
+      // }else{
+       
+      //  LPC_GPIO1->FIOPIN = _BV(rowSelect++);
+     
+      // }
+    
+      //}
+     //   count++;
+    #endif
     PULSE_XLAT_PIN;
     
   //   // write(0.0);
@@ -157,6 +214,9 @@ void RIT_IRQHandler(){
   // BLANK_PIN_CLR;
 
     //select Row to be one
-   
+    
+   //delay_call(10000);
+    
+    
 
 }

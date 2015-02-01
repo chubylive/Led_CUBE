@@ -9,6 +9,19 @@ CMakeFiles/Led_CUBE.axf.dir/Software/FastPWM/FastPWM.c.obj: ../CMSISv2p00_LPC17x
 CMakeFiles/Led_CUBE.axf.dir/Software/FastPWM/FastPWM.c.obj: Software/FastPWM/FastPWM.c
 CMakeFiles/Led_CUBE.axf.dir/Software/FastPWM/FastPWM.c.obj: Software/FastPWM/FastPWM.h
 
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj: ../CMSISv2p00_LPC17xx/inc/LPC17xx.h
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj: ../CMSISv2p00_LPC17xx/inc/core_cm3.h
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj: ../CMSISv2p00_LPC17xx/inc/core_cmFunc.h
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj: ../CMSISv2p00_LPC17xx/inc/core_cmInstr.h
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj: ../CMSISv2p00_LPC17xx/inc/system_LPC17xx.h
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj: Software/LEDCUBE/ledcube.c
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj: Software/LEDCUBE/ledcube.h
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj: Software/FastPWM/FastPWM.h
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj: Software/SPI_SSP/spi.h
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj: Software/TLC5940/TLC5940.h
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj: Software/liblpc-inc/lpc17xx_gpdma.h
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj: Software/liblpc-inc/lpc_types.h
+
 CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: ../CMSISv2p00_LPC17xx/inc/LPC17xx.h
 CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: ../CMSISv2p00_LPC17xx/inc/core_cm3.h
 CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj: ../CMSISv2p00_LPC17xx/inc/core_cmFunc.h
@@ -71,6 +84,7 @@ CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: ../CMSISv2p00_LPC17xx/inc/s
 CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: Software/src/main.c
 CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: Software/src/main.h
 CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: Software/FastPWM/FastPWM.h
+CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: Software/LEDCUBE/ledcube.h
 CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: Software/SPI_SSP/spi.h
 CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: Software/TLC5940/TLC5940.h
 CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj: Software/liblpc-inc/lpc17xx_gpdma.h

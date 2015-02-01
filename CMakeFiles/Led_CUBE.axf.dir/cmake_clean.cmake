@@ -10,6 +10,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_libcfg_default.c.obj"
   "CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj"
   "CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj"
+  "CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj"
   "bin/Led_CUBE.axf.pdb"
   "bin/Led_CUBE.axf"
 )

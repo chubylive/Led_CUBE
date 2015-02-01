@@ -5,6 +5,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
   "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/FastPWM/FastPWM.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/FastPWM/FastPWM.c.obj"
+  "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj"
   "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/SPI_SSP/spi.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj"
   "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/TLC5940/TLC5940.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj"
   "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/liblpc-src/lpc17xx_clkpwr.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_clkpwr.c.obj"

@@ -226,6 +226,30 @@ Software/FastPWM/FastPWM.c.s:
 	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/FastPWM/FastPWM.c.s
 .PHONY : Software/FastPWM/FastPWM.c.s
 
+Software/LEDCUBE/ledcube.obj: Software/LEDCUBE/ledcube.c.obj
+.PHONY : Software/LEDCUBE/ledcube.obj
+
+# target to build an object file
+Software/LEDCUBE/ledcube.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj
+.PHONY : Software/LEDCUBE/ledcube.c.obj
+
+Software/LEDCUBE/ledcube.i: Software/LEDCUBE/ledcube.c.i
+.PHONY : Software/LEDCUBE/ledcube.i
+
+# target to preprocess a source file
+Software/LEDCUBE/ledcube.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.i
+.PHONY : Software/LEDCUBE/ledcube.c.i
+
+Software/LEDCUBE/ledcube.s: Software/LEDCUBE/ledcube.c.s
+.PHONY : Software/LEDCUBE/ledcube.s
+
+# target to generate assembly for a file
+Software/LEDCUBE/ledcube.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.s
+.PHONY : Software/LEDCUBE/ledcube.c.s
+
 Software/SPI_SSP/spi.obj: Software/SPI_SSP/spi.c.obj
 .PHONY : Software/SPI_SSP/spi.obj
 
@@ -485,6 +509,9 @@ help:
 	@echo "... Software/FastPWM/FastPWM.obj"
 	@echo "... Software/FastPWM/FastPWM.i"
 	@echo "... Software/FastPWM/FastPWM.s"
+	@echo "... Software/LEDCUBE/ledcube.obj"
+	@echo "... Software/LEDCUBE/ledcube.i"
+	@echo "... Software/LEDCUBE/ledcube.s"
 	@echo "... Software/SPI_SSP/spi.obj"
 	@echo "... Software/SPI_SSP/spi.i"
 	@echo "... Software/SPI_SSP/spi.s"

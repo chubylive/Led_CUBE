@@ -26,8 +26,8 @@ void spi_init(){
 		// set_PinFunc(PINSEL_PORT_0, PINSEL_PIN_17, PINSEL_FUNC_2); //enable CTS on P2.2
 		// set_PinFunc(PINSEL_PORT_0, PINSEL_PIN_18, PINSEL_FUNC_2); //enable RTS on P2.7
 
-	 /* Set DSS data to 12-bit, Frame format SPI, CPOL = 0, CPHA = 0, and SCR is 15 */
-  	 LPC_SSP0->CR0 |= 0x7 ;
+	 /* Set DSS data to 8-bit, Frame format SPI, CPOL = 0, CPHA = 0, and SCR is 15 */
+  	 LPC_SSP0->CR0 |= 0x7;
 	// drop clock rate from 12mhz to 150khz
 	LPC_SSP0->CPSR = 2;
 	//master mode and enable ssp0

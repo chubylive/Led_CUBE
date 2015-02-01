@@ -8,7 +8,7 @@ void rit_init(){
     LPC_SC->PCLKSEL0 |= _BV(26);
     LPC_RIT->RICOUNTER = 0;
   
-    NVIC_EnableIRQ(RIT_IRQn);
+   
 
 }
 
@@ -44,7 +44,7 @@ void tlcMuxInit(){
 
     }
     
-    tlc_init();
+    //tlc_init();
 }
 
 void TLC5940_Init(void) {
@@ -59,6 +59,8 @@ void TLC5940_Init(void) {
     //set SCLK_PIN to output
     LPC_GPIO0->FIODIR |= _BV(SCLK_PIN);
 
+
+    tlcMuxInit();
     //set XLAT_PIN low
     XLAT_PIN_CLR;
     //set DCPRG_PIN low
@@ -196,26 +198,48 @@ void TLC5940_SetAllGS(uint16_t value){
     uint8_t tmp2 = (uint8_t)(value << 4) | (tmp1 >> 4);
     gsData_t i = 0;
     do {
-        gsData[i++] = tmp1; // bits: 11 10 09 08 07 06 05 04
-        gsData[i++] = tmp2; // bits: 03 02 01 00 11 10 09 08
-        gsData[i++] = (uint8_t)value; // bits: 07 06 05 04 03 02 01 00
+        #if MUX 
+        for(int level = 0; level < SIZE; level++){
+            gsData[i++][level] = tmp1; // bits: 11 10 09 08 07 06 05 04
+            gsData[i++][level] = tmp2; // bits: 03 02 01 00 11 10 09 08
+            gsData[i++][level] = (uint8_t)value; // bits: 07 06 05 04 03 02 01 00
+            
+        }
+        #else
+            gsData[i++] = tmp1; // bits: 11 10 09 08 07 06 05 04
+            gsData[i++] = tmp2; // bits: 03 02 01 00 11 10 09 08
+            gsData[i++] = (uint8_t)value; // bits: 07 06 05 04 03 02 01 00
+        #endif
     } while (i < gsDataSize);
 
 }
 
-void TLC5940_SetGS(channel_t channel, uint16_t value) {
+void TLC5940_SetGS(channel_t channel,uint8_t level,  uint16_t value) {
     channel = numChannels - 1 - channel;
     channel3_t i = (channel3_t)channel * 3 / 2;
     switch (channel % 2) {
         case 0:
-            gsData[i] = (value >> 4);
-            i++;
-            gsData[i] = (gsData[i] & 0x0F) | (uint8_t)(value << 4);
+            #if !MUX
+                gsData[i] = (value >> 4);
+                i++;
+                gsData[i] = (gsData[i] & 0x0F) | (uint8_t)(value << 4);
+            #else
+                gsData[i][level] = (value >> 4);
+                i++;
+                gsData[i][level] = (gsData[i][level] & 0x0F) | (uint8_t)(value << 4);
+            #endif
             break;
         default: // case 1:
-            gsData[i] = (gsData[i] & 0xF0) | (value >> 8);
-            i++;
-            gsData[i] = (uint8_t)value;
+            #if MUX
+
+                gsData[i][level] = (gsData[i][level] & 0xF0) | (value >> 8);
+                i++;
+                gsData[i][level] = (uint8_t)value;
+            #else
+                gsData[i] = (gsData[i] & 0xF0) | (value >> 8);
+                i++;
+                gsData[i] = (uint8_t)value;
+            #endif
             break;
     }
 }
