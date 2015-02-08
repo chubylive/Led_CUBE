@@ -39,6 +39,26 @@ void delay_call(int dl){
   }
 }
 
+
+void print_buff_binary(uint16_t *buff, size_t length){
+  printf("$*********** Start of Frame **************$\n");
+  uint16_t byte;
+
+  for(int idx = 0; idx < length; idx++){
+
+    for(int b_idx = 0; b_idx < 16; b_idx++){
+      byte = buff[idx] & (1 << b_idx);
+      byte  = byte >> b_idx;
+
+        printf("%u ", byte);
+      
+    }
+    printf("\n");
+  }
+  printf("$*********** End of Frame **************$\n");
+
+}
+
 void set_all(int level1){
   int idx, jdx;
   for (idx = 0; idx < SIZE; ++idx)
@@ -93,25 +113,30 @@ COLOUR cl ;
 cl.r = 255; //green
 cl.g = 255; //blue
 cl.b = 255; //red 
-SetColour3D(0,0,0,cl);
-SetColour3D(2,0,0,cl);
-SetColour3D(4,0,0,cl);
-SetColour3D(6,0,0,cl);
-SetColour3D(8,0,0,cl);
-SetColour3D(10,0,0,cl);
-SetColour3D(12,0,0,cl);
-SetColour3D(14,0,0,cl);
+SetColour3D_16(0,0,0,cl);
+SetColour3D_16(2,0,0,cl);
+// SetColour3D_16(2,0,0,cl);
+// SetColour3D_16(4,0,0,cl);
+// SetColour3D_16(6,0,0,cl);
+// SetColour3D_16(8,0,0,cl);
+// SetColour3D_16(10,0,0,cl);
+// SetColour3D_16(12,0,0,cl);
+// SetColour3D_16(14,0,0,cl);
 
-SetColour3D(0 + 1,0,0,cl);
-SetColour3D(2 + 1,0,0,cl);
-SetColour3D(4 + 1,0,0,cl);
-SetColour3D(6 + 1,0,0,cl);
-SetColour3D(8 + 1,0,0,cl);
-SetColour3D(10 + 1,0,0,cl);
-SetColour3D(12 + 1,0,0,cl);
-SetColour3D(14 + 1,0,0,cl);
+// SetColour3D_16(0 + 1,0,0,cl);
+// SetColour3D_16(2 + 1,0,0,cl);
+// SetColour3D_16(4 + 1,0,0,cl);
+// SetColour3D_16(6 + 1,0,0,cl);
+// SetColour3D_16(8 + 1,0,0,cl);
+// SetColour3D_16(10 + 1,0,0,cl);
+// SetColour3D_16(12 + 1,0,0,cl);
+// SetColour3D_16(14 + 1,0,0,cl);
 
- 
+//SetColour3D_16(0,0,2,cl);
+print_buff_binary(gsData, gsDataSize);
+// print_buff_binary(gsData[1], gsDataSize);
+// print_buff_binary(gsData[2], gsDataSize);
+exit(0);
 // TLC5940_SetGS(R1, 0,0xFFF);
 // TLC5940_SetGS(G1,0, 0xFFF);
 // TLC5940_SetGS(B1, 0, 0xFFF);
@@ -170,7 +195,7 @@ void RIT_IRQHandler(){
       dcspi_txrx((uint8_t*) gsData[0], NULL, gsDataSize);
     #else
       dcspi_txrx((uint8_t*) gsData, NULL, gsDataSize);
-      
+
    if(rowSelect > GPIO1_1_25){
         //set row 
         rowSelect = GPIO1_1_18;
@@ -220,3 +245,4 @@ void RIT_IRQHandler(){
     
 
 }
+

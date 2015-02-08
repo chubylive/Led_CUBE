@@ -11,6 +11,7 @@
 #define SIZE 8
 #define TLC5940_N 3
 #define MUX 0
+#define USE_16_BIT 1
 
 //+---+
 //|   |
@@ -96,15 +97,29 @@
 #endif
 
 #define dcDataSize ((dcData_t)12 * TLC5940_N)
-#define gsDataSize ((gsData_t)24 * TLC5940_N)
+
+#ifdef USE_16_BIT 
+	#define gsDataSize ((gsData_t)12 * TLC5940_N)
+#else
+	#define gsDataSize ((gsData_t)24 * TLC5940_N)
+#endif
+
 #define numChannels ((channel_t)16 * TLC5940_N)
 
 #if (MUX)
 	uint8_t dcData[dcDataSize];
-	uint8_t gsData[gsDataSize][SIZE];
+	#ifdef USE_16_BIT 
+		uint16_t gsData[SIZE][gsDataSize];
+	#else
+		uint8_t gsData[SIZE][gsDataSize];
+	#endif
 #else
 	uint8_t dcData[dcDataSize];
-	uint8_t gsData[gsDataSize];
+	#ifdef USE_16_BIT 
+		uint16_t gsData[gsDataSize];
+	#else
+		uint8_t gsData[gsDataSize];
+	#endif
 #endif
 
 volatile uint8_t gsUpdateFlag;
@@ -120,6 +135,7 @@ void TLC5940_SetDC(channel_t channel, uint8_t vaule);
 void TLC5940_ClockInDC(void);
 void TLC5940_SetAllGS(uint16_t value);
 void TLC5940_SetGS(channel_t channel, uint8_t, uint16_t);
+void TLC5940_SetGS_16(channel_t channel, uint8_t, uint16_t);
 uint8_t dc_spi_tx(uint8_t tx);
 void dcspi_txrx(uint8_t* tx, uint8_t* rx, uint16_t len);
 

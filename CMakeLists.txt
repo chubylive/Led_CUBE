@@ -41,7 +41,7 @@ add_definitions(
 
 # Uncomment to enable Semihosting (required to even link against
 # semihosting libraries)
-# set(SEMIHOSTING_ENABLED True)
+set(SEMIHOSTING_ENABLED True)
 
 include(../Platform/LPC1769_project_default.cmake)
 include(../Platform/LPC1769_targets.cmake)

@@ -200,9 +200,9 @@ void TLC5940_SetAllGS(uint16_t value){
     do {
         #if MUX 
         for(int level = 0; level < SIZE; level++){
-            gsData[i++][level] = tmp1; // bits: 11 10 09 08 07 06 05 04
-            gsData[i++][level] = tmp2; // bits: 03 02 01 00 11 10 09 08
-            gsData[i++][level] = (uint8_t)value; // bits: 07 06 05 04 03 02 01 00
+            gsData[level][i++] = tmp1; // bits: 11 10 09 08 07 06 05 04
+            gsData[level][i++] = tmp2; // bits: 03 02 01 00 11 10 09 08
+            gsData[level][i++] = (uint8_t)value; // bits: 07 06 05 04 03 02 01 00
             
         }
         #else
@@ -224,17 +224,17 @@ void TLC5940_SetGS(channel_t channel,uint8_t level,  uint16_t value) {
                 i++;
                 gsData[i] = (gsData[i] & 0x0F) | (uint8_t)(value << 4);
             #else
-                gsData[i][level] = (value >> 4);
+                gsData[level][i] = (value >> 4);
                 i++;
-                gsData[i][level] = (gsData[i][level] & 0x0F) | (uint8_t)(value << 4);
+                gsData[level][i] = (gsData[level][i] & 0x0F) | (uint8_t)(value << 4);
             #endif
             break;
         default: // case 1:
             #if MUX
 
-                gsData[i][level] = (gsData[i][level] & 0xF0) | (value >> 8);
+                gsData[level][i] = (gsData[level][i] & 0xF0) | (value >> 8);
                 i++;
-                gsData[i][level] = (uint8_t)value;
+                gsData[level][i] = (uint8_t)value;
             #else
                 gsData[i] = (gsData[i] & 0xF0) | (value >> 8);
                 i++;
@@ -245,6 +245,63 @@ void TLC5940_SetGS(channel_t channel,uint8_t level,  uint16_t value) {
 }
 
 
+void TLC5940_SetGS_16(channel_t channel, uint8_t level, uint16_t value){
+    channel = numChannels - 1 - channel; 
+    channel3_t  i = (channel3_t) channel * 3/4;
+    switch( channel % 3) {
+       case 0:
+            #if !MUX
+
+                switch(i % 2){
+                    case 0:
+                        gsData[i] = (gsData[i] & 0xF000) | (value);
+                        break;
+                    default:
+                        gsData[i] = (gsData[i] & 0x0FFF) | ((value >> 8) << 12);
+                        i++;
+                        gsData[i] = (gsData[i] & 0xFF00) | (value & 0x0FF);
+                        break;
+                }
+               
+            #else
+                switch(i % 2){
+                    case 0:
+                        gsData[level][i] = (gsData[i][level] & 0xF000) | (value);
+                        break;
+                    default:
+                        gsData[level][i] = (gsData[i][level] 0x0FFF) | ((value >> 8) << 12);
+                        i++;
+                        gsData[level][i] = (gsData[i][level] & 0xFF00) | (value & 0x0FF);
+                        break;
+                }
+               
+            #endif
+            break;
+
+       case 1:
+            #if !MUX
+                    gsData[i] = (gsData[i] & 0x00FF) | ((value >> 4) << 8);
+                    i++;
+                    gsData[i] = (gsData[i] & 0xFFF0) | (value & 0x00F);
+            #else
+                    gsData[i][level] = (gsData[i][level] & 0x00FF) | ((value >> 4) << 8);
+                    i++;
+                    gsData[i][level] = (gsData[i][level] & 0xFFF0) | (value & 0x00F);
+            #endif
+            break;
+
+       case 2:
+            #if !MUX
+                   
+                gsData[i] = (gsData[i] & 0x000F) | (value << 4);
+            #else
+                gsData[i][level] = (gsData[i][level] & 0x000F) | (value << 4);
+            #endif
+            break;
+
+
+    }
+}
 
 
 

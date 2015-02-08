@@ -9,9 +9,9 @@ void SetAllColour(COLOUR colour){
       gsData_t i = 0;
       do {
         #if MUX
-          gsData[i++][idx] = tmp1; // bits: 11 10 09 08 07 06 05 04
-          gsData[i++][idx] = tmp2; // bits: 03 02 01 00 11 10 09 08
-          gsData[i++][idx] = (uint8_t)value; // bits: 07 06 05 04 03 02 01 00
+          gsData[idx][i++] = tmp1; // bits: 11 10 09 08 07 06 05 04
+          gsData[idx][i++] = tmp2; // bits: 03 02 01 00 11 10 09 08
+          gsData[idx][i++] = (uint8_t)value; // bits: 07 06 05 04 03 02 01 00
 
         #else
           gsData[i++] = tmp1; // bits: 11 10 09 08 07 06 05 04
@@ -26,9 +26,9 @@ void SetAllColour(COLOUR colour){
      	
      	do{
         #if MUX
-          gsData[i++][idx] = tmp1; // bits: 11 10 09 08 07 06 05 04
-          gsData[i++][idx] = tmp2; // bits: 03 02 01 00 11 10 09 08
-          gsData[i++][idx] = (uint8_t)value; // bits: 07 06 05 04 03 02 01 00
+          gsData[idx][i++] = tmp1; // bits: 11 10 09 08 07 06 05 04
+          gsData[idx][i++] = tmp2; // bits: 03 02 01 00 11 10 09 08
+          gsData[idx][i++] = (uint8_t)value; // bits: 07 06 05 04 03 02 01 00
         #else
           gsData[i++] = tmp1; // bits: 11 10 09 08 07 06 05 04
           gsData[i++] = tmp2; // bits: 03 02 01 00 11 10 09 08
@@ -42,9 +42,9 @@ void SetAllColour(COLOUR colour){
      	
      	do{
         #if MUX
-     		  gsData[i++][idx] = tmp1; // bits: 11 10 09 08 07 06 05 04
-          gsData[i++][idx] = tmp2; // bits: 03 02 01 00 11 10 09 08
-          gsData[i++][idx] = (uint8_t)value; // bits: 07 06 05 04 03 02 01 00
+     		  gsData[idx][i++] = tmp1; // bits: 11 10 09 08 07 06 05 04
+          gsData[idx][i++] = tmp2; // bits: 03 02 01 00 11 10 09 08
+          gsData[idx][i++] = (uint8_t)value; // bits: 07 06 05 04 03 02 01 00
         #else
           gsData[i++] = tmp1; // bits: 11 10 09 08 07 06 05 04
           gsData[i++] = tmp2; // bits: 03 02 01 00 11 10 09 08
@@ -69,4 +69,20 @@ void SetColour3D(uint8_t x, uint8_t y, uint8_t z, COLOUR colour){
 
 
 		
+}
+
+void SetColour3D_16(uint8_t x, uint8_t y, uint8_t z, COLOUR colour){
+  /*  0 1 2 3 
+    4 5 6 7
+    8 9 10 11
+    12 13 14 15*/
+
+    uint16_t  idx = x + y * SIZE;
+    uint16_t scale = numChannels/3;
+    TLC5940_SetGS_16(idx , z, map12(colour.r));
+    TLC5940_SetGS_16(idx + scale, z, map12(colour.g));
+    TLC5940_SetGS_16(idx + (scale * 2),z, map12(colour.b));
+
+
+    
 }
