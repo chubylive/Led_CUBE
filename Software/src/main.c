@@ -114,6 +114,7 @@ cl.r = 255; //green
 cl.g = 255; //blue
 cl.b = 255; //red 
 SetColour3D_16(0,0,0,cl);
+SetColour3D_16(1,0,0,cl);
 SetColour3D_16(2,0,0,cl);
 // SetColour3D_16(2,0,0,cl);
 // SetColour3D_16(4,0,0,cl);
