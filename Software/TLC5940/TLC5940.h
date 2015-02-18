@@ -97,30 +97,12 @@
 #endif
 
 #define dcDataSize ((dcData_t)12 * TLC5940_N)
-
-#if USE_16_BIT 
-	#define gsDataSize ((gsData_t)12 * TLC5940_N)
-#else
-	#define gsDataSize ((gsData_t)24 * TLC5940_N)
-#endif
-
+#define gsDataSize ((gsData_t)12 * TLC5940_N)
 #define numChannels ((channel_t)16 * TLC5940_N)
+uint8_t dcData[dcDataSize];
+uint16_t gsData[SIZE][gsDataSize];
+	
 
-#if (MUX)
-	uint8_t dcData[dcDataSize];
-	#if USE_16_BIT 
-		uint16_t gsData[SIZE][gsDataSize];
-	#else
-		uint8_t gsData[SIZE][gsDataSize];
-	#endif
-#else
-	uint8_t dcData[dcDataSize];
-	#if USE_16_BIT 
-		uint16_t gsData[gsDataSize];
-	#else
-		uint8_t gsData[gsDataSize];
-	#endif
-#endif
 
 volatile uint8_t gsUpdateFlag;
 

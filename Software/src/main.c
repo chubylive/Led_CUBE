@@ -78,17 +78,8 @@ void print_buff_binary_8(uint8_t *buff, size_t length){
   printf("$*********** End of Frame **************$\n");
 
 }
-#if !USE_16_BIT && !MUX
-void print_buff_temp(){
-  int j= 0;
-  for (int i = 0; i < gsDataSize; i+=2)
-  {
-    temp[j++] = ((uint16_t)gsData[i] << 8) | gsData[i+1];
-  }
-  print_buff_binary_16(temp, gsDataSize/2);
 
-}
-#endif
+
 void set_all(int level1){
   int idx, jdx;
   for (idx = 0; idx < SIZE; ++idx)
@@ -143,7 +134,7 @@ int main(void) {
   cl.r = 255; //green
   cl.g = 0; //blue
   cl.b = 0; //red 
-  #if USE_16_BIT
+ 
   SetColour3D_16(0,0,0,cl);
   SetColour3D_16(2,0,0,cl);
   SetColour3D_16(4,0,0,cl);
@@ -162,26 +153,7 @@ int main(void) {
   SetColour3D_16(14 + 1,0,0,cl);
 
   print_buff_binary_16(gsData[0], gsDataSize);
-  #else
-  SetColour3D(0,0,0,cl);
-  SetColour3D(2,0,0,cl);
-  SetColour3D(4,0,0,cl);
-  SetColour3D(6,0,0,cl);
-  SetColour3D(8,0,0,cl);
-  SetColour3D(10,0,0,cl);
-  SetColour3D(12,0,0,cl);
-  SetColour3D(14,0,0,cl);
-  SetColour3D(0 + 1,0,0,cl);
-  SetColour3D(2 + 1,0,0,cl);
-  SetColour3D(4 + 1,0,0,cl);
-  SetColour3D(6 + 1,0,0,cl);
-  SetColour3D(8 + 1,0,0,cl);
-  SetColour3D(10 + 1,0,0,cl);
-  SetColour3D(12 + 1,0,0,cl);
-  SetColour3D(14 + 1,0,0,cl);
-  print_buff_binary_8(gsData, gsDataSize);
-  print_buff_temp();
-  #endif
+  
   // SetColour3D_16(2,0,0,cl);
   // SetColour3D_16(4,0,0,cl);
   // SetColour3D_16(6,0,0,cl);
@@ -263,54 +235,22 @@ void RIT_IRQHandler(){
     }
     BLANK_PIN_CLR;
 
-    #if MUX 
-      #if USE_16_BIT 
-        spi_txrx((uint16_t*) gsData[0], NULL, gsDataSize);
-      #else
-        dcspi_txrx((uint8_t*) gsData[0], NULL, gsDataSize);
-      #endif
-    #else
-      #ifdef USE_16_BIT
-        spi_txrx((uint16_t*) gsData, NULL, gsDataSize);
-      #else
-        dcspi_txrx((uint8_t*) gsData, NULL, gsDataSize);
-      #endif
-
-
-
-       if(rowSelect > GPIO1_1_25){
-            //set row 
-            rowSelect = GPIO1_1_18;
-            LPC_GPIO1->FIOPIN = _BV(rowSelect++);
-            //reset row select
-            
-        }else{
-           
-            LPC_GPIO1->FIOPIN = _BV(rowSelect++);
-         
-        }
-       
-    #endif
-    PULSE_XLAT_PIN;
-    
-  //   // write(0.0);
+   
+    spi_txrx((uint16_t*) gsData[0], NULL, gsDataSize);
   
-  // BLANK_PIN_SET;
-  // if (t)
-  // {
-  // VPRG_PIN_CLR;
-  // PULSE_XLAT_PIN;
-  // t = 0;
-  //   /* code */
-  // }
-
-  // BLANK_PIN_CLR;
-
-    //select Row to be one
-    
-   //delay_call(10000);
-    
-    
+    if(rowSelect > GPIO1_1_25){
+        //set row 
+        rowSelect = GPIO1_1_18;
+        LPC_GPIO1->FIOPIN = _BV(rowSelect++);
+        //reset row select
+        
+    }else{
+       
+        LPC_GPIO1->FIOPIN = _BV(rowSelect++);
+     
+    }
+  
+    PULSE_XLAT_PIN;  
 
 }
 

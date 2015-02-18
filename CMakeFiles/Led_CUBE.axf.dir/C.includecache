@@ -32,6 +32,26 @@ intrinsics.h
 stdint.h
 -
 
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.c
+ledcube.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
+TLC5940.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/TLC5940.h
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/TLC5940/TLC5940.c
+TLC5940.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/TLC5940/TLC5940.h
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/TLC5940/TLC5940.h
+FastPWM.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/TLC5940/FastPWM.h
+lpc17xx_gpdma.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/TLC5940/lpc17xx_gpdma.h
+spi.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/TLC5940/spi.h
+
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.c
 LPC17xx.h
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/LPC17xx.h

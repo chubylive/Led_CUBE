@@ -218,28 +218,15 @@ void TLC5940_SetGS(channel_t channel,uint8_t level,  uint16_t value) {
     channel = numChannels - 1 - channel;
     channel3_t i = (channel3_t)channel * 3 / 2;
     switch (channel % 2) {
-        case 0:
-            #if !MUX
-                gsData[i] = (value >> 4);
-                i++;
-                gsData[i] = (gsData[i] & 0x0F) | (uint8_t)(value << 4);
-            #else
-                gsData[level][i] = (value >> 4);
-                i++;
-                gsData[level][i] = (gsData[level][i] & 0x0F) | (uint8_t)(value << 4);
-            #endif
+        case 0:    
+            gsData[level][i] = (value >> 4);
+            i++;
+            gsData[level][i] = (gsData[level][i] & 0x0F) | (uint8_t)(value << 4);
             break;
         default: // case 1:
-            #if MUX
-
-                gsData[level][i] = (gsData[level][i] & 0xF0) | (value >> 8);
-                i++;
-                gsData[level][i] = (uint8_t)value;
-            #else
-                gsData[i] = (gsData[i] & 0xF0) | (value >> 8);
-                i++;
-                gsData[i] = (uint8_t)value;
-            #endif
+            gsData[level][i] = (gsData[level][i] & 0xF0) | (value >> 8);
+            i++;
+            gsData[level][i] = (uint8_t)value;
             break;
     }
 }
@@ -252,80 +239,25 @@ void TLC5940_SetGS_16(channel_t channel, uint8_t level, uint16_t value){
     printf("channel_after: %d    index: %d\n",channel, i + 1);
     switch((i + 1 ) % 3) {
        case 0:
-            #if !MUX
-                gsData[i] = (gsData[i] & 0xF000) | ((value) & 0x0FFF);
-               
-            #else
-                gsData[i][level] = (gsData[i][level] & 0xF000) | ((value) & 0x0FFF);
-               
-            #endif
+            gsData[i][level] = (gsData[i][level] & 0xF000) | ((value) & 0x0FFF);
             break;
 
        case 1:
-
-
-            #if !MUX
-                switch(channel % 2){
-                    case 0:
-                        gsData[i] = (gsData[i] & 0x000F) | (value << 4);
-                    default:
-                        gsData[i] = (gsData[i] & 0xFFF0) | (value  >> 8);
-                        i++;
-                        gsData[i] = (gsData[i] & 0x00FF) | ((value & 0x00FF) << 8);
-                }
-                 
-            #else
-                switch(channel % 2){
-                    case 0:
-                        gsData[i][level] = (gsData[i][level] & 0x000F) | (value << 4);
-                    default:
-                        gsData[i][level] = (gsData[i][level] & 0xFFF0) | (value  >> 8);
-                        i++;
-                        gsData[i][level] = (gsData[i][level] & 0x00FF) | ((value & 0x00FF) << 8);
-                }
-
-            #endif
+            switch(channel % 2){
+                case 0:
+                    gsData[i][level] = (gsData[i][level] & 0x000F) | (value << 4);
+                default:
+                    gsData[i][level] = (gsData[i][level] & 0xFFF0) | (value  >> 8);
+                    i++;
+                    gsData[i][level] = (gsData[i][level] & 0x00FF) | ((value & 0x00FF) << 8);
+            }
             break;
 
        case 2:
-           #if !MUX
-                gsData[i] = (gsData[i] & 0xFF00) | ((value & 0x0FF0) >> 4);
-                i++;
-                gsData[i] = (gsData[i] & 0x0FFF) | ((value & 0x000F) << 12);
-                
-            #else
-                gsData[i][level] = (gsData[i][level] & 0xFF00) | ((value & 0x0FF0) >> 4);
-                i++;
-                gsData[i][level] = (gsData[i][level] & 0x0FFF) | ((value & 0x000F) << 12);     
-            #endif
+            gsData[i][level] = (gsData[i][level] & 0xFF00) | ((value & 0x0FF0) >> 4);
+            i++;
+            gsData[i][level] = (gsData[i][level] & 0x0FFF) | ((value & 0x000F) << 12);     
             break;
-
 
     }
 }
-
-
-
-
-
-    
-  //  write(0);
-
-    // //set BLANK pin high
-
-    // //select row
-    // /*might just let spi do this*/
-    // if(need_xlat){
-    //     //pulse xlat
-    //     need_xlat = 0;
-    // }
-
-    // //set BLANK low
-    // write(0.5);
-
-    // if(newGSData){
-    //     for (int i = (16 *  ); i < ; ++i)
-    //     {
-    //         /* code */
-    //     }
-    // }
