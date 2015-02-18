@@ -171,7 +171,7 @@ void dcspi_txrx(uint8_t* tx, uint8_t* rx, uint16_t len)
                   dummy = LPC_SSP0->DR;
         }
         else if(tx == NULL && rx != NULL){
-            LPC_SSP0->DR = 0xFFF;
+            LPC_SSP0->DR = 0xFF;
             /* Wait until the Busy bit is cleared */
             while ( (LPC_SSP0->SR & (SSPSR_BSY|SSPSR_RNE)) != SSPSR_RNE );
             /*according to manual (software can read data from this register whenever the RNE bit
@@ -246,56 +246,57 @@ void TLC5940_SetGS(channel_t channel,uint8_t level,  uint16_t value) {
 
 
 void TLC5940_SetGS_16(channel_t channel, uint8_t level, uint16_t value){
+    printf("channel before: %d", channel );
     channel = numChannels - 1 - channel; 
     channel3_t  i = (channel3_t) channel * 3/4;
-    switch( channel % 3) {
+    printf("channel_after: %d    index: %d\n",channel, i + 1);
+    switch((i + 1 ) % 3) {
        case 0:
             #if !MUX
-
-                switch(i % 2){
-                    case 0:
-                        gsData[i] = (gsData[i] & 0xF000) | (value);
-                        break;
-                    default:
-                        gsData[i] = (gsData[i] & 0x0FFF) | ((value >> 8) << 12);
-                        i++;
-                        gsData[i] = (gsData[i] & 0xFF00) | (value & 0x0FF);
-                        break;
-                }
+                gsData[i] = (gsData[i] & 0xF000) | ((value) & 0x0FFF);
                
             #else
-                switch(i % 2){
-                    case 0:
-                        gsData[level][i] = (gsData[i][level] & 0xF000) | (value);
-                        break;
-                    default:
-                        gsData[level][i] = (gsData[i][level] 0x0FFF) | ((value >> 8) << 12);
-                        i++;
-                        gsData[level][i] = (gsData[i][level] & 0xFF00) | (value & 0x0FF);
-                        break;
-                }
+                gsData[i][level] = (gsData[i][level] & 0xF000) | ((value) & 0x0FFF);
                
             #endif
             break;
 
        case 1:
+
+
             #if !MUX
-                    gsData[i] = (gsData[i] & 0x00FF) | ((value >> 4) << 8);
-                    i++;
-                    gsData[i] = (gsData[i] & 0xFFF0) | (value & 0x00F);
+                switch(channel % 2){
+                    case 0:
+                        gsData[i] = (gsData[i] & 0x000F) | (value << 4);
+                    default:
+                        gsData[i] = (gsData[i] & 0xFFF0) | (value  >> 8);
+                        i++;
+                        gsData[i] = (gsData[i] & 0x00FF) | ((value & 0x00FF) << 8);
+                }
+                 
             #else
-                    gsData[i][level] = (gsData[i][level] & 0x00FF) | ((value >> 4) << 8);
-                    i++;
-                    gsData[i][level] = (gsData[i][level] & 0xFFF0) | (value & 0x00F);
+                switch(channel % 2){
+                    case 0:
+                        gsData[i][level] = (gsData[i][level] & 0x000F) | (value << 4);
+                    default:
+                        gsData[i][level] = (gsData[i][level] & 0xFFF0) | (value  >> 8);
+                        i++;
+                        gsData[i][level] = (gsData[i][level] & 0x00FF) | ((value & 0x00FF) << 8);
+                }
+
             #endif
             break;
 
        case 2:
-            #if !MUX
-                   
-                gsData[i] = (gsData[i] & 0x000F) | (value << 4);
+           #if !MUX
+                gsData[i] = (gsData[i] & 0xFF00) | ((value & 0x0FF0) >> 4);
+                i++;
+                gsData[i] = (gsData[i] & 0x0FFF) | ((value & 0x000F) << 12);
+                
             #else
-                gsData[i][level] = (gsData[i][level] & 0x000F) | (value << 4);
+                gsData[i][level] = (gsData[i][level] & 0xFF00) | ((value & 0x0FF0) >> 4);
+                i++;
+                gsData[i][level] = (gsData[i][level] & 0x0FFF) | ((value & 0x000F) << 12);     
             #endif
             break;
 

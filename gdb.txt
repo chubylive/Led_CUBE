@@ -3883,4 +3883,1368 @@ A debugging session is active.
 
 	Inferior 1 [Remote target] will be killed.
 
-Quit anyway? (y or n) 
+Quit anyway? (y or n) `/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf.debug' has changed; re-reading symbols.
+Loading section .text, size 0x7490 lma 0x0
+Loading section .ARM.exidx, size 0x8 lma 0x7490
+Loading section .data, size 0x8a4 lma 0x7498
+Nt: Writing 32060 bytes to 0000 in Flash (assumed clock: 100.0MHz)
+Pb: 1 of 1 (  0) Writing pages 0-7 at 0x00000000 with 32060 bytes
+Ps: (  0) Page  0 at 00000000
+Ps: ( 12) Page  0 at 00000000: 4096 bytes
+Ps: ( 25) Page  1 at 00001000: 4096 bytes
+Ps: ( 38) Page  2 at 00002000: 4096 bytes
+Ps: ( 51) Page  3 at 00003000: 4096 bytes
+Ps: ( 63) Page  4 at 00004000: 4096 bytes
+Ps: ( 76) Page  5 at 00005000: 4096 bytes
+Ps: ( 89) Page  6 at 00006000: 4096 bytes
+Ps: (100) Page  7 at 00007000: 3388 bytes
+Nt: Erased/Wrote page  0-7 with 32060 bytes in 6759msec
+Pb: (100) Finished writing Flash successfully.
+Nt: Flash write Done
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+Nt: 
+Start address 0x185, load size 32060
+Transfer rate: 4 KB/sec, 8015 bytes/write.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf 
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+$*********** Start of Frame **************$
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 
+1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 
+0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 
+$*********** End of Frame **************$
+Nt: Stopped: Halt
+main () at /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.c:195
+195	}
+`/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf.debug' has changed; re-reading symbols.
+Loading section .text, size 0x73a0 lma 0x0
+Loading section .ARM.exidx, size 0x8 lma 0x73a0
+Loading section .data, size 0x8a4 lma 0x73a8
+Nt: Writing 31820 bytes to 0000 in Flash (assumed clock: 100.0MHz)
+Pb: 1 of 1 (  0) Writing pages 0-7 at 0x00000000 with 31820 bytes
+Ps: (  0) Page  0 at 00000000
+Ps: ( 12) Page  0 at 00000000: 4096 bytes
+Ps: ( 25) Page  1 at 00001000: 4096 bytes
+Ps: ( 38) Page  2 at 00002000: 4096 bytes
+Ps: ( 51) Page  3 at 00003000: 4096 bytes
+Ps: ( 64) Page  4 at 00004000: 4096 bytes
+Ps: ( 77) Page  5 at 00005000: 4096 bytes
+Ps: ( 90) Page  6 at 00006000: 4096 bytes
+Ps: (100) Page  7 at 00007000: 3148 bytes
+Nt: Erased/Wrote page  0-7 with 31820 bytes in 6712msec
+Pb: (100) Finished writing Flash successfully.
+Nt: Flash write Done
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+Nt: 
+Start address 0x185, load size 31820
+Transfer rate: 4 KB/sec, 7955 bytes/write.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf 
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+$*********** Start of Frame **************$
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 1 
+0 0 0 0 0 0 0 0 
+1 1 1 1 0 0 0 0 
+1 1 1 1 1 1 1 1 
+$*********** End of Frame **************$
+Nt: Stopped: Halt
+main () at /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.c:195
+195	}
+A debugging session is active.
+
+	Inferior 1 [Remote target] will be killed.
+
+Quit anyway? (y or n) The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf 
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+$*********** Start of Frame **************$
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+1 1 1 0 0 0 1 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+1 1 1 0 0 0 1 0 
+$*********** End of Frame **************$
+Nt: Stopped: Halt
+main () at /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.c:195
+195	}
+`/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf.debug' has changed; re-reading symbols.
+Loading section .text, size 0x7470 lma 0x0
+Loading section .ARM.exidx, size 0x8 lma 0x7470
+Loading section .data, size 0x8a4 lma 0x7478
+Nt: Writing 32028 bytes to 0000 in Flash (assumed clock: 100.0MHz)
+Pb: 1 of 1 (  0) Writing pages 0-7 at 0x00000000 with 32028 bytes
+Ps: (  0) Page  0 at 00000000
+Ps: ( 12) Page  0 at 00000000: 4096 bytes
+Ps: ( 25) Page  1 at 00001000: 4096 bytes
+Ps: ( 38) Page  2 at 00002000: 4096 bytes
+Ps: ( 51) Page  3 at 00003000: 4096 bytes
+Ps: ( 63) Page  4 at 00004000: 4096 bytes
+Ps: ( 76) Page  5 at 00005000: 4096 bytes
+Ps: ( 89) Page  6 at 00006000: 4096 bytes
+Ps: (100) Page  7 at 00007000: 3356 bytes
+Nt: Erased/Wrote page  0-7 with 32028 bytes in 6756msec
+Pb: (100) Finished writing Flash successfully.
+Nt: Flash write Done
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+Nt: 
+Start address 0x185, load size 32028
+Transfer rate: 4 KB/sec, 8007 bytes/write.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf 
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+$*********** Start of Frame **************$
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 
+0 0 0 0 1 1 1 0 0 0 1 0 0 0 0 0 
+$*********** End of Frame **************$
+Nt: Stopped: Halt
+main () at /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.c:195
+195	}
+`/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf.debug' has changed; re-reading symbols.
+Loading section .text, size 0x7468 lma 0x0
+Loading section .ARM.exidx, size 0x8 lma 0x7468
+Loading section .data, size 0x8a4 lma 0x7470
+Nt: Writing 32020 bytes to 0000 in Flash (assumed clock: 100.0MHz)
+Pb: 1 of 1 (  0) Writing pages 0-7 at 0x00000000 with 32020 bytes
+Ps: (  0) Page  0 at 00000000
+Ps: ( 12) Page  0 at 00000000: 4096 bytes
+Ps: ( 25) Page  1 at 00001000: 4096 bytes
+Ps: ( 38) Page  2 at 00002000: 4096 bytes
+Ps: ( 51) Page  3 at 00003000: 4096 bytes
+Ps: ( 63) Page  4 at 00004000: 4096 bytes
+Ps: ( 76) Page  5 at 00005000: 4096 bytes
+Ps: ( 89) Page  6 at 00006000: 4096 bytes
+Ps: (100) Page  7 at 00007000: 3348 bytes
+Nt: Erased/Wrote page  0-7 with 32020 bytes in 6740msec
+Pb: (100) Finished writing Flash successfully.
+Nt: Flash write Done
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+Nt: 
+Start address 0x185, load size 32020
+Transfer rate: 4 KB/sec, 8005 bytes/write.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf 
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+$*********** Start of Frame **************$
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 
+1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 
+$*********** End of Frame **************$
+Nt: Stopped: Halt
+0x00000c5a in spi_txrx (tx=0x10000a5a, rx=0x0, len=36)
+    at /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/SPI_SSP/spi.c:61
+61		 		while ( (LPC_SSP0->SR & (SSPSR_TNF|SSPSR_BSY)) != SSPSR_TNF );
+`/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf.debug' has changed; re-reading symbols.
+Loading section .text, size 0x7470 lma 0x0
+Loading section .ARM.exidx, size 0x8 lma 0x7470
+Loading section .data, size 0x8a4 lma 0x7478
+Nt: Writing 32028 bytes to 0000 in Flash (assumed clock: 100.0MHz)
+Pb: 1 of 1 (  0) Writing pages 0-7 at 0x00000000 with 32028 bytes
+Ps: (  0) Page  0 at 00000000
+Ps: ( 12) Page  0 at 00000000: 4096 bytes
+Ps: ( 25) Page  1 at 00001000: 4096 bytes
+Ps: ( 38) Page  2 at 00002000: 4096 bytes
+Ps: ( 51) Page  3 at 00003000: 4096 bytes
+Ps: ( 63) Page  4 at 00004000: 4096 bytes
+Ps: ( 76) Page  5 at 00005000: 4096 bytes
+Ps: ( 89) Page  6 at 00006000: 4096 bytes
+Ps: (100) Page  7 at 00007000: 3356 bytes
+Nt: Erased/Wrote page  0-7 with 32028 bytes in 6749msec
+Pb: (100) Finished writing Flash successfully.
+Nt: Flash write Done
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+Nt: 
+Start address 0x185, load size 32028
+Transfer rate: 4 KB/sec, 8007 bytes/write.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf 
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+$*********** Start of Frame **************$
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 
+0 0 0 0 1 1 1 0 0 0 1 0 0 0 0 0 
+$*********** End of Frame **************$
+Nt: Stopped: Halt
+main () at /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.c:195
+195	}
+`/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf.debug' has changed; re-reading symbols.
+Loading section .text, size 0x7478 lma 0x0
+Loading section .ARM.exidx, size 0x8 lma 0x7478
+Loading section .data, size 0x8a4 lma 0x7480
+Nt: Writing 32036 bytes to 0000 in Flash (assumed clock: 100.0MHz)
+Pb: 1 of 1 (  0) Writing pages 0-7 at 0x00000000 with 32036 bytes
+Ps: (  0) Page  0 at 00000000
+Ps: ( 12) Page  0 at 00000000: 4096 bytes
+Ps: ( 25) Page  1 at 00001000: 4096 bytes
+Ps: ( 38) Page  2 at 00002000: 4096 bytes
+Ps: ( 51) Page  3 at 00003000: 4096 bytes
+Ps: ( 63) Page  4 at 00004000: 4096 bytes
+Ps: ( 76) Page  5 at 00005000: 4096 bytes
+Ps: ( 89) Page  6 at 00006000: 4096 bytes
+Ps: (100) Page  7 at 00007000: 3364 bytes
+Nt: Erased/Wrote page  0-7 with 32036 bytes in 6708msec
+Pb: (100) Finished writing Flash successfully.
+Nt: Flash write Done
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+Nt: 
+Start address 0x185, load size 32036
+Transfer rate: 4 KB/sec, 8009 bytes/write.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf 
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+$*********** Start of Frame **************$
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 
+1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 
+$*********** End of Frame **************$
+Nt: Stopped: Halt
+main () at /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.c:195
+195	}
+`/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf.debug' has changed; re-reading symbols.
+Loading section .text, size 0x7470 lma 0x0
+Loading section .ARM.exidx, size 0x8 lma 0x7470
+Loading section .data, size 0x8a4 lma 0x7478
+Nt: Writing 32028 bytes to 0000 in Flash (assumed clock: 100.0MHz)
+Pb: 1 of 1 (  0) Writing pages 0-7 at 0x00000000 with 32028 bytes
+Ps: (  0) Page  0 at 00000000
+Ps: ( 12) Page  0 at 00000000: 4096 bytes
+Ps: ( 25) Page  1 at 00001000: 4096 bytes
+Ps: ( 38) Page  2 at 00002000: 4096 bytes
+Ps: ( 51) Page  3 at 00003000: 4096 bytes
+Ps: ( 63) Page  4 at 00004000: 4096 bytes
+Ps: ( 76) Page  5 at 00005000: 4096 bytes
+Ps: ( 89) Page  6 at 00006000: 4096 bytes
+Ps: (100) Page  7 at 00007000: 3356 bytes
+Nt: Erased/Wrote page  0-7 with 32028 bytes in 6732msec
+Pb: (100) Finished writing Flash successfully.
+Nt: Flash write Done
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+Nt: 
+Start address 0x185, load size 32028
+Transfer rate: 4 KB/sec, 8007 bytes/write.
+Undefined command: "ry".  Try "help".
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf 
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+$*********** Start of Frame **************$
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 1 1 0 0 0 1 0 
+$*********** End of Frame **************$
+Xe:
+Ed:16: Target error from status-poll: Ee(92). Unknown error
+Ed:16: Target error from status-poll: Ee(02). Not connected to emulator.
+Nt: Unknown/broken state: Ee(02). Not connected to emulator.: 
+Remote failure reply: E22
+The program being debugged has been started already.
+Start it from the beginning? (y or n) Please answer y or n.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) Please answer y or n.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) Please answer y or n.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) Please answer y or n.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) Program not restarted.
+A debugging session is active.
+
+	Inferior 1 [Remote target] will be killed.
+
+Quit anyway? (y or n) Quitting: Can't kill process
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf 
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+channel before: 0channel_after: 47    index: 36
+channel before: 16channel_after: 31    index: 24
+channel before: 32channel_after: 15    index: 12
+channel before: 2channel_after: 45    index: 34
+channel before: 18channel_after: 29    index: 22
+channel before: 34channel_after: 13    index: 10
+channel before: 2channel_after: 45    index: 34
+channel before: 18channel_after: 29    index: 22
+channel before: 34channel_after: 13    index: 10
+channel before: 4channel_after: 43    index: 33
+channel before: 20channel_after: 27    index: 21
+channel before: 36channel_after: 11    index: 9
+channel before: 6channel_after: 41    index: 31
+channel before: 22channel_after: 25    index: 19
+channel before: 38channel_after: 9    index: 7
+channel before: 8channel_after: 39    index: 30
+channel before: 24channel_after: 23    index: 18
+channel before: 40channel_after: 7    index: 6
+channel before: 10channel_after: 37    index: 28
+channel before: 26channel_after: 21    index: 16
+channel before: 42channel_after: 5    index: 4
+channel before: 12channel_after: 35    index: 27
+channel before: 28channel_after: 19    index: 15
+channel before: 44channel_after: 3    index: 3
+channel before: 14channel_after: 33    index: 25
+channel before: 30channel_after: 17    index: 13
+channel before: 46channel_after: 1    index: 1
+channel before: 1channel_after: 46    index: 35
+channel before: 17channel_after: 30    index: 23
+channel before: 33channel_after: 14    index: 11
+channel before: 3channel_after: 44    index: 34
+channel before: 19channel_after: 28    index: 22
+channel before: 35channel_after: 12    index: 10
+channel before: 5channel_after: 42    index: 32
+channel before: 21channel_after: 26    index: 20
+channel before: 37channel_after: 10    index: 8
+channel before: 7channel_after: 40    index: 31
+channel before: 23channel_after: 24    index: 19
+channel before: 39channel_after: 8    index: 7
+channel before: 9channel_after: 38    index: 29
+channel before: 25channel_after: 22    index: 17
+channel before: 41channel_after: 6    index: 5
+channel before: 11channel_after: 36    index: 28
+channel before: 27channel_after: 20    index: 16
+channel before: 43channel_after: 4    index: 4
+channel before: 13channel_after: 34    index: 26
+channel before: 29channel_after: 18    index: 14
+channel before: 45channel_after: 2    index: 2
+channel before: 15channel_after: 32    index: 25
+channel before: 31channel_after: 16    index: 13
+channel before: 47channel_after: 0    index: 1
+$*********** Start of Frame **************$
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+$*********** End of Frame **************$
+Nt: Stopped: Application exit (Breakpoint)
+0x00006f92 in do_AngelSWI (arg=0x18, reason=24) at ../src/swi.h:76
+76	../src/swi.h: No such file or directory.
+	in ../src/swi.h
+Already logging to gdb.txt.
+`/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf.debug' has changed; re-reading symbols.
+Loading section .text, size 0x7658 lma 0x0
+Loading section .ARM.exidx, size 0x8 lma 0x7658
+Loading section .data, size 0x8a4 lma 0x7660
+Nt: Writing 32516 bytes to 0000 in Flash (assumed clock: 100.0MHz)
+Pb: 1 of 1 (  0) Writing pages 0-7 at 0x00000000 with 32516 bytes
+Ps: (  0) Page  0 at 00000000
+Ps: ( 12) Page  0 at 00000000: 4096 bytes
+Ps: ( 25) Page  1 at 00001000: 4096 bytes
+Ps: ( 37) Page  2 at 00002000: 4096 bytes
+Ps: ( 50) Page  3 at 00003000: 4096 bytes
+Ps: ( 62) Page  4 at 00004000: 4096 bytes
+Ps: ( 75) Page  5 at 00005000: 4096 bytes
+Ps: ( 88) Page  6 at 00006000: 4096 bytes
+Ps: (100) Page  7 at 00007000: 3844 bytes
+Nt: Erased/Wrote page  0-7 with 32516 bytes in 6773msec
+Pb: (100) Finished writing Flash successfully.
+Nt: Flash write Done
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+Nt: 
+Start address 0x185, load size 32516
+Transfer rate: 4 KB/sec, 8129 bytes/write.
+Loading section .text, size 0x7658 lma 0x0
+Loading section .ARM.exidx, size 0x8 lma 0x7658
+Loading section .data, size 0x8a4 lma 0x7660
+Nt: Writing 32516 bytes to 0000 in Flash (assumed clock: 4.0MHz)
+Pb: 1 of 1 (  0) Writing pages 0-7 at 0x00000000 with 32516 bytes
+Ps: (  0) Page  0 at 00000000
+Ps: ( 12) Page  0 at 00000000: 4096 bytes
+Ps: ( 25) Page  1 at 00001000: 4096 bytes
+Ps: ( 37) Page  2 at 00002000: 4096 bytes
+Ps: ( 50) Page  3 at 00003000: 4096 bytes
+Ps: ( 62) Page  4 at 00004000: 4096 bytes
+Ps: ( 75) Page  5 at 00005000: 4096 bytes
+Ps: ( 88) Page  6 at 00006000: 4096 bytes
+Ps: (100) Page  7 at 00007000: 3844 bytes
+Nt: Verified-same page 0-7 with 32516 bytes in 2040msec
+Pb: (100) Finished writing Flash successfully.
+Nt: Flash write Done
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+Nt: 
+Start address 0x185, load size 32516
+Transfer rate: 12 KB/sec, 8129 bytes/write.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf 
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+channel before: 0channel_after: 47    index: 36
+channel before: 16channel_after: 31    index: 24
+channel before: 32channel_after: 15    index: 12
+channel before: 2channel_after: 45    index: 34
+channel before: 18channel_after: 29    index: 22
+channel before: 34channel_after: 13    index: 10
+channel before: 4channel_after: 43    index: 33
+channel before: 20channel_after: 27    index: 21
+channel before: 36channel_after: 11    index: 9
+channel before: 6channel_after: 41    index: 31
+channel before: 22channel_after: 25    index: 19
+channel before: 38channel_after: 9    index: 7
+channel before: 8channel_after: 39    index: 30
+channel before: 24channel_after: 23    index: 18
+channel before: 40channel_after: 7    index: 6
+channel before: 10channel_after: 37    index: 28
+channel before: 26channel_after: 21    index: 16
+channel before: 42channel_after: 5    index: 4
+channel before: 12channel_after: 35    index: 27
+channel before: 28channel_after: 19    index: 15
+channel before: 44channel_after: 3    index: 3
+channel before: 14channel_after: 33    index: 25
+channel before: 30channel_after: 17    index: 13
+channel before: 46channel_after: 1    index: 1
+channel before: 1channel_after: 46    index: 35
+channel before: 17channel_after: 30    index: 23
+channel before: 33channel_after: 14    index: 11
+channel before: 3channel_after: 44    index: 34
+channel before: 19channel_after: 28    index: 22
+channel before: 35channel_after: 12    index: 10
+channel before: 5channel_after: 42    index: 32
+channel before: 21channel_after: 26    index: 20
+channel before: 37channel_after: 10    index: 8
+channel before: 7channel_after: 40    index: 31
+channel before: 23channel_after: 24    index: 19
+channel before: 39channel_after: 8    index: 7
+channel before: 9channel_after: 38    index: 29
+channel before: 25channel_after: 22    index: 17
+channel before: 41channel_after: 6    index: 5
+channel before: 11channel_after: 36    index: 28
+channel before: 27channel_after: 20    index: 16
+channel before: 43channel_after: 4    index: 4
+channel before: 13channel_after: 34    index: 26
+channel before: 29channel_after: 18    index: 14
+channel before: 45channel_after: 2    index: 2
+channel before: 15channel_after: 32    index: 25
+channel before: 31channel_after: 16    index: 13
+channel before: 47channel_after: 0    index: 1
+$*********** Start of Frame **************$
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+$*********** End of Frame **************$
+Nt: Stopped: Application exit (Breakpoint)
+/home/build/work/jenkins-daily-build/src/gdb/gdb/dwarf2-frame.c:2045: internal-error: decode_frame_entry_1: Assertion `fde->cie != NULL' failed.
+A problem internal to GDB has been detected,
+further debugging may prove unreliable.
+Quit this debugging session? (y or n) 
+/home/build/work/jenkins-daily-build/src/gdb/gdb/dwarf2-frame.c:2045: internal-error: decode_frame_entry_1: Assertion `fde->cie != NULL' failed.
+A problem internal to GDB has been detected,
+further debugging may prove unreliable.
+Create a core file of GDB? (y or n) `/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf.debug' has changed; re-reading symbols.
+Loading section .text, size 0x7620 lma 0x0
+Loading section .ARM.exidx, size 0x8 lma 0x7620
+Loading section .data, size 0x8a4 lma 0x7628
+Nt: Writing 32460 bytes to 0000 in Flash (assumed clock: 100.0MHz)
+Pb: 1 of 1 (  0) Writing pages 0-7 at 0x00000000 with 32460 bytes
+Ps: (  0) Page  0 at 00000000
+Ps: ( 12) Page  0 at 00000000: 4096 bytes
+Ps: ( 25) Page  1 at 00001000: 4096 bytes
+Ps: ( 37) Page  2 at 00002000: 4096 bytes
+Ps: ( 50) Page  3 at 00003000: 4096 bytes
+Ps: ( 63) Page  4 at 00004000: 4096 bytes
+Ps: ( 75) Page  5 at 00005000: 4096 bytes
+Ps: ( 88) Page  6 at 00006000: 4096 bytes
+Ps: (100) Page  7 at 00007000: 3788 bytes
+Nt: Erased/Wrote page  0-7 with 32460 bytes in 6743msec
+Pb: (100) Finished writing Flash successfully.
+Nt: Flash write Done
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+Nt: 
+Start address 0x185, load size 32460
+Transfer rate: 4 KB/sec, 8115 bytes/write.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf 
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+$*********** Start of Frame **************$
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 
+$*********** End of Frame **************$
+$*********** Start of Frame **************$
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+$*********** End of Frame **************$
+Nt: Stopped: Application exit (Breakpoint)
+0x00006f7a in do_AngelSWI (arg=0x18, reason=24) at ../src/swi.h:76
+76	../src/swi.h: No such file or directory.
+	in ../src/swi.h
+`/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf.debug' has changed; re-reading symbols.
+Loading section .text, size 0x7658 lma 0x0
+Loading section .ARM.exidx, size 0x8 lma 0x7658
+Loading section .data, size 0x8a4 lma 0x7660
+Nt: Writing 32516 bytes to 0000 in Flash (assumed clock: 100.0MHz)
+Pb: 1 of 1 (  0) Writing pages 0-7 at 0x00000000 with 32516 bytes
+Ps: (  0) Page  0 at 00000000
+Ps: ( 12) Page  0 at 00000000: 4096 bytes
+Ps: ( 25) Page  1 at 00001000: 4096 bytes
+Ps: ( 37) Page  2 at 00002000: 4096 bytes
+Ps: ( 50) Page  3 at 00003000: 4096 bytes
+Ps: ( 62) Page  4 at 00004000: 4096 bytes
+Ps: ( 75) Page  5 at 00005000: 4096 bytes
+Ps: ( 88) Page  6 at 00006000: 4096 bytes
+Ps: (100) Page  7 at 00007000: 3844 bytes
+Nt: Erased/Wrote page  0-7 with 32516 bytes in 6760msec
+Pb: (100) Finished writing Flash successfully.
+Nt: Flash write Done
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+Nt: 
+Start address 0x185, load size 32516
+Transfer rate: 4 KB/sec, 8129 bytes/write.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf 
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+channel before: 0channel_after: 47    index: 36
+channel before: 16channel_after: 31    index: 24
+channel before: 32channel_after: 15    index: 12
+channel before: 2channel_after: 45    index: 34
+channel before: 18channel_after: 29    index: 22
+channel before: 34channel_after: 13    index: 10
+channel before: 4channel_after: 43    index: 33
+channel before: 20channel_after: 27    index: 21
+channel before: 36channel_after: 11    index: 9
+channel before: 6channel_after: 41    index: 31
+channel before: 22channel_after: 25    index: 19
+channel before: 38channel_after: 9    index: 7
+channel before: 8channel_after: 39    index: 30
+channel before: 24channel_after: 23    index: 18
+channel before: 40channel_after: 7    index: 6
+channel before: 10channel_after: 37    index: 28
+channel before: 26channel_after: 21    index: 16
+channel before: 42channel_after: 5    index: 4
+channel before: 12channel_after: 35    index: 27
+channel before: 28channel_after: 19    index: 15
+channel before: 44channel_after: 3    index: 3
+channel before: 14channel_after: 33    index: 25
+channel before: 30channel_after: 17    index: 13
+channel before: 46channel_after: 1    index: 1
+channel before: 1channel_after: 46    index: 35
+channel before: 17channel_after: 30    index: 23
+channel before: 33channel_after: 14    index: 11
+channel before: 3channel_after: 44    index: 34
+channel before: 19channel_after: 28    index: 22
+channel before: 35channel_after: 12    index: 10
+channel before: 5channel_after: 42    index: 32
+channel before: 21channel_after: 26    index: 20
+channel before: 37channel_after: 10    index: 8
+channel before: 7channel_after: 40    index: 31
+channel before: 23channel_after: 24    index: 19
+channel before: 39channel_after: 8    index: 7
+channel before: 9channel_after: 38    index: 29
+channel before: 25channel_after: 22    index: 17
+channel before: 41channel_after: 6    index: 5
+channel before: 11channel_after: 36    index: 28
+channel before: 27channel_after: 20    index: 16
+channel before: 43channel_after: 4    index: 4
+channel before: 13channel_after: 34    index: 26
+channel before: 29channel_after: 18    index: 14
+channel before: 45channel_after: 2    index: 2
+channel before: 15channel_after: 32    index: 25
+channel before: 31channel_after: 16    index: 13
+channel before: 47channel_after: 0    index: 1
+$*********** Start of Frame **************$
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+$*********** End of Frame **************$
+Nt: Stopped: Application exit (Breakpoint)
+0x00006f82 in do_AngelSWI (arg=0x18, reason=24) at ../src/swi.h:76
+76	../src/swi.h: No such file or directory.
+	in ../src/swi.h
+`/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf.debug' has changed; re-reading symbols.
+Loading section .text, size 0x7658 lma 0x0
+Loading section .ARM.exidx, size 0x8 lma 0x7658
+Loading section .data, size 0x8a4 lma 0x7660
+Nt: Writing 32516 bytes to 0000 in Flash (assumed clock: 100.0MHz)
+Pb: 1 of 1 (  0) Writing pages 0-7 at 0x00000000 with 32516 bytes
+Ps: (  0) Page  0 at 00000000
+Ps: ( 12) Page  0 at 00000000: 4096 bytes
+Ps: ( 25) Page  1 at 00001000: 4096 bytes
+Ps: ( 37) Page  2 at 00002000: 4096 bytes
+Ps: ( 50) Page  3 at 00003000: 4096 bytes
+Ps: ( 62) Page  4 at 00004000: 4096 bytes
+Ps: ( 75) Page  5 at 00005000: 4096 bytes
+Ps: ( 88) Page  6 at 00006000: 4096 bytes
+Ps: (100) Page  7 at 00007000: 3844 bytes
+Nt: Erased/Wrote page  0-7 with 32516 bytes in 2493msec
+Pb: (100) Finished writing Flash successfully.
+Nt: Flash write Done
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+Nt: 
+Start address 0x185, load size 32516
+Transfer rate: 10 KB/sec, 8129 bytes/write.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf 
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+channel before: 0channel_after: 47    index: 36
+channel before: 16channel_after: 31    index: 24
+channel before: 32channel_after: 15    index: 12
+channel before: 2channel_after: 45    index: 34
+channel before: 18channel_after: 29    index: 22
+channel before: 34channel_after: 13    index: 10
+channel before: 4channel_after: 43    index: 33
+channel before: 20channel_after: 27    index: 21
+channel before: 36channel_after: 11    index: 9
+channel before: 6channel_after: 41    index: 31
+channel before: 22channel_after: 25    index: 19
+channel before: 38channel_after: 9    index: 7
+channel before: 8channel_after: 39    index: 30
+channel before: 24channel_after: 23    index: 18
+channel before: 40channel_after: 7    index: 6
+channel before: 10channel_after: 37    index: 28
+channel before: 26channel_after: 21    index: 16
+channel before: 42channel_after: 5    index: 4
+channel before: 12channel_after: 35    index: 27
+channel before: 28channel_after: 19    index: 15
+channel before: 44channel_after: 3    index: 3
+channel before: 14channel_after: 33    index: 25
+channel before: 30channel_after: 17    index: 13
+channel before: 46channel_after: 1    index: 1
+channel before: 1channel_after: 46    index: 35
+channel before: 17channel_after: 30    index: 23
+channel before: 33channel_after: 14    index: 11
+channel before: 3channel_after: 44    index: 34
+channel before: 19channel_after: 28    index: 22
+channel before: 35channel_after: 12    index: 10
+channel before: 5channel_after: 42    index: 32
+channel before: 21channel_after: 26    index: 20
+channel before: 37channel_after: 10    index: 8
+channel before: 7channel_after: 40    index: 31
+channel before: 23channel_after: 24    index: 19
+channel before: 39channel_after: 8    index: 7
+channel before: 9channel_after: 38    index: 29
+channel before: 25channel_after: 22    index: 17
+channel before: 41channel_after: 6    index: 5
+channel before: 11channel_after: 36    index: 28
+channel before: 27channel_after: 20    index: 16
+channel before: 43channel_after: 4    index: 4
+channel before: 13channel_after: 34    index: 26
+channel before: 29channel_after: 18    index: 14
+channel before: 45channel_after: 2    index: 2
+channel before: 15channel_after: 32    index: 25
+channel before: 31channel_after: 16    index: 13
+channel before: 47channel_after: 0    index: 1
+$*********** Start of Frame **************$
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+$*********** End of Frame **************$
+Nt: Stopped: Application exit (Breakpoint)
+0x00006f82 in do_AngelSWI (arg=0x18, reason=24) at ../src/swi.h:76
+76	../src/swi.h: No such file or directory.
+	in ../src/swi.h
+`/home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf.debug' has changed; re-reading symbols.
+Loading section .text, size 0x76f0 lma 0x0
+Loading section .ARM.exidx, size 0x8 lma 0x76f0
+Loading section .data, size 0x8a4 lma 0x76f8
+Nt: Writing 32668 bytes to 0000 in Flash (assumed clock: 100.0MHz)
+Pb: 1 of 1 (  0) Writing pages 0-7 at 0x00000000 with 32668 bytes
+Ps: (  0) Page  0 at 00000000
+Ps: ( 12) Page  0 at 00000000: 4096 bytes
+Ps: ( 25) Page  1 at 00001000: 4096 bytes
+Ps: ( 37) Page  2 at 00002000: 4096 bytes
+Ps: ( 50) Page  3 at 00003000: 4096 bytes
+Ps: ( 62) Page  4 at 00004000: 4096 bytes
+Ps: ( 75) Page  5 at 00005000: 4096 bytes
+Ps: ( 87) Page  6 at 00006000: 4096 bytes
+Ps: (100) Page  7 at 00007000: 3996 bytes
+Nt: Erased/Wrote page  0-7 with 32668 bytes in 6772msec
+Pb: (100) Finished writing Flash successfully.
+Nt: Flash write Done
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+Nt: 
+Start address 0x185, load size 32668
+Transfer rate: 4 KB/sec, 8167 bytes/write.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/chuby/local_prj/umd-lpc1769/Led_CUBE/bin/Led_CUBE.axf 
+Nc: nSRST assert (if available)
+Nc: Executing in user flash.
+channel before: 0channel_after: 47    index: 36
+channel before: 16channel_after: 31    index: 24
+channel before: 32channel_after: 15    index: 12
+channel before: 2channel_after: 45    index: 34
+channel before: 18channel_after: 29    index: 22
+channel before: 34channel_after: 13    index: 10
+channel before: 4channel_after: 43    index: 33
+channel before: 20channel_after: 27    index: 21
+channel before: 36channel_after: 11    index: 9
+channel before: 6channel_after: 41    index: 31
+channel before: 22channel_after: 25    index: 19
+channel before: 38channel_after: 9    index: 7
+channel before: 8channel_after: 39    index: 30
+channel before: 24channel_after: 23    index: 18
+channel before: 40channel_after: 7    index: 6
+channel before: 10channel_after: 37    index: 28
+channel before: 26channel_after: 21    index: 16
+channel before: 42channel_after: 5    index: 4
+channel before: 12channel_after: 35    index: 27
+channel before: 28channel_after: 19    index: 15
+channel before: 44channel_after: 3    index: 3
+channel before: 14channel_after: 33    index: 25
+channel before: 30channel_after: 17    index: 13
+channel before: 46channel_after: 1    index: 1
+channel before: 1channel_after: 46    index: 35
+channel before: 17channel_after: 30    index: 23
+channel before: 33channel_after: 14    index: 11
+channel before: 3channel_after: 44    index: 34
+channel before: 19channel_after: 28    index: 22
+channel before: 35channel_after: 12    index: 10
+channel before: 5channel_after: 42    index: 32
+channel before: 21channel_after: 26    index: 20
+channel before: 37channel_after: 10    index: 8
+channel before: 7channel_after: 40    index: 31
+channel before: 23channel_after: 24    index: 19
+channel before: 39channel_after: 8    index: 7
+channel before: 9channel_after: 38    index: 29
+channel before: 25channel_after: 22    index: 17
+channel before: 41channel_after: 6    index: 5
+channel before: 11channel_after: 36    index: 28
+channel before: 27channel_after: 20    index: 16
+channel before: 43channel_after: 4    index: 4
+channel before: 13channel_after: 34    index: 26
+channel before: 29channel_after: 18    index: 14
+channel before: 45channel_after: 2    index: 2
+channel before: 15channel_after: 32    index: 25
+channel before: 31channel_after: 16    index: 13
+channel before: 47channel_after: 0    index: 1
+$*********** Start of Frame **************$
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+$*********** End of Frame **************$
+Nt: Stopped: Application exit (Breakpoint)
+0x0000701a in do_AngelSWI (arg=0x18, reason=24) at ../src/swi.h:76
+76	../src/swi.h: No such file or directory.
+	in ../src/swi.h

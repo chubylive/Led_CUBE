@@ -10,7 +10,7 @@
 #define GSCLK_SPEED 12000000
 #define SIZE 8
 #define TLC5940_N 3
-#define MUX 0
+#define MUX 1
 #define USE_16_BIT 1
 
 //+---+
@@ -98,7 +98,7 @@
 
 #define dcDataSize ((dcData_t)12 * TLC5940_N)
 
-#ifdef USE_16_BIT 
+#if USE_16_BIT 
 	#define gsDataSize ((gsData_t)12 * TLC5940_N)
 #else
 	#define gsDataSize ((gsData_t)24 * TLC5940_N)
@@ -108,14 +108,14 @@
 
 #if (MUX)
 	uint8_t dcData[dcDataSize];
-	#ifdef USE_16_BIT 
+	#if USE_16_BIT 
 		uint16_t gsData[SIZE][gsDataSize];
 	#else
 		uint8_t gsData[SIZE][gsDataSize];
 	#endif
 #else
 	uint8_t dcData[dcDataSize];
-	#ifdef USE_16_BIT 
+	#if USE_16_BIT 
 		uint16_t gsData[gsDataSize];
 	#else
 		uint8_t gsData[gsDataSize];

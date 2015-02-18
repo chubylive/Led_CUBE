@@ -51,7 +51,7 @@ void spi_txrx(uint16_t* tx, uint16_t* rx, uint16_t len)
 	 		 while ( LPC_SSP0->SR & SSPSR_BSY );
 	 		dummy = LPC_SSP0->DR;
 	 		 while ( LPC_SSP0->SR & SSPSR_BSY );
-	 		 LPC_SSP0->DR = 0xFF;
+	 		 LPC_SSP0->DR = 0xFFFF;
 
 
 	 	}
@@ -59,7 +59,7 @@ void spi_txrx(uint16_t* tx, uint16_t* rx, uint16_t len)
 	 		/*according to manual (software can write data to be sent in a future frame to this
 			register whenever the TNF bit in the Status register is 1)*/
 	 		while ( (LPC_SSP0->SR & (SSPSR_TNF|SSPSR_BSY)) != SSPSR_TNF );
-	 		LPC_SSP0->DR = *tx & 0xFFF;
+	 		LPC_SSP0->DR = *tx & 0xFFFF ;
 	 		tx++;
 	 		 while ( (LPC_SSP0->SR & (SSPSR_BSY|SSPSR_RNE)) != SSPSR_RNE );
 	 			  /* Whenever a byte is written, MISO FIFO counter increments, Clear FIFO
@@ -68,7 +68,7 @@ void spi_txrx(uint16_t* tx, uint16_t* rx, uint16_t len)
 	 			  dummy = LPC_SSP0->DR;
 	 	}
 	 	else if(tx == NULL && rx != NULL){
-	 		LPC_SSP0->DR = 0xFFF;
+	 		LPC_SSP0->DR = 0xFFFF;
 	 		/* Wait until the Busy bit is cleared */
 			while ( (LPC_SSP0->SR & (SSPSR_BSY|SSPSR_RNE)) != SSPSR_RNE );
 	 		/*according to manual (software can read data from this register whenever the RNE bit
