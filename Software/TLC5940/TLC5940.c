@@ -192,7 +192,7 @@ void TLC5940_ClockInDC(void){
 
 
 
-
+//This is not working at the moment need to be reviced for 16bit
 void TLC5940_SetAllGS(uint16_t value){
     uint8_t tmp1 = (value >> 4);
     uint8_t tmp2 = (uint8_t)(value << 4) | (tmp1 >> 4);

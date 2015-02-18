@@ -193,11 +193,9 @@ int main(void) {
   PULSE_XLAT_PIN;
   PULSE_SCLK_PIN;
   VPRG_PIN_CLR;
-  #if USE_16_BIT 
-      LPC_SSP0->CR0 |= 0xF;
-  #else
-       LPC_SSP0->CR0 |= 0x7;
-  #endif   
+  //switch ssp to send 16bit frames   
+  LPC_SSP0->CR0 |= 0xF;
+  
    NVIC_EnableIRQ(RIT_IRQn);
 
   while(1){
