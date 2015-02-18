@@ -1,7 +1,7 @@
 #include "ledcube.h"
 
 
-void SetAllColour(COLOUR colour){
+/*void SetAllColour(COLOUR colour){
   for(int idx = 0; idx < SIZE; idx++){
   	uint16_t value = map12(colour.r);
   	uint8_t tmp1 = (value >> 4);
@@ -53,7 +53,7 @@ void SetAllColour(COLOUR colour){
       } while (i < gsDataSize);
     }
 
-}
+}*/
 
 void SetColour3D(uint8_t x, uint8_t y, uint8_t z, COLOUR colour){
 	/*  0 1 2 3 
