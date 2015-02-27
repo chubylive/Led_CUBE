@@ -32,17 +32,31 @@ intrinsics.h
 stdint.h
 -
 
-/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.c
-ledcube.h
-/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
-
-/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.c
+LPC17xx.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/LPC17xx.h
+cr_section_macros.h
+-
+NXP/crp.h
+-
+main.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.h
 TLC5940.h
-/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/TLC5940.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/TLC5940.h
+ledcube.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/ledcube.h
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.h
+stdint.h
+-
 
 Software/FastPWM/FastPWM.h
 LPC17xx.h
 Software/FastPWM/LPC17xx.h
+
+Software/LEDCUBE/ledcube.h
+TLC5940.h
+Software/LEDCUBE/TLC5940.h
 
 Software/SPI_SSP/spi.h
 LPC17xx.h

@@ -228,10 +228,10 @@ void TLC5940_SetGS(channel_t channel,uint8_t level,  uint16_t value) {
 
 
 void TLC5940_SetGS_16(channel_t channel, uint8_t level, uint16_t value){
-    printf("channel before: %d", channel );
+    //printf("channel before: %d", channel );
     channel = numChannels - 1 - channel; 
     channel3_t  i = (channel3_t) channel * 3/4;
-    printf("channel_after: %d    index: %d\n",channel, i + 1);
+    //printf("channel_after: %d    index: %d\n",channel, i + 1);
     switch((i + 1 ) % 3) {
        case 0:
             gsData[i][level] = (gsData[i][level] & 0xF000) | ((value) & 0x0FFF);

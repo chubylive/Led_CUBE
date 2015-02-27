@@ -95,7 +95,7 @@ int level= 0xFFF;
 
 int con = 0;
 int up = 0;
-int idx = 0;
+volatile int idx = 0;
 int vprg_pin =0;
 #define R1 1
 #define G1 2
@@ -134,27 +134,30 @@ int main(void) {
   cl.b = 0; //red 
 
   SetColour3D(0,0,0,cl);
+  SetColour3D(1,0,0,cl);
   SetColour3D(2,0,0,cl);
+  SetColour3D(3,0,0,cl);
   SetColour3D(4,0,0,cl);
+  SetColour3D(5,0,0,cl);
   SetColour3D(6,0,0,cl);
-  SetColour3D(8,0,0,cl);
-  SetColour3D(10,0,0,cl);
-  SetColour3D(12,0,0,cl);
-  SetColour3D(14,0,0,cl);
-  SetColour3D(0 + 1,0,0,cl);
-  SetColour3D(2 + 1,0,0,cl);
-  SetColour3D(4 + 1,0,0,cl);
-  SetColour3D(6 + 1,0,0,cl);
-  SetColour3D(8 + 1,0,0,cl);
-  SetColour3D(10 + 1,0,0,cl);
-  SetColour3D(12 + 1,0,0,cl);
-  SetColour3D(14 + 1,0,0,cl);
-  print_buff_binary_8(gsData, gsDataSize);
+  SetColour3D(7,0,0,cl);
+
+  SetColour3D(0,3,1,cl);
+  SetColour3D(1,3,1,cl);
+  SetColour3D(2,3,1,cl);
+  SetColour3D(3,3,1,cl);
+  SetColour3D(4,3,1,cl);
+  SetColour3D(5,3,1,cl);
+  SetColour3D(6,3,1,cl);
+  SetColour3D(7,3,1,cl);
+  
+ // print_buff_binary_8(gsData, gsDataSize);
 
 
+   print_buff_binary_8(gsData[0], gsDataSize);
+   print_buff_binary_8(gsData[1], gsDataSize);
+    print_buff_binary_8(gsData[2], gsDataSize);
   exit(0);
-  // print_buff_binary(gsData[1], gsDataSize);
-  // print_buff_binary(gsData[2], gsDataSize);
   // TLC5940_SetGS(R1, 0,0xFFF);
   // TLC5940_SetGS(G1,0, 0xFFF);
   // TLC5940_SetGS(B1, 0, 0xFFF);
@@ -211,19 +214,21 @@ void RIT_IRQHandler(){
     BLANK_PIN_CLR;
 
 
-    dcspi_txrx((uint8_t*) gsData[0], NULL, gsDataSize);
-
-    if(rowSelect > GPIO1_1_25){
-        //set row 
-        rowSelect = GPIO1_1_18;
-        LPC_GPIO1->FIOPIN = _BV(rowSelect++);
-        //reset row select
+    dcspi_txrx((uint8_t*) gsData[idx], NULL, gsDataSize);
+    
+    LPC_GPIO1->FIOPIN = _BV(GPIO1_1_18 + idx);
+    idx = (idx + 1) % SIZE;
+    // if(rowSelect > GPIO1_1_25){
+    //     //set row 
+    //     rowSelect = GPIO1_1_18;
+    //     LPC_GPIO1->FIOPIN = _BV(rowSelect++);
+    //     //reset row select
         
-    }else{
+    // }else{
        
-        LPC_GPIO1->FIOPIN = _BV(rowSelect++);
+    //     LPC_GPIO1->FIOPIN = _BV(rowSelect++);
      
-    }
+    // }
    PULSE_XLAT_PIN;
     
   //   // write(0.0);
