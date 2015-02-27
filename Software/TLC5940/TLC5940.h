@@ -7,7 +7,7 @@
 
 
 #define SPI_SPEED 30000000
-#define GSCLK_SPEED 12000000
+#define GSCLK_SPEED 100000
 #define SIZE 8
 #define TLC5940_N 3
 #define MUX 1
@@ -19,6 +19,7 @@
 //+---+
 
 //this are the layer pins a better system is needed 
+#define GPIO1_1_17 17
 #define GPIO1_1_18 18
 #define GPIO1_1_25 25
 //XLAT pin this should be 

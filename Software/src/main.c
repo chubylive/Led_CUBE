@@ -97,7 +97,7 @@ int level= 0xFFF;
 
 int con = 0;
 int up = 0;
-int idx = 0;
+volatile uint_fast8_t idx = 0;
 int vprg_pin =0;
 #define R1 1
 #define G1 2
@@ -123,7 +123,7 @@ int main(void) {
   TLC5940_Init();
   TLC5940_SetAllDC(0);
   TLC5940_ClockInDC();
-  vprg_pin = 1;
+  //vprg_pin = 1;
   TLC5940_SetAllGS(0x00);
 
 
@@ -135,13 +135,22 @@ int main(void) {
   cl.b = 0; //red 
  
   SetColour3D_16(0,0,0,cl);
-  SetColour3D_16(2,0,0,cl);
+  SetColour3D_16(1,0,0,cl);
+  SetColour3D_16(2,0,1,cl);
+  SetColour3D_16(3,0,0,cl);
+  SetColour3D_16(5,0,1,cl);
   SetColour3D_16(4,0,0,cl);
   SetColour3D_16(6,0,0,cl);
-  SetColour3D_16(0 + 1,0,0,cl);
-  SetColour3D_16(2 + 1,0,0,cl);
-  SetColour3D_16(4 + 1,0,0,cl);
-  SetColour3D_16(6 + 1,0,0,cl);
+  SetColour3D_16(7,0,1,cl);
+
+  SetColour3D_16(0,2,1,cl);
+  SetColour3D_16(1,2,0,cl);
+  SetColour3D_16(2,2,0,cl);
+  SetColour3D_16(3,2,0,cl);
+  SetColour3D_16(5,2,1,cl);
+  SetColour3D_16(4,2,1,cl);
+  SetColour3D_16(6,2,1,cl);
+  SetColour3D_16(7,2,1,cl);
  
   
 
@@ -195,7 +204,7 @@ int main(void) {
    
 
      
-    
+    //TLC5940_SetGSUpdateFlag;
 
   }
     return 0;
@@ -208,12 +217,14 @@ void RIT_IRQHandler(){
   BLANK_PIN_SET;
   BLANK_PIN_CLR;
 
- if (gsUpdateFlag) //framerate of cube ie on cube image
- {
+  
+  LPC_GPIO1->FIOPIN = _BV(GPIO1_1_17 + idx);
+
+ //if (gsUpdateFlag) //framerate of cube ie on cube image
+ //{
+
 
   spi_txrx((uint16_t*) gsData[idx], NULL, gsDataSize);
-  idx = (idx + 1) % SIZE;
-  LPC_GPIO1->FIOPIN = _BV(GPIO1_1_18 + idx);
   
 /*  if(rowSelect > GPIO1_1_25){
     //set row 
@@ -225,13 +236,14 @@ void RIT_IRQHandler(){
     LPC_GPIO1->FIOPIN = _BV(rowSelect++);
    
   }*/
+    // gsUpdateFlag = 0;
   PULSE_XLAT_PIN;  
- }
+ //}
 
   
 
 
-
+idx = (idx + 1) % SIZE;
 
 }
 
