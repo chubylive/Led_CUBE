@@ -119,6 +119,7 @@ int vprg_pin =0;
 #define B3 34
 
 int main(void) {
+
    
    /* uint8_t layer ;  // //Setup GPIO pins
     LPC_GPIO0->FIODIR |= (1<<22);
