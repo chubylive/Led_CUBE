@@ -124,11 +124,10 @@ int main(void) {
   TLC5940_SetAllDC(0);
   TLC5940_ClockInDC();
   vprg_pin = 1;
-
-
-
-
   TLC5940_SetAllGS(0x00);
+
+
+
 
   COLOUR cl ;
   cl.r = 255; //green
@@ -139,20 +138,14 @@ int main(void) {
   SetColour3D_16(2,0,0,cl);
   SetColour3D_16(4,0,0,cl);
   SetColour3D_16(6,0,0,cl);
-  SetColour3D_16(8,0,0,cl);
-  SetColour3D_16(10,0,0,cl);
-  SetColour3D_16(12,0,0,cl);
-  SetColour3D_16(14,0,0,cl);
   SetColour3D_16(0 + 1,0,0,cl);
   SetColour3D_16(2 + 1,0,0,cl);
   SetColour3D_16(4 + 1,0,0,cl);
   SetColour3D_16(6 + 1,0,0,cl);
-  SetColour3D_16(8 + 1,0,0,cl);
-  SetColour3D_16(10 + 1,0,0,cl);
-  SetColour3D_16(12 + 1,0,0,cl);
-  SetColour3D_16(14 + 1,0,0,cl);
+ 
+  
 
-  print_buff_binary_16(gsData[0], gsDataSize);
+  //print_buff_binary_16(gsData[0], gsDataSize);
   
   // SetColour3D_16(2,0,0,cl);
   // SetColour3D_16(4,0,0,cl);
@@ -173,7 +166,7 @@ int main(void) {
 
   //SetColour3D_16(0,0,2,cl);
 
-  exit(0);
+  //exit(0);
   // print_buff_binary(gsData[1], gsDataSize);
   // print_buff_binary(gsData[2], gsDataSize);
   // TLC5940_SetGS(R1, 0,0xFFF);
@@ -209,46 +202,36 @@ int main(void) {
 }
 
 void RIT_IRQHandler(){
-    //clear interrupt
-    LPC_RIT->RICTRL |= _BV(0);
+  //clear interrupt
+  LPC_RIT->RICTRL |= _BV(0);
 
- 
+  BLANK_PIN_SET;
+  BLANK_PIN_CLR;
+
+ if (gsUpdateFlag) //framerate of cube ie on cube image
+ {
+
+  spi_txrx((uint16_t*) gsData[idx], NULL, gsDataSize);
+  idx = (idx + 1) % SIZE;
+  LPC_GPIO1->FIOPIN = _BV(GPIO1_1_18 + idx);
+  
+/*  if(rowSelect > GPIO1_1_25){
+    //set row 
+    rowSelect = GPIO1_1_18;
+    LPC_GPIO1->FIOPIN = _BV(rowSelect++);
+    //reset row select
     
-    static uint8_t xlatNeedsPulse = 0;
-
-    BLANK_PIN_SET;
-    if (vprg_pin){
-      
-      if (xlatNeedsPulse){
-        PULSE_XLAT_PIN;
-        xlatNeedsPulse = 0;
-      }
-      PULSE_SCLK_PIN;
-      vprg_pin =0;
-
-    }else if (xlatNeedsPulse)
-    {
-      
-      xlatNeedsPulse = 0;
-    }
-    BLANK_PIN_CLR;
-
+  }else{
+    LPC_GPIO1->FIOPIN = _BV(rowSelect++);
    
-    spi_txrx((uint16_t*) gsData[0], NULL, gsDataSize);
+  }*/
+  PULSE_XLAT_PIN;  
+ }
+
   
-    if(rowSelect > GPIO1_1_25){
-        //set row 
-        rowSelect = GPIO1_1_18;
-        LPC_GPIO1->FIOPIN = _BV(rowSelect++);
-        //reset row select
-        
-    }else{
-       
-        LPC_GPIO1->FIOPIN = _BV(rowSelect++);
-     
-    }
-  
-    PULSE_XLAT_PIN;  
+
+
+
 
 }
 
