@@ -154,6 +154,7 @@ int main(void) {
  
   
 
+<<<<<<< HEAD
   //print_buff_binary_16(gsData[0], gsDataSize);
   
   // SetColour3D_16(2,0,0,cl);
@@ -163,6 +164,22 @@ int main(void) {
   // SetColour3D_16(10,0,0,cl);
   // SetColour3D_16(12,0,0,cl);
   // SetColour3D_16(14,0,0,cl);
+=======
+COLOUR cl ;
+cl.r = 255; //green
+cl.g = 255; //blue
+cl.b = 255; //red 
+SetColour3D_16(0,0,0,cl);
+SetColour3D_16(1,0,0,cl);
+SetColour3D_16(2,0,0,cl);
+// SetColour3D_16(2,0,0,cl);
+// SetColour3D_16(4,0,0,cl);
+// SetColour3D_16(6,0,0,cl);
+// SetColour3D_16(8,0,0,cl);
+// SetColour3D_16(10,0,0,cl);
+// SetColour3D_16(12,0,0,cl);
+// SetColour3D_16(14,0,0,cl);
+>>>>>>> fd22eaa7e5b8ae37ac6be4597ddf593035b71a16
 
   // SetColour3D_16(0 + 1,0,0,cl);
   // SetColour3D_16(2 + 1,0,0,cl);
