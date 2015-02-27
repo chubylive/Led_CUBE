@@ -7,7 +7,7 @@
 
 
 #define SPI_SPEED 30000000
-#define GSCLK_SPEED 12000000
+#define GSCLK_SPEED 8000000
 #define SIZE 8
 #define TLC5940_N 3
 
@@ -102,7 +102,7 @@ uint8_t dcData[dcDataSize];
 uint8_t gsData[SIZE][gsDataSize];
 	
 
-volatile uint8_t gsUpdateFlag;
+volatile uint_fast8_t gsUpdateFlag;
 
 static inline void TLC5940_SetGSUpdateFlag(void) {
 __asm__ volatile ("" ::: "memory");

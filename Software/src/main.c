@@ -95,7 +95,7 @@ int level= 0xFFF;
 
 int con = 0;
 int up = 0;
-volatile int idx = 0;
+volatile uint_fast8_t idx = 0;
 int vprg_pin =0;
 #define R1 1
 #define G1 2
@@ -135,29 +135,29 @@ int main(void) {
 
   SetColour3D(0,0,0,cl);
   SetColour3D(1,0,0,cl);
-  SetColour3D(2,0,0,cl);
+  SetColour3D(2,0,1,cl);
   SetColour3D(3,0,0,cl);
-  SetColour3D(4,0,0,cl);
+  SetColour3D(4,0,1,cl);
   SetColour3D(5,0,0,cl);
   SetColour3D(6,0,0,cl);
   SetColour3D(7,0,0,cl);
 
-  SetColour3D(0,3,1,cl);
-  SetColour3D(1,3,1,cl);
-  SetColour3D(2,3,1,cl);
-  SetColour3D(3,3,1,cl);
-  SetColour3D(4,3,1,cl);
-  SetColour3D(5,3,1,cl);
-  SetColour3D(6,3,1,cl);
-  SetColour3D(7,3,1,cl);
+  SetColour3D(0,2,0,cl);
+  SetColour3D(1,2,1,cl);
+  SetColour3D(2,2,0,cl);
+  SetColour3D(3,2,1,cl);
+  SetColour3D(4,2,1,cl);
+  SetColour3D(5,2,1,cl);
+  SetColour3D(6,2,1,cl);
+  SetColour3D(7,2,1,cl);
   
  // print_buff_binary_8(gsData, gsDataSize);
 
 
-   print_buff_binary_8(gsData[0], gsDataSize);
-   print_buff_binary_8(gsData[1], gsDataSize);
-    print_buff_binary_8(gsData[2], gsDataSize);
-  exit(0);
+   //print_buff_binary_8(gsData[0], gsDataSize);
+   //print_buff_binary_8(gsData[1], gsDataSize);
+    //print_buff_binary_8(gsData[2], gsDataSize);
+  //exit(0);
   // TLC5940_SetGS(R1, 0,0xFFF);
   // TLC5940_SetGS(G1,0, 0xFFF);
   // TLC5940_SetGS(B1, 0, 0xFFF);
@@ -197,27 +197,26 @@ void RIT_IRQHandler(){
     static uint8_t xlatNeedsPulse = 0;
 
     BLANK_PIN_SET;
-    if (vprg_pin){
+    // if (vprg_pin){
       
-      if (xlatNeedsPulse){
-        PULSE_XLAT_PIN;
-        xlatNeedsPulse = 0;
-      }
-      PULSE_SCLK_PIN;
-      vprg_pin =0;
+    //   if (xlatNeedsPulse){
+    //     PULSE_XLAT_PIN;
+    //     xlatNeedsPulse = 0;
+    //   }
+    //   PULSE_SCLK_PIN;
+    //   vprg_pin =0;
 
-    }else if (xlatNeedsPulse)
-    {
+    // }else if (xlatNeedsPulse)
+    // {
       
-      xlatNeedsPulse = 0;
-    }
+    //   xlatNeedsPulse = 0;
+    // }
     BLANK_PIN_CLR;
 
 
     dcspi_txrx((uint8_t*) gsData[idx], NULL, gsDataSize);
     
-    LPC_GPIO1->FIOPIN = _BV(GPIO1_1_18 + idx);
-    idx = (idx + 1) % SIZE;
+    LPC_GPIO1->FIOPIN = _BV(18 + idx );
     // if(rowSelect > GPIO1_1_25){
     //     //set row 
     //     rowSelect = GPIO1_1_18;
@@ -248,6 +247,7 @@ void RIT_IRQHandler(){
     
    //delay_call(10000);
     
+    idx = (idx + 1) % SIZE;
     
 
 }
