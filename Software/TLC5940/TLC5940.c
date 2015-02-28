@@ -236,7 +236,7 @@ void TLC5940_SetGS_16(channel_t channel, uint8_t level, uint16_t value){
     //printf("channel before: %d", channel );
     channel = numChannels - 1 - channel; 
     channel3_t  i = (channel3_t) channel * 3/4;
-   // printf("channel_after: %d    index: %d\n",channel, i + 1);
+    //printf("channel_after: %d    index: %d\n",channel, i + 1);
     switch((i + 1 ) % 3) {
        case 0:
             gsData[level][i] = (gsData[level][i] & 0xF000) | ((value) & 0x0FFF);
@@ -245,18 +245,20 @@ void TLC5940_SetGS_16(channel_t channel, uint8_t level, uint16_t value){
        case 1:
             switch(channel % 2){
                 case 0:
-                    gsData[level][i] = (gsData[level][i] & 0x000F) | (value << 4);
-                default:
-                    gsData[level][i] = (gsData[level][i] & 0xFFF0) | (value  >> 8);
+                    gsData[level][i] = (gsData[level][i] & 0x000F) | ((value << 4) & 0xFFF0) ;
+                break;
+                case 1:
+                    gsData[level][i] = (gsData[level][i] & 0xFFF0) | ((value  >> 8) & 0x000F);
                     i++;
                     gsData[level][i] = (gsData[level][i] & 0x00FF) | ((value & 0x00FF) << 8);
+                break;
             }
             break;
 
        case 2:
             gsData[level][i] = (gsData[level][i] & 0xFF00) | ((value & 0x0FF0) >> 4);
             i++;
-            gsData[level][i] = (gsData[level][i] & 0x0FFF) | ((value & 0x000F) << 12);     
+            gsData[level][i] = (gsData[level][i] & 0x0FFF) | (((value & 0x000F) << 12) & 0xF000);     
             break;
 
     }

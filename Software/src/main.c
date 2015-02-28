@@ -134,28 +134,27 @@ int main(void) {
   cl.g = 0; //blue
   cl.b = 0; //red 
  
-  SetColour3D_16(0,0,0,cl);
-  SetColour3D_16(1,0,0,cl);
+   SetColour3D_16(0,0,1,cl);
+   SetColour3D_16(1,0,0,cl);
   SetColour3D_16(2,0,1,cl);
   SetColour3D_16(3,0,0,cl);
   SetColour3D_16(5,0,1,cl);
-  SetColour3D_16(4,0,0,cl);
-  SetColour3D_16(6,0,0,cl);
-  SetColour3D_16(7,0,1,cl);
+   SetColour3D_16(4,0,0,cl);
+   SetColour3D_16(6,0,1,cl);
+   SetColour3D_16(7,0,0,cl);
 
-  SetColour3D_16(0,2,1,cl);
-  SetColour3D_16(1,2,0,cl);
-  SetColour3D_16(2,2,0,cl);
-  SetColour3D_16(3,2,0,cl);
-  SetColour3D_16(5,2,1,cl);
-  SetColour3D_16(4,2,1,cl);
-  SetColour3D_16(6,2,1,cl);
-  SetColour3D_16(7,2,1,cl);
+   SetColour3D_16(0,2,1,cl);
+   SetColour3D_16(1,2,0,cl);
+    SetColour3D_16(2,2,1,cl);
+    SetColour3D_16(3,2,4,cl);
+   SetColour3D_16(5,2,1,cl);
+   SetColour3D_16(4,2,7,cl);
+
  
   
 
-<<<<<<< HEAD
-  //print_buff_binary_16(gsData[0], gsDataSize);
+// <<<<<<< HEAD
+ // print_buff_binary_16(gsData[0], gsDataSize);
   
   // SetColour3D_16(2,0,0,cl);
   // SetColour3D_16(4,0,0,cl);
@@ -164,24 +163,24 @@ int main(void) {
   // SetColour3D_16(10,0,0,cl);
   // SetColour3D_16(12,0,0,cl);
   // SetColour3D_16(14,0,0,cl);
-=======
-COLOUR cl ;
-cl.r = 255; //green
-cl.g = 255; //blue
-cl.b = 255; //red 
-SetColour3D_16(0,0,0,cl);
-SetColour3D_16(1,0,0,cl);
-SetColour3D_16(2,0,0,cl);
+// // =======
+// COLOUR cl ;
+// cl.r = 255; //green
+// cl.g = 255; //blue
+// cl.b = 255; //red 
+// SetColour3D_16(0,0,0,cl);
+// SetColour3D_16(1,0,0,cl);
 // SetColour3D_16(2,0,0,cl);
-// SetColour3D_16(4,0,0,cl);
-// SetColour3D_16(6,0,0,cl);
-// SetColour3D_16(8,0,0,cl);
-// SetColour3D_16(10,0,0,cl);
-// SetColour3D_16(12,0,0,cl);
-// SetColour3D_16(14,0,0,cl);
->>>>>>> fd22eaa7e5b8ae37ac6be4597ddf593035b71a16
+// // SetColour3D_16(2,0,0,cl);
+// // SetColour3D_16(4,0,0,cl);
+// // SetColour3D_16(6,0,0,cl);
+// // SetColour3D_16(8,0,0,cl);
+// // SetColour3D_16(10,0,0,cl);
+// // SetColour3D_16(12,0,0,cl);
+// // SetColour3D_16(14,0,0,cl);
+// >>>>>>> fd22eaa7e5b8ae37ac6be4597ddf593035b71a16
 
-  // SetColour3D_16(0 + 1,0,0,cl);
+//   // SetColour3D_16(0 + 1,0,0,cl);
   // SetColour3D_16(2 + 1,0,0,cl);
   // SetColour3D_16(4 + 1,0,0,cl);
   // SetColour3D_16(6 + 1,0,0,cl);

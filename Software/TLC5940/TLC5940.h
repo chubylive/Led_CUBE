@@ -7,7 +7,7 @@
 
 
 #define SPI_SPEED 30000000
-#define GSCLK_SPEED 8000000
+#define GSCLK_SPEED 12000000
 #define SIZE 8
 #define TLC5940_N 3
 #define MUX 1
