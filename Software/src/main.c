@@ -134,27 +134,39 @@ int main(void) {
   cl.g = 0; //blue
   cl.b = 0; //red 
  
-   SetColour3D_16(0,0,1,cl);
-   SetColour3D_16(1,0,0,cl);
-  SetColour3D_16(2,0,1,cl);
-  SetColour3D_16(3,0,0,cl);
-  SetColour3D_16(5,0,1,cl);
-   SetColour3D_16(4,0,0,cl);
-   SetColour3D_16(6,0,1,cl);
-   SetColour3D_16(7,0,0,cl);
+  // COLOUR cl1 ;
+  // cl1.r = 255; //green
+  // cl.g = 0; //blue
+  // cl.b = 0; //red 
+  // SetColour3D_16(0,0,1,cl);
+  // SetColour3D_16(1,0,0,cl);
+  // SetColour3D_16(2,0,1,cl);
+  // SetColour3D_16(3,0,0,cl);
+  // SetColour3D_16(5,0,1,cl);
+  // SetColour3D_16(4,0,0,cl);
+  // SetColour3D_16(6,0,1,cl);
+  // SetColour3D_16(7,0,0,cl);
 
-   SetColour3D_16(0,2,1,cl);
-   SetColour3D_16(1,2,0,cl);
-    SetColour3D_16(2,2,1,cl);
-    SetColour3D_16(3,2,4,cl);
-   SetColour3D_16(5,2,1,cl);
-   SetColour3D_16(4,2,7,cl);
+  // SetColour3D_16(0,0,1,cl1);
+  // SetColour3D_16(1,0,0,cl1);
+  // SetColour3D_16(2,0,1,cl1);
+  // SetColour3D_16(3,0,0,cl1);
+  // SetColour3D_16(5,0,1,cl1);
+  // SetColour3D_16(4,0,0,cl1);
+  // SetColour3D_16(6,0,1,cl1);
+  // SetColour3D_16(7,0,0,cl1);
+  // SetColour3D_16(0,2,1,cl);
+  // SetColour3D_16(1,2,0,cl);
+  // SetColour3D_16(2,2,1,cl);
+  // SetColour3D_16(3,2,4,cl);
+  // SetColour3D_16(5,2,1,cl);
+  // SetColour3D_16(4,2,7,cl);
 
  
   
 
-// <<<<<<< HEAD
- // print_buff_binary_16(gsData[0], gsDataSize);
+  // <<<<<<< HEAD
+  // print_buff_binary_16(gsData[0], gsDataSize);
   
   // SetColour3D_16(2,0,0,cl);
   // SetColour3D_16(4,0,0,cl);
@@ -163,24 +175,24 @@ int main(void) {
   // SetColour3D_16(10,0,0,cl);
   // SetColour3D_16(12,0,0,cl);
   // SetColour3D_16(14,0,0,cl);
-// // =======
-// COLOUR cl ;
-// cl.r = 255; //green
-// cl.g = 255; //blue
-// cl.b = 255; //red 
-// SetColour3D_16(0,0,0,cl);
-// SetColour3D_16(1,0,0,cl);
-// SetColour3D_16(2,0,0,cl);
-// // SetColour3D_16(2,0,0,cl);
-// // SetColour3D_16(4,0,0,cl);
-// // SetColour3D_16(6,0,0,cl);
-// // SetColour3D_16(8,0,0,cl);
-// // SetColour3D_16(10,0,0,cl);
-// // SetColour3D_16(12,0,0,cl);
-// // SetColour3D_16(14,0,0,cl);
-// >>>>>>> fd22eaa7e5b8ae37ac6be4597ddf593035b71a16
+  // // =======
+  // COLOUR cl ;
+  // cl.r = 255; //green
+  // cl.g = 255; //blue
+  // cl.b = 255; //red 
+  // SetColour3D_16(0,0,0,cl);
+  // SetColour3D_16(1,0,0,cl);
+  // SetColour3D_16(2,0,0,cl);
+  // // SetColour3D_16(2,0,0,cl);
+  // // SetColour3D_16(4,0,0,cl);
+  // // SetColour3D_16(6,0,0,cl);
+  // // SetColour3D_16(8,0,0,cl);
+  // // SetColour3D_16(10,0,0,cl);
+  // // SetColour3D_16(12,0,0,cl);
+  // // SetColour3D_16(14,0,0,cl);
+  // >>>>>>> fd22eaa7e5b8ae37ac6be4597ddf593035b71a16
 
-//   // SetColour3D_16(0 + 1,0,0,cl);
+  // SetColour3D_16(0 + 1,0,0,cl);
   // SetColour3D_16(2 + 1,0,0,cl);
   // SetColour3D_16(4 + 1,0,0,cl);
   // SetColour3D_16(6 + 1,0,0,cl);
@@ -214,13 +226,30 @@ int main(void) {
   //switch ssp to send 16bit frames   
   LPC_SSP0->CR0 |= 0xF;
   
-   NVIC_EnableIRQ(RIT_IRQn);
+  NVIC_EnableIRQ(RIT_IRQn);
+  int tdx = 0;
 
   while(1){
    
+  COLOUR cl1 ;
+  cl1.r = 0; //green
+  cl1.g = 0; //blue
+  cl1.b = 0; //red 
+    SetColour3D_16(1, 0, 0, cl1);
+     SetColour3D_16(1, 0, 1, cl1);
+      SetColour3D_16(1, 0, 2, cl1);
+       SetColour3D_16(1, 0, 3, cl1);
+        SetColour3D_16(1, 0, 4, cl1);
+         SetColour3D_16(1, 0, 5, cl1);
+          SetColour3D_16(1, 0, 6, cl1);
+           SetColour3D_16(1, 0, 7, cl1);    
+            SetColour3D_16(1, 0,tdx, cl);
 
+  tdx = (tdx + 1) % SIZE;
+
+  delay_call(10000);
      
-    //TLC5940_SetGSUpdateFlag;
+   
 
   }
     return 0;
@@ -234,32 +263,20 @@ void RIT_IRQHandler(){
   BLANK_PIN_CLR;
 
   
-  LPC_GPIO1->FIOPIN = _BV(GPIO1_1_17 + idx);
+  LPC_GPIO1->FIOPIN = _BV(GPIO1_1_18 + idx);
 
- //if (gsUpdateFlag) //framerate of cube ie on cube image
- //{
+  if (gsUpdateFlag) //framerate of cube ie on cube image
+  {
 
 
-  spi_txrx((uint16_t*) gsData[idx], NULL, gsDataSize);
-  
-/*  if(rowSelect > GPIO1_1_25){
-    //set row 
-    rowSelect = GPIO1_1_18;
-    LPC_GPIO1->FIOPIN = _BV(rowSelect++);
-    //reset row select
+    spi_txrx((uint16_t*) gsData[idx], NULL, gsDataSize);
     
-  }else{
-    LPC_GPIO1->FIOPIN = _BV(rowSelect++);
-   
-  }*/
-    // gsUpdateFlag = 0;
-  PULSE_XLAT_PIN;  
- //}
 
-  
+    PULSE_XLAT_PIN; 
+    //gsUpdateFlag = 0; 
+  }
 
-
-idx = (idx + 1) % SIZE;
+  idx = (idx + 1) % SIZE;
 
 }
 
