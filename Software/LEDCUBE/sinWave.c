@@ -3,6 +3,9 @@
 float X, Y, Z, phase;
 
 uint8_t animate(void *arrayP){
+
+	TLC5940_ClearGsData();
+	
 	COLOUR cl1 ;
   	cl1.r = 0; 
   	cl1.g = 0; 
@@ -23,5 +26,5 @@ uint8_t animate(void *arrayP){
 			SetColour3D_16(1, 0, 0, cl1);
 		}
 	}
-	
+
 }
