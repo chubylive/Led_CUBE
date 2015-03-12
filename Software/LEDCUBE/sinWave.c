@@ -16,7 +16,7 @@ uint8_t animate(void *arrayP){
 		{
 
 			X = myMap(x, 0, SIZE - 1, -2, 2);
-			Y = myMay(y, 0, SIZE - 1, -2, 2);
+			Y = myMap(y, 0, SIZE - 1, -2, 2);
 			Z = mySin(phase - myPI/8 + mySqrt(X*X + Y*Y));
 			Z = myRound(myMap(Z,-1,1,0,SIZE-1));
 
