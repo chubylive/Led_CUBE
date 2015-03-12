@@ -263,3 +263,12 @@ void TLC5940_SetGS_16(channel_t channel, uint8_t level, uint16_t value){
 
     }
 }
+
+
+
+void TLC5940_ClearGsData(){
+    for (int level = 0; level < SIZE; ++i)
+    {
+        memset(gsData[level], 0, gsDataSize);
+    }
+}
