@@ -2,7 +2,7 @@
 
 float X, Y, Z, phase;
 
-uint8_t animate(void *arrayP){
+uint8_t sinWave(void *arrayP){
 
 	TLC5940_ClearGsData();
 	
