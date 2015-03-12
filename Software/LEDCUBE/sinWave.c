@@ -7,7 +7,7 @@ uint8_t sinWave(void *arrayP){
 	TLC5940_ClearGsData();
 	
 	COLOUR cl1 ;
-  	cl1.r = 0; 
+  	cl1.r = 255; 
   	cl1.g = 0; 
   	cl1.b = 0;  
 	for (uint8_t x = 0; x < SIZE; x++)
@@ -23,7 +23,7 @@ uint8_t sinWave(void *arrayP){
 			Z= mySin(phase + mySqrt(X*X + Y*Y));
 			Z = myRound(myMap(Z,-1,1,0,SIZE-1));
 
-			SetColour3D_16(1, 0, 0, cl1);
+			SetColour3D_16(x, y, Z, cl1);
 		}
 	}
 
