@@ -2,7 +2,7 @@
 #define SINEWAVE_h
 #include "ledcube.h"
 void init();
-uint8_t sinWave(void * arrayP);
+void sinWave();
 void begin();
 
 #endif

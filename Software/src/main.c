@@ -8,6 +8,7 @@
 #include "main.h"
 #include "TLC5940.h"
 #include "ledcube.h"
+#include "sinWave.h"
 
 
 // Variable to store CRP value in. Will be placed automatically
@@ -235,19 +236,23 @@ int main(void) {
   cl1.r = 0; //green
   cl1.g = 0; //blue
   cl1.b = 0; //red 
-    SetColour3D_16(1, 0, 0, cl1);
-     SetColour3D_16(1, 0, 1, cl1);
-      SetColour3D_16(1, 0, 2, cl1);
-       SetColour3D_16(1, 0, 3, cl1);
-        SetColour3D_16(1, 0, 4, cl1);
-         SetColour3D_16(1, 0, 5, cl1);
-          SetColour3D_16(1, 0, 6, cl1);
-           SetColour3D_16(1, 0, 7, cl1);    
-            SetColour3D_16(1, 0,tdx, cl);
+//gsUpdateFlag = 0;
 
-  tdx = (tdx + 1) % SIZE;
+ //TLC5940_ClearGsData();    
+  // SetColour3D_16(3, 0,tdx, cl);
+  // SetColour3D_16(3, 1,tdx, cl);
+  // SetColour3D_16(3, 2,tdx, cl);
+  // SetColour3D_16(3, 3,tdx, cl);
+  // SetColour3D_16(3, 4,tdx, cl);
+  // SetColour3D_16(3, 5,tdx, cl);
+ // SetColour3D_16(tdx, 6,0, cl);
+  //SetColour3D_16(tdx, tdx,tdx, cl);
+  //tdx = (tdx + 1) % SIZE;
+ sinWave();
+ //Spiral();
+ gsUpdateFlag = 1;
 
-  delay_call(10000);
+  delay_call(5000);
      
    
 

@@ -325,6 +325,75 @@ CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj.provides: CMakeFiles/
 
 CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj.provides.build: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj
 
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj: CMakeFiles/Led_CUBE.axf.dir/flags.make
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj: Software/LEDCUBE/sinWave.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj   -c /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sinWave.c
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.i"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sinWave.c > CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.i
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.s"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sinWave.c -o CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.s
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj.requires:
+.PHONY : CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj.requires
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj.provides: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj.requires
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj.provides.build
+.PHONY : CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj.provides
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj.provides.build: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj: CMakeFiles/Led_CUBE.axf.dir/flags.make
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj: Software/LEDCUBE/spiral.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj   -c /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/spiral.c
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.i"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/spiral.c > CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.i
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.s"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/spiral.c -o CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.s
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj.requires:
+.PHONY : CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj.requires
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj.provides: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj.requires
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj.provides.build
+.PHONY : CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj.provides
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj.provides.build: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj: CMakeFiles/Led_CUBE.axf.dir/flags.make
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj: Software/LEDCUBE/utils.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles $(CMAKE_PROGRESS_15)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj   -c /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/utils.c
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.i"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/utils.c > CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.i
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.s"
+	/usr/local/lpcxpresso_5.1.2_2065/lpcxpresso/tools/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/utils.c -o CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.s
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj.requires:
+.PHONY : CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj.requires
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj.provides: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj.requires
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj.provides.build
+.PHONY : CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj.provides
+
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj.provides.build: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj
+
 # Object files for target Led_CUBE.axf
 Led_CUBE_axf_OBJECTS = \
 "CMakeFiles/Led_CUBE.axf.dir/Software/src/cr_startup_lpc176x.c.obj" \
@@ -338,7 +407,10 @@ Led_CUBE_axf_OBJECTS = \
 "CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_libcfg_default.c.obj" \
 "CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj" \
 "CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj" \
-"CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj"
+"CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj" \
+"CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj" \
+"CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj" \
+"CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj"
 
 # External object files for target Led_CUBE.axf
 Led_CUBE_axf_EXTERNAL_OBJECTS =
@@ -355,6 +427,9 @@ bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/liblpc-src/lpc17xx_libcfg
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj
+bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj
+bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj
+bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/build.make
 bin/Led_CUBE.axf: CMakeFiles/Led_CUBE.axf.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable bin/Led_CUBE.axf"
@@ -378,6 +453,9 @@ CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/liblp
 CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj.requires
 CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/TLC5940/TLC5940.c.obj.requires
 CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj.requires
+CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj.requires
+CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj.requires
+CMakeFiles/Led_CUBE.axf.dir/requires: CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj.requires
 .PHONY : CMakeFiles/Led_CUBE.axf.dir/requires
 
 CMakeFiles/Led_CUBE.axf.dir/clean:

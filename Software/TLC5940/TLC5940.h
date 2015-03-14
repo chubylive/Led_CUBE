@@ -4,12 +4,12 @@
 #include "FastPWM.h"
 #include "lpc17xx_gpdma.h"
 #include "spi.h"
-
+#include <string.h>
 
 #define SPI_SPEED 30000000
 #define GSCLK_SPEED 12000000
 #define SIZE 8
-#define TLC5940_N 3
+#define TLC5940_N 12
 #define MUX 1
 #define USE_16_BIT 1
 
@@ -116,6 +116,7 @@ void TLC5940_Init(void);
 void TLC5940_SetAllDC(uint8_t value);
 void TLC5940_SetDC(channel_t channel, uint8_t vaule);
 void TLC5940_ClockInDC(void);
+void TLC5940_ClearGsData();
 void TLC5940_SetAllGS(uint16_t value);
 void TLC5940_SetGS(channel_t channel, uint8_t, uint16_t);
 void TLC5940_SetGS_16(channel_t channel, uint8_t, uint16_t);

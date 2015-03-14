@@ -45,6 +45,8 @@ TLC5940.h
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/TLC5940.h
 ledcube.h
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/ledcube.h
+sinWave.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/sinWave.h
 
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.h
 stdint.h
@@ -57,6 +59,16 @@ Software/FastPWM/LPC17xx.h
 Software/LEDCUBE/ledcube.h
 TLC5940.h
 Software/LEDCUBE/TLC5940.h
+utils.h
+Software/LEDCUBE/utils.h
+
+Software/LEDCUBE/sinWave.h
+ledcube.h
+Software/LEDCUBE/ledcube.h
+
+Software/LEDCUBE/utils.h
+ledcube.h
+Software/LEDCUBE/ledcube.h
 
 Software/SPI_SSP/spi.h
 LPC17xx.h
@@ -71,6 +83,8 @@ lpc17xx_gpdma.h
 Software/TLC5940/lpc17xx_gpdma.h
 spi.h
 Software/TLC5940/spi.h
+string.h
+-
 
 Software/liblpc-inc/lpc17xx_gpdma.h
 LPC17xx.h

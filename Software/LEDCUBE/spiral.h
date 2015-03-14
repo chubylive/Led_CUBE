@@ -1,9 +1,11 @@
-#include "Animation.h"
+#include "ledcube.h"
 
 #ifndef SPIRAL_H
 #define SPIRAL_H
+uint8_t bottom, top; 
+		float narrow;
+		float speed;
 
-
-		uint8_t spiral(COLOUR *arrayP, uint8_t fadeIn, uint8_t fadeOut, BUCK startBuck);
+		void Spiral();
 		void begin(void);
 #endif

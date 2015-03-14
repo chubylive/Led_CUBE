@@ -1,8 +1,8 @@
-#include "sineWave.h"
+#include "sinWave.h"
 
-float X, Y, Z, phase;
+static float X, Y, Z, phase;
 
-uint8_t sinWave(void *arrayP){
+void sinWave(){
 
 	TLC5940_ClearGsData();
 	
@@ -16,7 +16,7 @@ uint8_t sinWave(void *arrayP){
 		{
 
 			X = myMap(x, 0, SIZE - 1, -2, 2);
-			Y = myMay(y, 0, SIZE - 1, -2, 2);
+			Y = myMap(y, 0, SIZE - 1, -2, 2);
 			Z = mySin(phase - myPI/8 + mySqrt(X*X + Y*Y));
 			Z = myRound(myMap(Z,-1,1,0,SIZE-1));
 
@@ -25,6 +25,11 @@ uint8_t sinWave(void *arrayP){
 
 			SetColour3D_16(x, y, Z, cl1);
 		}
+	}
+
+	phase += myPI/8;
+	if(phase >= 2*myPI){
+		phase -= 2*myPI;
 	}
 
 }

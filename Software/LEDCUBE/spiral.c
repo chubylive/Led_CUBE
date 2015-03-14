@@ -1,8 +1,12 @@
-#include "Spiral.h"
+#include "spiral.h"
 
 
+float X, Y, Z, phase;
+uint8_t bottom = 0, top = 8; 
+		float narrow = 0;
+		float speed =1 ;
 
-void Spiral(uint8_t bottom, uint8_t top, uint8_t narrow){
+void Spiral(){
 	
 	TLC5940_ClearGsData();
 	COLOUR cl1 ;

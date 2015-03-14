@@ -1,6 +1,6 @@
 #ifndef __UTILS_H_
 #define __UTILS_H_
-
+#include "ledcube.h"
 #define myPI  3.14159265358979323846
 #define myDPI 1.2732395
 #define myDPI2 0.40528473
