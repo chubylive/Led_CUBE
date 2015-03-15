@@ -31,6 +31,7 @@ set(SOURCES
 	Software/LEDCUBE/sinWave.c
 	Software/LEDCUBE/spiral.c
 	Software/LEDCUBE/utils.c
+	Software/LEDCUBE/ColourWheel.c
 
 )
 

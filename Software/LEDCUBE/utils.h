@@ -4,6 +4,7 @@
 #define myPI  3.14159265358979323846
 #define myDPI 1.2732395
 #define myDPI2 0.40528473
+#define MY_C_RES 8
 
 
 float mySin(float x);
