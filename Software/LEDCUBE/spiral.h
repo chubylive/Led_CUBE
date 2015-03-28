@@ -1,4 +1,5 @@
 #include "ledcube.h"
+#include "ColourWheel.h"
 
 #ifndef SPIRAL_H
 #define SPIRAL_H

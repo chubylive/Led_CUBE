@@ -12,8 +12,8 @@ void fill_colour_wheel(void){
 	int16_t I = 0;
 
 	while(phase < COLOUR_WHEEL_LENGTH){
-		s = MY_C_RES*mySin(myPI*(3*phase-I*COLOUR_WHEEL_LENGTH)/(2*COLOUR_WHEEL_LENGTH));
-		c = MY_C_RES*myCos(myPI*(3*phase-I*COLOUR_WHEEL_LENGTH)/(2*COLOUR_WHEEL_LENGTH));
+		s = MAX_8*mySin(myPI*(3*phase-I*COLOUR_WHEEL_LENGTH)/(2*COLOUR_WHEEL_LENGTH));
+		c = MAX_8*myCos(myPI*(3*phase-I*COLOUR_WHEEL_LENGTH)/(2*COLOUR_WHEEL_LENGTH));
 		COLOUR cl;
 		cl.r = (I==0?1:0)*s + (I==1?1:0)*c;
 		cl.g = (I==1?1:0)*s + (I==2?1:0)*c;

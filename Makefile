@@ -226,6 +226,30 @@ Software/FastPWM/FastPWM.c.s:
 	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/FastPWM/FastPWM.c.s
 .PHONY : Software/FastPWM/FastPWM.c.s
 
+Software/LEDCUBE/ColourWheel.obj: Software/LEDCUBE/ColourWheel.c.obj
+.PHONY : Software/LEDCUBE/ColourWheel.obj
+
+# target to build an object file
+Software/LEDCUBE/ColourWheel.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ColourWheel.c.obj
+.PHONY : Software/LEDCUBE/ColourWheel.c.obj
+
+Software/LEDCUBE/ColourWheel.i: Software/LEDCUBE/ColourWheel.c.i
+.PHONY : Software/LEDCUBE/ColourWheel.i
+
+# target to preprocess a source file
+Software/LEDCUBE/ColourWheel.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ColourWheel.c.i
+.PHONY : Software/LEDCUBE/ColourWheel.c.i
+
+Software/LEDCUBE/ColourWheel.s: Software/LEDCUBE/ColourWheel.c.s
+.PHONY : Software/LEDCUBE/ColourWheel.s
+
+# target to generate assembly for a file
+Software/LEDCUBE/ColourWheel.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ColourWheel.c.s
+.PHONY : Software/LEDCUBE/ColourWheel.c.s
+
 Software/LEDCUBE/ledcube.obj: Software/LEDCUBE/ledcube.c.obj
 .PHONY : Software/LEDCUBE/ledcube.obj
 
@@ -581,6 +605,9 @@ help:
 	@echo "... Software/FastPWM/FastPWM.obj"
 	@echo "... Software/FastPWM/FastPWM.i"
 	@echo "... Software/FastPWM/FastPWM.s"
+	@echo "... Software/LEDCUBE/ColourWheel.obj"
+	@echo "... Software/LEDCUBE/ColourWheel.i"
+	@echo "... Software/LEDCUBE/ColourWheel.s"
 	@echo "... Software/LEDCUBE/ledcube.obj"
 	@echo "... Software/LEDCUBE/ledcube.i"
 	@echo "... Software/LEDCUBE/ledcube.s"

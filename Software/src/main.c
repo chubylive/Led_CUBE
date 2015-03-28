@@ -9,6 +9,7 @@
 #include "TLC5940.h"
 #include "ledcube.h"
 #include "sinWave.h"
+#include "ColourWheel.h"
 
 
 // Variable to store CRP value in. Will be placed automatically
@@ -94,6 +95,15 @@ void set_all(int level1){
   }
 }
 
+void print_array(){
+  for (int i = 0; i < 512; ++i)
+  {
+    COLOUR cl = get_next_colour();
+    printf("Red: %d Green: %d Blue: %d\n", cl.r, cl.g, cl.b);
+
+  }
+}
+
 int level= 0xFFF;
 
 int con = 0;
@@ -127,100 +137,15 @@ int main(void) {
   //vprg_pin = 1;
   TLC5940_SetAllGS(0x00);
 
-
-
+  fill_colour_wheel();
+  //print_array();
+  //exit(0);
 
   COLOUR cl ;
-  cl.r = 255; //green
-  cl.g = 0; //blue
+  cl.r = 0; //green
+  cl.g = 255; //blue
   cl.b = 0; //red 
  
-  // COLOUR cl1 ;
-  // cl1.r = 255; //green
-  // cl.g = 0; //blue
-  // cl.b = 0; //red 
-  // SetColour3D_16(0,0,1,cl);
-  // SetColour3D_16(1,0,0,cl);
-  // SetColour3D_16(2,0,1,cl);
-  // SetColour3D_16(3,0,0,cl);
-  // SetColour3D_16(5,0,1,cl);
-  // SetColour3D_16(4,0,0,cl);
-  // SetColour3D_16(6,0,1,cl);
-  // SetColour3D_16(7,0,0,cl);
-
-  // SetColour3D_16(0,0,1,cl1);
-  // SetColour3D_16(1,0,0,cl1);
-  // SetColour3D_16(2,0,1,cl1);
-  // SetColour3D_16(3,0,0,cl1);
-  // SetColour3D_16(5,0,1,cl1);
-  // SetColour3D_16(4,0,0,cl1);
-  // SetColour3D_16(6,0,1,cl1);
-  // SetColour3D_16(7,0,0,cl1);
-  // SetColour3D_16(0,2,1,cl);
-  // SetColour3D_16(1,2,0,cl);
-  // SetColour3D_16(2,2,1,cl);
-  // SetColour3D_16(3,2,4,cl);
-  // SetColour3D_16(5,2,1,cl);
-  // SetColour3D_16(4,2,7,cl);
-
- 
-  
-
-  // <<<<<<< HEAD
-  // print_buff_binary_16(gsData[0], gsDataSize);
-  
-  // SetColour3D_16(2,0,0,cl);
-  // SetColour3D_16(4,0,0,cl);
-  // SetColour3D_16(6,0,0,cl);
-  // SetColour3D_16(8,0,0,cl);
-  // SetColour3D_16(10,0,0,cl);
-  // SetColour3D_16(12,0,0,cl);
-  // SetColour3D_16(14,0,0,cl);
-  // // =======
-  // COLOUR cl ;
-  // cl.r = 255; //green
-  // cl.g = 255; //blue
-  // cl.b = 255; //red 
-  // SetColour3D_16(0,0,0,cl);
-  // SetColour3D_16(1,0,0,cl);
-  // SetColour3D_16(2,0,0,cl);
-  // // SetColour3D_16(2,0,0,cl);
-  // // SetColour3D_16(4,0,0,cl);
-  // // SetColour3D_16(6,0,0,cl);
-  // // SetColour3D_16(8,0,0,cl);
-  // // SetColour3D_16(10,0,0,cl);
-  // // SetColour3D_16(12,0,0,cl);
-  // // SetColour3D_16(14,0,0,cl);
-  // >>>>>>> fd22eaa7e5b8ae37ac6be4597ddf593035b71a16
-
-  // SetColour3D_16(0 + 1,0,0,cl);
-  // SetColour3D_16(2 + 1,0,0,cl);
-  // SetColour3D_16(4 + 1,0,0,cl);
-  // SetColour3D_16(6 + 1,0,0,cl);
-  // SetColour3D_16(8 + 1,0,0,cl);
-  // SetColour3D_16(10 + 1,0,0,cl);
-  // SetColour3D_16(12 + 1,0,0,cl);
-  // SetColour3D_16(14 + 1,0,0,cl);
-
-  //SetColour3D_16(0,0,2,cl);
-
-  //exit(0);
-  // print_buff_binary(gsData[1], gsDataSize);
-  // print_buff_binary(gsData[2], gsDataSize);
-  // TLC5940_SetGS(R1, 0,0xFFF);
-  // TLC5940_SetGS(G1,0, 0xFFF);
-  // TLC5940_SetGS(B1, 0, 0xFFF);
-  /*
-  TLC5940_SetGS(0, 0,0xFFF);
-  TLC5940_SetGS(16,0, 0xFFF);
-  TLC5940_SetGS(32, 0, 0xFFF);*/
-
-
-
-
-
-
-
   PULSE_XLAT_PIN;
   PULSE_SCLK_PIN;
   VPRG_PIN_CLR;
@@ -229,32 +154,39 @@ int main(void) {
   
   NVIC_EnableIRQ(RIT_IRQn);
   int tdx = 0;
+  for (int x = 0; x < 8; ++x)
+    {
+      for (int y = 0; y < 8; ++y)
+      {
+        for (int z = 0; z < 8; ++z)
+        {
+          SetColour3D_16(x,y,z, cl);
+        }
+      }
+  }
 
   while(1){
-   
-  COLOUR cl1 ;
-  cl1.r = 0; //green
-  cl1.g = 0; //blue
-  cl1.b = 0; //red 
-//gsUpdateFlag = 0;
 
- //TLC5940_ClearGsData();    
-  // SetColour3D_16(3, 0,tdx, cl);
-  // SetColour3D_16(3, 1,tdx, cl);
-  // SetColour3D_16(3, 2,tdx, cl);
-  // SetColour3D_16(3, 3,tdx, cl);
-  // SetColour3D_16(3, 4,tdx, cl);
-  // SetColour3D_16(3, 5,tdx, cl);
- // SetColour3D_16(tdx, 6,0, cl);
-  //SetColour3D_16(tdx, tdx,tdx, cl);
-  //tdx = (tdx + 1) % SIZE;
- sinWave();
- //Spiral();
- gsUpdateFlag = 1;
+    //gsUpdateFlag = 0;
+    // TLC5940_ClearGsData();    
+    // SetColour3D_16(3, 0,tdx, cl);
+    // SetColour3D_16(3, 1,tdx, cl);
+    // SetColour3D_16(3, 2,tdx, cl);
+    // SetColour3D_16(3, 3,tdx, cl);
+    // SetColour3D_16(3, 4,tdx, cl);
+    // SetColour3D_16(3, 5,tdx, cl);
+    // SetColour3D_16(tdx, 6,0, cl);
+    // SetColour3D_16(tdx, tdx,tdx, cl);
+    // tdx = (tdx + 1) % SIZE;
+   sinWave();
+    //Spiral();
+   // gsUpdateFlag = 1;
 
-  delay_call(5000);
+    
+
+    delay_call(5000);
+       
      
-   
 
   }
     return 0;

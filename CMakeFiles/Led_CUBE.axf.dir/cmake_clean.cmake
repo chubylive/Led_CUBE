@@ -14,6 +14,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj"
   "CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj"
   "CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj"
+  "CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ColourWheel.c.obj"
   "bin/Led_CUBE.axf.pdb"
   "bin/Led_CUBE.axf"
 )

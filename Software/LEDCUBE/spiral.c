@@ -11,7 +11,7 @@ void Spiral(){
 	TLC5940_ClearGsData();
 	COLOUR cl1 ;
   	cl1.r = 255; 
-  	cl1.g = 0; 
+  	cl1.g = 255; 
   	cl1.b = 0; 
 	//Calculate frame
 	for(uint8_t z = bottom; z < top; z++){
