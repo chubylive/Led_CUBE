@@ -226,6 +226,30 @@ Software/FastPWM/FastPWM.c.s:
 	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/FastPWM/FastPWM.c.s
 .PHONY : Software/FastPWM/FastPWM.c.s
 
+Software/LEDCUBE/ColourWheel.obj: Software/LEDCUBE/ColourWheel.c.obj
+.PHONY : Software/LEDCUBE/ColourWheel.obj
+
+# target to build an object file
+Software/LEDCUBE/ColourWheel.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ColourWheel.c.obj
+.PHONY : Software/LEDCUBE/ColourWheel.c.obj
+
+Software/LEDCUBE/ColourWheel.i: Software/LEDCUBE/ColourWheel.c.i
+.PHONY : Software/LEDCUBE/ColourWheel.i
+
+# target to preprocess a source file
+Software/LEDCUBE/ColourWheel.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ColourWheel.c.i
+.PHONY : Software/LEDCUBE/ColourWheel.c.i
+
+Software/LEDCUBE/ColourWheel.s: Software/LEDCUBE/ColourWheel.c.s
+.PHONY : Software/LEDCUBE/ColourWheel.s
+
+# target to generate assembly for a file
+Software/LEDCUBE/ColourWheel.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ColourWheel.c.s
+.PHONY : Software/LEDCUBE/ColourWheel.c.s
+
 Software/LEDCUBE/ledcube.obj: Software/LEDCUBE/ledcube.c.obj
 .PHONY : Software/LEDCUBE/ledcube.obj
 
@@ -249,6 +273,78 @@ Software/LEDCUBE/ledcube.s: Software/LEDCUBE/ledcube.c.s
 Software/LEDCUBE/ledcube.c.s:
 	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.s
 .PHONY : Software/LEDCUBE/ledcube.c.s
+
+Software/LEDCUBE/sinWave.obj: Software/LEDCUBE/sinWave.c.obj
+.PHONY : Software/LEDCUBE/sinWave.obj
+
+# target to build an object file
+Software/LEDCUBE/sinWave.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj
+.PHONY : Software/LEDCUBE/sinWave.c.obj
+
+Software/LEDCUBE/sinWave.i: Software/LEDCUBE/sinWave.c.i
+.PHONY : Software/LEDCUBE/sinWave.i
+
+# target to preprocess a source file
+Software/LEDCUBE/sinWave.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.i
+.PHONY : Software/LEDCUBE/sinWave.c.i
+
+Software/LEDCUBE/sinWave.s: Software/LEDCUBE/sinWave.c.s
+.PHONY : Software/LEDCUBE/sinWave.s
+
+# target to generate assembly for a file
+Software/LEDCUBE/sinWave.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.s
+.PHONY : Software/LEDCUBE/sinWave.c.s
+
+Software/LEDCUBE/spiral.obj: Software/LEDCUBE/spiral.c.obj
+.PHONY : Software/LEDCUBE/spiral.obj
+
+# target to build an object file
+Software/LEDCUBE/spiral.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj
+.PHONY : Software/LEDCUBE/spiral.c.obj
+
+Software/LEDCUBE/spiral.i: Software/LEDCUBE/spiral.c.i
+.PHONY : Software/LEDCUBE/spiral.i
+
+# target to preprocess a source file
+Software/LEDCUBE/spiral.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.i
+.PHONY : Software/LEDCUBE/spiral.c.i
+
+Software/LEDCUBE/spiral.s: Software/LEDCUBE/spiral.c.s
+.PHONY : Software/LEDCUBE/spiral.s
+
+# target to generate assembly for a file
+Software/LEDCUBE/spiral.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.s
+.PHONY : Software/LEDCUBE/spiral.c.s
+
+Software/LEDCUBE/utils.obj: Software/LEDCUBE/utils.c.obj
+.PHONY : Software/LEDCUBE/utils.obj
+
+# target to build an object file
+Software/LEDCUBE/utils.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj
+.PHONY : Software/LEDCUBE/utils.c.obj
+
+Software/LEDCUBE/utils.i: Software/LEDCUBE/utils.c.i
+.PHONY : Software/LEDCUBE/utils.i
+
+# target to preprocess a source file
+Software/LEDCUBE/utils.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.i
+.PHONY : Software/LEDCUBE/utils.c.i
+
+Software/LEDCUBE/utils.s: Software/LEDCUBE/utils.c.s
+.PHONY : Software/LEDCUBE/utils.s
+
+# target to generate assembly for a file
+Software/LEDCUBE/utils.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.s
+.PHONY : Software/LEDCUBE/utils.c.s
 
 Software/SPI_SSP/spi.obj: Software/SPI_SSP/spi.c.obj
 .PHONY : Software/SPI_SSP/spi.obj
@@ -509,9 +605,21 @@ help:
 	@echo "... Software/FastPWM/FastPWM.obj"
 	@echo "... Software/FastPWM/FastPWM.i"
 	@echo "... Software/FastPWM/FastPWM.s"
+	@echo "... Software/LEDCUBE/ColourWheel.obj"
+	@echo "... Software/LEDCUBE/ColourWheel.i"
+	@echo "... Software/LEDCUBE/ColourWheel.s"
 	@echo "... Software/LEDCUBE/ledcube.obj"
 	@echo "... Software/LEDCUBE/ledcube.i"
 	@echo "... Software/LEDCUBE/ledcube.s"
+	@echo "... Software/LEDCUBE/sinWave.obj"
+	@echo "... Software/LEDCUBE/sinWave.i"
+	@echo "... Software/LEDCUBE/sinWave.s"
+	@echo "... Software/LEDCUBE/spiral.obj"
+	@echo "... Software/LEDCUBE/spiral.i"
+	@echo "... Software/LEDCUBE/spiral.s"
+	@echo "... Software/LEDCUBE/utils.obj"
+	@echo "... Software/LEDCUBE/utils.i"
+	@echo "... Software/LEDCUBE/utils.s"
 	@echo "... Software/SPI_SSP/spi.obj"
 	@echo "... Software/SPI_SSP/spi.i"
 	@echo "... Software/SPI_SSP/spi.s"

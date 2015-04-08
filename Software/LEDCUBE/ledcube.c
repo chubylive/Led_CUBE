@@ -1,6 +1,6 @@
 #include "ledcube.h"
 
-
+/*
 void SetAllColour(COLOUR colour){
   for(int idx = 0; idx < SIZE; idx++){
   	uint16_t value = map12(colour.r);
@@ -54,7 +54,7 @@ void SetAllColour(COLOUR colour){
     }
 
 }
-
+*/
 void SetColour3D(uint8_t x, uint8_t y, uint8_t z, COLOUR colour){
 	/*  0 1 2 3 
 		4 5 6 7
@@ -76,6 +76,14 @@ void SetColour3D_16(uint8_t x, uint8_t y, uint8_t z, COLOUR colour){
     4 5 6 7
     8 9 10 11
     12 13 14 15*/
+    if (y % 2 ){
+     if (x % 2 == 0)
+     {
+       x++;
+     }else{
+      x--;
+     }
+    }
 
     uint16_t  idx = x + y * SIZE;
     uint16_t scale = numChannels/3;

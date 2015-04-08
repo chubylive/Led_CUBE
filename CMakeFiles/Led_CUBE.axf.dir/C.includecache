@@ -32,11 +32,16 @@ intrinsics.h
 stdint.h
 -
 
+<<<<<<< HEAD
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.c
+=======
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ColourWheel.h
+>>>>>>> 23c7eb9597e776124ed79c12fc95c9d47e93587f
 ledcube.h
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
 
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
+<<<<<<< HEAD
 TLC5940.h
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/TLC5940.h
 
@@ -61,22 +66,30 @@ NXP/crp.h
 -
 main.h
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.h
+=======
+>>>>>>> 23c7eb9597e776124ed79c12fc95c9d47e93587f
 TLC5940.h
-/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/TLC5940.h
-ledcube.h
-/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/ledcube.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/TLC5940.h
+utils.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/utils.h
 
-/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.h
-stdint.h
--
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sinWave.c
+sinWave.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sinWave.h
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sinWave.h
+ledcube.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
+ColourWheel.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ColourWheel.h
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/utils.h
+ledcube.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
 
 Software/FastPWM/FastPWM.h
 LPC17xx.h
 Software/FastPWM/LPC17xx.h
-
-Software/LEDCUBE/ledcube.h
-TLC5940.h
-Software/LEDCUBE/TLC5940.h
 
 Software/SPI_SSP/spi.h
 LPC17xx.h
@@ -91,6 +104,8 @@ lpc17xx_gpdma.h
 Software/TLC5940/lpc17xx_gpdma.h
 spi.h
 Software/TLC5940/spi.h
+string.h
+-
 
 Software/liblpc-inc/lpc17xx_gpdma.h
 LPC17xx.h

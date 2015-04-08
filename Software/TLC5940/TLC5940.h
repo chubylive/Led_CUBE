@@ -4,12 +4,12 @@
 #include "FastPWM.h"
 #include "lpc17xx_gpdma.h"
 #include "spi.h"
-
+#include <string.h>
 
 #define SPI_SPEED 30000000
 #define GSCLK_SPEED 12000000
 #define SIZE 8
-#define TLC5940_N 3
+#define TLC5940_N 12
 #define MUX 1
 #define USE_16_BIT 1
 
@@ -19,6 +19,7 @@
 //+---+
 
 //this are the layer pins a better system is needed 
+#define GPIO1_1_17 17
 #define GPIO1_1_18 18
 #define GPIO1_1_25 25
 //XLAT pin this should be 
@@ -97,30 +98,12 @@
 #endif
 
 #define dcDataSize ((dcData_t)12 * TLC5940_N)
-
-#if USE_16_BIT 
-	#define gsDataSize ((gsData_t)12 * TLC5940_N)
-#else
-	#define gsDataSize ((gsData_t)24 * TLC5940_N)
-#endif
-
+#define gsDataSize ((gsData_t)12 * TLC5940_N)
 #define numChannels ((channel_t)16 * TLC5940_N)
+uint8_t dcData[dcDataSize];
+uint16_t gsData[SIZE][gsDataSize];
+	
 
-#if (MUX)
-	uint8_t dcData[dcDataSize];
-	#if USE_16_BIT 
-		uint16_t gsData[SIZE][gsDataSize];
-	#else
-		uint8_t gsData[SIZE][gsDataSize];
-	#endif
-#else
-	uint8_t dcData[dcDataSize];
-	#if USE_16_BIT 
-		uint16_t gsData[gsDataSize];
-	#else
-		uint8_t gsData[gsDataSize];
-	#endif
-#endif
 
 volatile uint8_t gsUpdateFlag;
 
@@ -133,6 +116,7 @@ void TLC5940_Init(void);
 void TLC5940_SetAllDC(uint8_t value);
 void TLC5940_SetDC(channel_t channel, uint8_t vaule);
 void TLC5940_ClockInDC(void);
+void TLC5940_ClearGsData();
 void TLC5940_SetAllGS(uint16_t value);
 void TLC5940_SetGS(channel_t channel, uint8_t, uint16_t);
 void TLC5940_SetGS_16(channel_t channel, uint8_t, uint16_t);

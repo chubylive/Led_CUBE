@@ -5248,3 +5248,14 @@ Nt: Stopped: Application exit (Breakpoint)
 0x0000701a in do_AngelSWI (arg=0x18, reason=24) at ../src/swi.h:76
 76	../src/swi.h: No such file or directory.
 	in ../src/swi.h
+Quit
+A debugging session is active.
+
+	Inferior 1 [Remote target] will be killed.
+
+Quit anyway? (y or n) Please answer y or n.
+A debugging session is active.
+
+	Inferior 1 [Remote target] will be killed.
+
+Quit anyway? (y or n) 

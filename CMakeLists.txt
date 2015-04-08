@@ -28,6 +28,10 @@ set(SOURCES
 	Software/SPI_SSP/spi.c
 	Software/TLC5940/TLC5940.c
 	Software/LEDCUBE/ledcube.c
+	Software/LEDCUBE/sinWave.c
+	Software/LEDCUBE/spiral.c
+	Software/LEDCUBE/utils.c
+	Software/LEDCUBE/ColourWheel.c
 
 )
 
