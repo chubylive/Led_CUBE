@@ -1,0 +1,164 @@
+Cmp-Mod V01 Created by Cvpcb (2014-jan-25)-product   date = Sat 28 Jun 2014 03:04:38 AM EDT
+
+BeginCmp
+TimeStamp = /53AAF7B4;
+Reference = C1;
+ValeurCmp = C;
+IdModule  = Capacitors_SMD:c_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53AAFCAD;
+Reference = C2;
+ValeurCmp = C;
+IdModule  = Capacitors_SMD:c_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53ADCC54;
+Reference = C3;
+ValeurCmp = C;
+IdModule  = Capacitors_SMD:c_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /53AE6CA5;
+Reference = NT1;
+ValeurCmp = TLC590NT;
+IdModule  = Sockets_DIP:DIP-28__300_ELL;
+EndCmp
+
+BeginCmp
+TimeStamp = /53AE6DF0;
+Reference = NT2;
+ValeurCmp = TLC590NT;
+IdModule  = Sockets_DIP:DIP-28__300_ELL;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8FE24;
+Reference = P1;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8F43E;
+Reference = P2;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8E719;
+Reference = P4;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8F45A;
+Reference = P5;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53ADD637;
+Reference = P7;
+ValeurCmp = CONN_4X2;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /53ADB70C;
+Reference = P8;
+ValeurCmp = CONN_10;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x10;
+EndCmp
+
+BeginCmp
+TimeStamp = /53ADA1C1;
+Reference = Q1;
+ValeurCmp = MMBF170;
+IdModule  = Housings_SOT-23_SOT-143_TSOT-6:SOT23_Transistor_Handsoldering_RevB_14Mar2014;
+EndCmp
+
+BeginCmp
+TimeStamp = /53AD9DD2;
+Reference = Q2;
+ValeurCmp = MMBF170;
+IdModule  = Housings_SOT-23_SOT-143_TSOT-6:SOT23_Transistor_Handsoldering_RevB_14Mar2014;
+EndCmp
+
+BeginCmp
+TimeStamp = /53ADA1C7;
+Reference = Q3;
+ValeurCmp = MMBF170;
+IdModule  = Housings_SOT-23_SOT-143_TSOT-6:SOT23_Transistor_Handsoldering_RevB_14Mar2014;
+EndCmp
+
+BeginCmp
+TimeStamp = /53AD9F4D;
+Reference = Q4;
+ValeurCmp = MMBF170;
+IdModule  = Housings_SOT-23_SOT-143_TSOT-6:SOT23_Transistor_Handsoldering_RevB_14Mar2014;
+EndCmp
+
+BeginCmp
+TimeStamp = /53ADA1CD;
+Reference = Q5;
+ValeurCmp = MMBF170;
+IdModule  = Housings_SOT-23_SOT-143_TSOT-6:SOT23_Transistor_Handsoldering_RevB_14Mar2014;
+EndCmp
+
+BeginCmp
+TimeStamp = /53ADA030;
+Reference = Q6;
+ValeurCmp = MMBF170;
+IdModule  = Housings_SOT-23_SOT-143_TSOT-6:SOT23_Transistor_Handsoldering_RevB_14Mar2014;
+EndCmp
+
+BeginCmp
+TimeStamp = /53ADA1D3;
+Reference = Q7;
+ValeurCmp = MMBF170;
+IdModule  = Housings_SOT-23_SOT-143_TSOT-6:SOT23_Transistor_Handsoldering_RevB_14Mar2014;
+EndCmp
+
+BeginCmp
+TimeStamp = /53ADA036;
+Reference = Q8;
+ValeurCmp = MMBF170;
+IdModule  = Housings_SOT-23_SOT-143_TSOT-6:SOT23_Transistor_Handsoldering_RevB_14Mar2014;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8EAAB;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:Resistor_SMD0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53A8F479;
+Reference = R2;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:Resistor_SMD0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53ABD2DF;
+Reference = R3;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:Resistor_SMD0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /53AD9CCB;
+Reference = U3;
+ValeurCmp = 74HC595;
+IdModule  = Sockets_DIP:DIP-16__300_ELL;
+EndCmp
+
+EndListe
