@@ -1,5 +1,5 @@
 #include "spiral.h"
-
+#include <stdio.h>
 
 float X, Y, Z, phase;
 uint8_t bottom = 0, top = 8; 
@@ -33,4 +33,37 @@ void Spiral(){
 	}
 	cl1 = get_next_colour();
 
+}
+
+
+int Spiral_animate(struct animation *in){
+	if (in->overlay == 0)
+	{
+			TLC5940_ClearGsData();
+
+	}
+	//printf(" top %d, X %d, Y %d, Z%d\n", in->top ,(int)in->X, (int)in->Y, (int)in->Z);
+
+	//Calculate frame
+	for(uint8_t z = in->bottom; z < in->top; z++){
+		for(uint8_t i = 0; i < 4; i++){
+			in->Y = myCos(in->phase + myMap(z, 0, SIZE-1, 0, 2*myPI) + i*myPI/8);
+			in->X = mySin(in->phase + myMap(z, 0, SIZE-1, 0, 2*myPI) + i*myPI/8);
+			in->Y = myMap(in->Y, -1.1, 0.9, in->narrow, (float)SIZE - 1 - (in->narrow));
+			in->X = myMap(in->X, -1.1, 0.9, in->narrow, (float)SIZE - 1 - (in->narrow));
+
+			SetColour3D_16((uint8_t)(in->X),(uint8_t)(in->Y), z, get_random_colour());
+		}
+	}
+	
+	//Count periods
+	in->phase += myPI/5*in->speed;
+	if(in->phase >= 2*myPI){
+		in->phase -= 2*myPI;
+		
+	}
+	//printf("X %d, Y %d, Z%d\n", (int)in->X, (int)in->Y, (int)in->Z);
+	in->clr = get_random_colour();
+
+return 1;
 }

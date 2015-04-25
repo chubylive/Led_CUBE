@@ -14,6 +14,7 @@ float mySqrt(float x);
 float myMap(float in, float inMin, float inMax, float outMin, float outMax);
 int16_t myRound(float x);
 float myAbs(float x);
+int myRand();
 
 
 #endif

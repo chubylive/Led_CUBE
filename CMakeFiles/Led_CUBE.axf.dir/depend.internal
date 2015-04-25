@@ -61,6 +61,7 @@ CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj
  ../CMSISv2p00_LPC17xx/inc/core_cmInstr.h
  ../CMSISv2p00_LPC17xx/inc/system_LPC17xx.h
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ColourWheel.h
+ /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/animate.h
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/spiral.c
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/spiral.h
@@ -148,8 +149,10 @@ CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.h
  Software/FastPWM/FastPWM.h
  Software/LEDCUBE/ColourWheel.h
+ Software/LEDCUBE/animate.h
  Software/LEDCUBE/ledcube.h
  Software/LEDCUBE/sinWave.h
+ Software/LEDCUBE/spiral.h
  Software/LEDCUBE/utils.h
  Software/SPI_SSP/spi.h
  Software/TLC5940/TLC5940.h

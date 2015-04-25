@@ -2,6 +2,7 @@
 #define __LEDCUBE_H_
 #include "TLC5940.h"
 #include "utils.h"
+
 #define myPI  3.14159265358979323846
 #define MAX_8 255
 #define MAX_12 4095
@@ -13,7 +14,11 @@ typedef struct{
 	uint8_t b;
 }COLOUR;
 
- 
+ struct COLOUR_S{
+	uint8_t r;
+	uint8_t g;
+	uint8_t b;
+};
 void SetAllColour(COLOUR colour);
 void SetColour(channel_t channel, COLOUR colour);
 void SetColour3D(uint8_t x, uint8_t y, uint8_t z, COLOUR colour);

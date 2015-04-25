@@ -1,5 +1,7 @@
 #include "utils.h"
 
+
+uint32_t x = 360, y=107, z = 13, w=77;
 //FAST SINE APPROX
 float mySin(float x){
 	float sinr = 0;
@@ -66,4 +68,11 @@ int16_t myRound(float in){
 //ABSOLUTE VALUE
 float myAbs(float in){
 	return (in)>0?(in):-(in);
-}	
+}
+
+
+int myRand() {
+    uint32_t t = x ^ (x << 11);
+    x = y; y = z; z = w;
+    return w = w ^ (w >> 19) ^ t ^ (t >> 8);
+}

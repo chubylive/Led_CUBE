@@ -9,7 +9,9 @@
 #include "TLC5940.h"
 #include "ledcube.h"
 #include "sinWave.h"
+#include "spiral.h"
 #include "ColourWheel.h"
+#include "animate.h"
 
 
 // Variable to store CRP value in. Will be placed automatically
@@ -99,7 +101,7 @@ void print_array(){
   for (int i = 0; i < 512; ++i)
   {
     COLOUR cl = get_next_colour();
-    printf("Red: %d Green: %d Blue: %d\n", cl.r, cl.g, cl.b);
+   // printf("Red: %d Green: %d Blue: %d\n", cl.r, cl.g, cl.b);
 
   }
 }
@@ -119,6 +121,7 @@ int vprg_pin =0;
 #define R3 32
 #define G3 33
 #define B3 34
+int anim_index =0;
 
 int main(void) {
    
@@ -179,23 +182,44 @@ int main(void) {
    //sinWave();
    //Spiral();
    // gsUpdateFlag = 1;
-  struct animate cube_animation[4];
-
+  struct animation cube_animation;
+  cube_animation.animate = Spiral_animate;
+  cube_animation.bottom = 0;
+  cube_animation.top = 8; 
+  cube_animation.narrow = 0;
+  cube_animation.speed =1 ;
+  cube_animation.phase = 0;
+  cube_animation.X = 0;
+  cube_animation.Y = 0;
+  cube_animation.Z = 0;
+  cube_animation.overlay = 0;
+  struct animation cube_animation1;
+  cube_animation1.animate = Spiral_animate;
+  cube_animation1.bottom = 0;
+  cube_animation1.top = 8; 
+  cube_animation1.narrow = 1;
+  cube_animation1.speed =0.5 ;
+  cube_animation1.phase = 0;
+  cube_animation1.Y = 0;
+  cube_animation1.Z = 0;  
+  cube_animation1.overlay =0;
   while(1){
-     
-    //delay_call(5000);
+    //Spiral();
+   // cube_animation.animate(&cube_animation);
+    cube_animation1.animate(&cube_animation1);
+    delay_call(5000);
 
-    switch (cube_animation[index].animate(&(cube_animation[index])){
-      case 0:
-        continue;
-        break;
-      case 1:
-        index++; 
-        break;
-      default:
-        break;
-    }
-  }
+  //   switch (cube_animation[anim_index].animate(&(cube_animation[anim_index]))){
+  //     case 0:
+  //       continue;
+  //       break;
+  //     case 1:
+  //       anim_index++; 
+  //       break;
+  //     default:
+  //       break;
+  //   }
+   }
     return 0;
 }
 
