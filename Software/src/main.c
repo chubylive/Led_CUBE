@@ -142,9 +142,9 @@ int main(void) {
   //exit(0);
 
   COLOUR cl ;
-  cl.r = 0; //green
+  cl.r = 255;//green
   cl.g = 255; //blue
-  cl.b = 0; //red 
+  cl.b = 255; //red 
  
   PULSE_XLAT_PIN;
   PULSE_SCLK_PIN;
@@ -178,13 +178,13 @@ int main(void) {
     // SetColour3D_16(tdx, 6,0, cl);
     // SetColour3D_16(tdx, tdx,tdx, cl);
     // tdx = (tdx + 1) % SIZE;
-   sinWave();
-    //Spiral();
+   //sinWave();
+   Spiral();
    // gsUpdateFlag = 1;
 
     
 
-    delay_call(5000);
+   delay_call(5000);
        
      
 

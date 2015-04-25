@@ -5,14 +5,14 @@ float X, Y, Z, phase;
 uint8_t bottom = 0, top = 8; 
 		float narrow = 0;
 		float speed =1 ;
-
+COLOUR cl1 ;
+/*  	cl1.r = 255; 
+  	cl1.g = 255; 
+  	cl1.b = 255;*/
 void Spiral(){
 	
 	TLC5940_ClearGsData();
-	COLOUR cl1 ;
-  	cl1.r = 255; 
-  	cl1.g = 255; 
-  	cl1.b = 0; 
+
 	//Calculate frame
 	for(uint8_t z = bottom; z < top; z++){
 		for(uint8_t i = 0; i < 4; i++){
@@ -31,4 +31,6 @@ void Spiral(){
 		phase -= 2*myPI;
 		
 	}
+	cl1 = get_next_colour();
+
 }

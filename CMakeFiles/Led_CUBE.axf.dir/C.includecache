@@ -42,11 +42,11 @@ TLC5940.h
 utils.h
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/utils.h
 
-/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sinWave.c
-sinWave.h
-/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sinWave.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/spiral.c
+spiral.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/spiral.h
 
-/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sinWave.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/spiral.h
 ledcube.h
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
 ColourWheel.h
