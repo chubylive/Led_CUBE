@@ -165,9 +165,7 @@ int main(void) {
       }
   }
 
-  while(1){
-
-    //gsUpdateFlag = 0;
+  //gsUpdateFlag = 0;
     // TLC5940_ClearGsData();    
     // SetColour3D_16(3, 0,tdx, cl);
     // SetColour3D_16(3, 1,tdx, cl);
@@ -179,15 +177,24 @@ int main(void) {
     // SetColour3D_16(tdx, tdx,tdx, cl);
     // tdx = (tdx + 1) % SIZE;
    //sinWave();
-   Spiral();
+   //Spiral();
    // gsUpdateFlag = 1;
+  struct animate cube_animation[4];
 
-    
-
-   delay_call(5000);
-       
+  while(1){
      
+    //delay_call(5000);
 
+    switch (cube_animation[index].animate(&(cube_animation[index])){
+      case 0:
+        continue;
+        break;
+      case 1:
+        index++; 
+        break;
+      default:
+        break;
+    }
   }
     return 0;
 }
