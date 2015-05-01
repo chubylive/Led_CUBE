@@ -26,7 +26,7 @@ struct animation
 	uint8_t top;
 	float narrow;
 
-
+	uint16_t overlay_buff[SIZE][gsDataSize];
 
 };
 

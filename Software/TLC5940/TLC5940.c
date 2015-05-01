@@ -264,11 +264,51 @@ void TLC5940_SetGS_16(channel_t channel, uint8_t level, uint16_t value){
     }
 }
 
+void TLC5940_SetGS_16_buff(channel_t channel, uint8_t level, uint16_t value, uint16_t **buff){
+    //printf("channel before: %d", channel );
+    channel = numChannels - 1 - channel; 
+    channel3_t  i = (channel3_t) channel * 3/4;
+    //printf("channel_after: %d    index: %d\n",channel, i + 1);
+    switch((i + 1 ) % 3) {
+       case 0:
+            buff[level][i] = (buff[level][i] & 0xF000) | ((value) & 0x0FFF);
+            break;
+
+       case 1:
+            switch(channel % 2){
+                case 0:
+                    buff[level][i] = (buff[level][i] & 0x000F) | ((value << 4) & 0xFFF0) ;
+                break;
+                case 1:
+                    buff[level][i] = (buff[level][i] & 0xFFF0) | ((value  >> 8) & 0x000F);
+                    i++;
+                    buff[level][i] = (buff[level][i] & 0x00FF) | ((value & 0x00FF) << 8);
+                break;
+            }
+            break;
+
+       case 2:
+            buff[level][i] = (buff[level][i] & 0xFF00) | ((value & 0x0FF0) >> 4);
+            i++;
+            buff[level][i] = (buff[level][i] & 0x0FFF) | (((value & 0x000F) << 12) & 0xF000);     
+            break;
+
+    }
+}
+
 
 
 void TLC5940_ClearGsData(){
     for (int level = 0; level < 8; level++)
     {
         memset(gsData[level], 0, sizeof(uint16_t)*gsDataSize);
+    }
+}
+
+
+void TLC5940_ClearGsData_buff(uint16_t **buff){
+    for (int level = 0; level < 8; level++)
+    {
+        memset(buff[level], 0, sizeof(uint16_t)*gsDataSize);
     }
 }

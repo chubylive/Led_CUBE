@@ -76,3 +76,13 @@ int myRand() {
     x = y; y = z; z = w;
     return w = w ^ (w >> 19) ^ t ^ (t >> 8);
 }
+
+void xor_buff(uint16_t **buff){
+	for (int idx = 0; idx < SIZE; ++idx)
+	{
+		for (int jdx = 0; jdx < gsDataSize; ++jdx)
+		{
+			gsData[idx][jdx] ^= buff[idx][jdx];
+		}
+	}
+}

@@ -94,3 +94,27 @@ void SetColour3D_16(uint8_t x, uint8_t y, uint8_t z, COLOUR colour){
 
     
 }
+
+void SetColour3D_16_buff(uint8_t x, uint8_t y, uint8_t z, COLOUR colour, uint16_t **buff){
+  /*  0 1 2 3 
+    4 5 6 7
+    8 9 10 11
+    12 13 14 15*/
+    if (y % 2 ){
+     if (x % 2 == 0)
+     {
+       x++;
+     }else{
+      x--;
+     }
+    }
+
+    uint16_t  idx = x + y * SIZE;
+    uint16_t scale = numChannels/3;
+    TLC5940_SetGS_16_buff(idx , z, map12(colour.r), buff);
+    TLC5940_SetGS_16_buff(idx + scale, z, map12(colour.g), buff);
+    TLC5940_SetGS_16_buff(idx + (scale * 2),z, map12(colour.b), buff);
+
+
+    
+}

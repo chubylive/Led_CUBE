@@ -39,20 +39,23 @@ void Spiral(){
 int Spiral_animate(struct animation *in){
 	if (in->overlay == 0)
 	{
-			TLC5940_ClearGsData();
-
+		//			TLC5940_ClearGsData();
+		xor_buff(in->overlay_buff);
+		TLC5940_ClearGsData_buff(in->overlay_buff);
 	}
 	//printf(" top %d, X %d, Y %d, Z%d\n", in->top ,(int)in->X, (int)in->Y, (int)in->Z);
 
 	//Calculate frame
 	for(uint8_t z = in->bottom; z < in->top; z++){
 		for(uint8_t i = 0; i < 4; i++){
+
 			in->Y = myCos(in->phase + myMap(z, 0, SIZE-1, 0, 2*myPI) + i*myPI/8);
 			in->X = mySin(in->phase + myMap(z, 0, SIZE-1, 0, 2*myPI) + i*myPI/8);
 			in->Y = myMap(in->Y, -1.1, 0.9, in->narrow, (float)SIZE - 1 - (in->narrow));
 			in->X = myMap(in->X, -1.1, 0.9, in->narrow, (float)SIZE - 1 - (in->narrow));
 
-			SetColour3D_16((uint8_t)(in->X),(uint8_t)(in->Y), z, get_random_colour());
+			SetColour3D_16((uint8_t)(in->X),(uint8_t)(in->Y), z, in->clr);
+			SetColour3D_16_buff((uint8_t)(in->X),(uint8_t)(in->Y), z, in->clr, in->overlay_buff);
 		}
 	}
 	
