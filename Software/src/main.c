@@ -187,27 +187,53 @@ int main(void) {
   cube_animation.bottom = 0;
   cube_animation.top = 8; 
   cube_animation.narrow = 0;
-  cube_animation.speed =1 ;
+  cube_animation.speed =0 ;
   cube_animation.phase = 0;
   cube_animation.X = 0;
   cube_animation.Y = 0;
   cube_animation.Z = 0;
   cube_animation.overlay = 0;
+
+  cube_animation.clr.r = 255;//green
+  cube_animation.clr.g = 0; //blue
+  cube_animation.clr.b = 255; //red 
   struct animation cube_animation1;
   cube_animation1.animate = Spiral_animate;
   cube_animation1.bottom = 0;
   cube_animation1.top = 8; 
   cube_animation1.narrow = 1;
-  cube_animation1.speed =0.5 ;
+  cube_animation1.speed =0 ;
   cube_animation1.phase = 0;
   cube_animation1.Y = 0;
   cube_animation1.Z = 0;  
-  cube_animation1.overlay =0;
+  cube_animation1.overlay =1;
+   cube_animation1.clr.r = 0;//green
+  cube_animation1.clr.g = 0; //blue
+  cube_animation1.clr.b = 255;
+  TLC5940_ClearGsData_buff(cube_animation1.overlay_buff);
+
+
+  struct animation cube_animation2;
+  cube_animation2.animate = Spiral_animate;
+  cube_animation2.bottom = 0;
+  cube_animation2.top = 8; 
+  cube_animation2.narrow = 2;
+  cube_animation2.speed =0 ;
+  cube_animation2.phase = 0;
+  cube_animation2.Y = 0;
+  cube_animation2.Z = 0;  
+  cube_animation2.overlay =1;
+   cube_animation2.clr.r = 255;//green
+  cube_animation2.clr.g = 255; //blue
+  cube_animation2.clr.b = 0;
+  TLC5940_ClearGsData_buff(cube_animation2.overlay_buff);
+  TLC5940_ClearGsData();
   while(1){
     //Spiral();
-   // cube_animation.animate(&cube_animation);
+    cube_animation.animate(&cube_animation);
     cube_animation1.animate(&cube_animation1);
-    delay_call(5000);
+    cube_animation2.animate(&cube_animation2);
+    delay_call(100000);
 
   //   switch (cube_animation[anim_index].animate(&(cube_animation[anim_index]))){
   //     case 0:

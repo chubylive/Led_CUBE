@@ -95,7 +95,7 @@ void SetColour3D_16(uint8_t x, uint8_t y, uint8_t z, COLOUR colour){
     
 }
 
-void SetColour3D_16_buff(uint8_t x, uint8_t y, uint8_t z, COLOUR colour, uint16_t **buff){
+void SetColour3D_16_buff(uint8_t x, uint8_t y, uint8_t z, COLOUR colour, uint16_t buff[SIZE][gsDataSize]){
   /*  0 1 2 3 
     4 5 6 7
     8 9 10 11

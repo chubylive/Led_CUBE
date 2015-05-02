@@ -1,6 +1,6 @@
 #include "utils.h"
 
-
+#include <stdio.h>
 uint32_t x = 360, y=107, z = 13, w=77;
 //FAST SINE APPROX
 float mySin(float x){
@@ -77,12 +77,14 @@ int myRand() {
     return w = w ^ (w >> 19) ^ t ^ (t >> 8);
 }
 
-void xor_buff(uint16_t **buff){
+void xorBuff(uint16_t buff[SIZE][gsDataSize]){
 	for (int idx = 0; idx < SIZE; ++idx)
 	{
 		for (int jdx = 0; jdx < gsDataSize; ++jdx)
 		{
+			//printf("b %d %d\n", gsData[idx][jdx], buff[idx][jdx]);
 			gsData[idx][jdx] ^= buff[idx][jdx];
+			//printf("a %d %d\n", gsData[idx][jdx], buff[idx][jdx]);
 		}
 	}
 }

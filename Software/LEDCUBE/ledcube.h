@@ -23,7 +23,7 @@ void SetAllColour(COLOUR colour);
 void SetColour(channel_t channel, COLOUR colour);
 void SetColour3D(uint8_t x, uint8_t y, uint8_t z, COLOUR colour);
 void SetColour3D_16(uint8_t x, uint8_t y, uint8_t z, COLOUR colour);
-void SetColour3D_16_buff(uint8_t x, uint8_t y, uint8_t z, COLOUR colour, uint16_t **buff);
+void SetColour3D_16_buff(uint8_t x, uint8_t y, uint8_t z, COLOUR colour, uint16_t buff[SIZE][gsDataSize]);
 
 
 

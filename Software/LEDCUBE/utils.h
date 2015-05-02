@@ -15,7 +15,7 @@ float myMap(float in, float inMin, float inMax, float outMin, float outMax);
 int16_t myRound(float x);
 float myAbs(float x);
 int myRand();
-void xor_buff(uint16_t **buff);
+void xorBuff(uint16_t buff[SIZE][gsDataSize]);
 
 
 #endif

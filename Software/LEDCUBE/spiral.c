@@ -37,11 +37,13 @@ void Spiral(){
 
 
 int Spiral_animate(struct animation *in){
-	if (in->overlay == 0)
+	if (in->overlay )
 	{
 		//			TLC5940_ClearGsData();
-		xor_buff(in->overlay_buff);
+		xorBuff(in->overlay_buff);
 		TLC5940_ClearGsData_buff(in->overlay_buff);
+	}else{
+		TLC5940_ClearGsData();
 	}
 	//printf(" top %d, X %d, Y %d, Z%d\n", in->top ,(int)in->X, (int)in->Y, (int)in->Z);
 
@@ -66,7 +68,7 @@ int Spiral_animate(struct animation *in){
 		
 	}
 	//printf("X %d, Y %d, Z%d\n", (int)in->X, (int)in->Y, (int)in->Z);
-	in->clr = get_random_colour();
+	//in->clr = get_next_colour();
 
 return 1;
 }

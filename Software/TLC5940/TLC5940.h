@@ -7,7 +7,7 @@
 #include <string.h>
 
 #define SPI_SPEED 30000000
-#define GSCLK_SPEED 12000000
+#define GSCLK_SPEED 8000000
 #define SIZE 8
 #define TLC5940_N 12
 #define MUX 1
@@ -122,8 +122,8 @@ void TLC5940_SetGS(channel_t channel, uint8_t, uint16_t);
 void TLC5940_SetGS_16(channel_t channel, uint8_t, uint16_t);
 uint8_t dc_spi_tx(uint8_t tx);
 void dcspi_txrx(uint8_t* tx, uint8_t* rx, uint16_t len);
-void TLC5940_SetGS_16_buff(channel_t channel, uint8_t level, uint16_t value, uint16_t **buff);
-void TLC5940_ClearGsData_buff(uint16_t **buff);
+void TLC5940_SetGS_16_buff(channel_t channel, uint8_t level, uint16_t value, uint16_t buff[SIZE][gsDataSize]);
+void TLC5940_ClearGsData_buff(uint16_t buff[SIZE][gsDataSize]);
 
 
 
