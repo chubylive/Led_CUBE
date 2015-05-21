@@ -10,6 +10,7 @@
 #include "ledcube.h"
 #include "sinWave.h"
 #include "spiral.h"
+#include "csumd.h"
 #include "ColourWheel.h"
 #include "animate.h"
 
@@ -110,7 +111,7 @@ int level= 0xFFF;
 
 int con = 0;
 int up = 0;
-volatile uint_fast8_t idx = 0;
+volatile uint_fast8_t row_index = 0;
 int vprg_pin =0;
 #define R1 1
 #define G1 2
@@ -122,6 +123,7 @@ int vprg_pin =0;
 #define G3 33
 #define B3 34
 int anim_index =0;
+volatile uint_fast8_t chg_buff = 0 ;
 
 int main(void) {
    
@@ -155,7 +157,7 @@ int main(void) {
   //switch ssp to send 16bit frames   
   LPC_SSP0->CR0 |= 0xF;
   
-  NVIC_EnableIRQ(RIT_IRQn);
+  
   int tdx = 0;
   for (int x = 0; x < 8; ++x)
     {
@@ -187,29 +189,30 @@ int main(void) {
   cube_animation.bottom = 0;
   cube_animation.top = 8; 
   cube_animation.narrow = 0;
-  cube_animation.speed =0 ;
+  cube_animation.speed =1 ;
   cube_animation.phase = 0;
   cube_animation.X = 0;
   cube_animation.Y = 0;
   cube_animation.Z = 0;
-  cube_animation.overlay = 0;
+  cube_animation.random_colour =1 ;
+  cube_animation.overlay = 1;
 
   cube_animation.clr.r = 255;//green
-  cube_animation.clr.g = 0; //blue
+  cube_animation.clr.g = 255; //blue
   cube_animation.clr.b = 255; //red 
   struct animation cube_animation1;
   cube_animation1.animate = Spiral_animate;
   cube_animation1.bottom = 0;
   cube_animation1.top = 8; 
   cube_animation1.narrow = 1;
-  cube_animation1.speed =0 ;
+  cube_animation1.speed =0.5 ;
   cube_animation1.phase = 0;
   cube_animation1.Y = 0;
   cube_animation1.Z = 0;  
   cube_animation1.overlay =1;
-   cube_animation1.clr.r = 0;//green
-  cube_animation1.clr.g = 0; //blue
-  cube_animation1.clr.b = 255;
+   cube_animation1.clr.r = 255;//red
+  cube_animation1.clr.g = 255; //blue
+  cube_animation1.clr.b = 255; // gree
   TLC5940_ClearGsData_buff(cube_animation1.overlay_buff);
 
 
@@ -218,22 +221,35 @@ int main(void) {
   cube_animation2.bottom = 0;
   cube_animation2.top = 8; 
   cube_animation2.narrow = 2;
-  cube_animation2.speed =0 ;
+  cube_animation2.speed =0.25 ;
   cube_animation2.phase = 0;
   cube_animation2.Y = 0;
   cube_animation2.Z = 0;  
+  cube_animation2.random_colour =0;
   cube_animation2.overlay =1;
    cube_animation2.clr.r = 255;//green
   cube_animation2.clr.g = 255; //blue
-  cube_animation2.clr.b = 0;
+  cube_animation2.clr.b = 255;
   TLC5940_ClearGsData_buff(cube_animation2.overlay_buff);
   TLC5940_ClearGsData();
+  //csumd();
+  NVIC_EnableIRQ(RIT_IRQn);
+ // csumd();
   while(1){
     //Spiral();
+    // if (row_index)
+    // {
+    //   /* code */
+    // }
+   // chg_buff = 1;
     cube_animation.animate(&cube_animation);
-    cube_animation1.animate(&cube_animation1);
+  //  cube_animation1.animate(&cube_animation1);
     cube_animation2.animate(&cube_animation2);
-    delay_call(100000);
+    //switch back to buffer 0
+    
+   // chg_buff = 0;
+
+    delay_call(5000);
 
   //   switch (cube_animation[anim_index].animate(&(cube_animation[anim_index]))){
   //     case 0:
@@ -257,20 +273,18 @@ void RIT_IRQHandler(){
   BLANK_PIN_CLR;
 
   
-  LPC_GPIO1->FIOPIN = _BV(GPIO1_1_18 + idx);
+  LPC_GPIO1->FIOPIN = _BV(GPIO1_1_18 + row_index);
 
-  if (gsUpdateFlag) //framerate of cube ie on cube image
-  {
-
-
-    spi_txrx((uint16_t*) gsData[idx], NULL, gsDataSize);
+  // if (!chg_buff) //Switch buffers
+  // {
+    spi_txrx((uint16_t*) gsData[row_index], NULL, gsDataSize);
     
+  // }else{
+  //   spi_txrx((uint16_t*) gsData1[row_index], NULL, gsDataSize);
+  // }
+  PULSE_XLAT_PIN; 
 
-    PULSE_XLAT_PIN; 
-    //gsUpdateFlag = 0; 
-  }
-
-  idx = (idx + 1) % SIZE;
+  row_index = (row_index + 1) % SIZE;
 
 }
 

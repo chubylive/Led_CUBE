@@ -301,7 +301,7 @@ void TLC5940_SetGS_16_buff(channel_t channel, uint8_t level, uint16_t value, uin
 void TLC5940_ClearGsData(){
     for (int level = 0; level < SIZE; level++)
     {
-        memset(gsData[level], 0, sizeof(uint16_t)*gsDataSize);
+        memset(gsData[level], 0, sizeof(uint16_t) * gsDataSize);
     }
 }
 
@@ -309,6 +309,13 @@ void TLC5940_ClearGsData(){
 void TLC5940_ClearGsData_buff(uint16_t buff[SIZE][gsDataSize]){
     for (int level = 0; level < SIZE; level++)
     {
-        memset(buff[level], 0, sizeof(uint16_t)*gsDataSize);
+        memset(buff[level], 0, sizeof(uint16_t) * gsDataSize);
+    }
+}
+
+void TLC5940_CopyGsData(){
+    for (int level = 0; level < SIZE; level++)
+    {
+        memcpy(gsData[level],gsData1[level], sizeof(uint16_t) * gsDataSize);
     }
 }

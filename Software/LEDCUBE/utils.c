@@ -1,7 +1,7 @@
 #include "utils.h"
 
 #include <stdio.h>
-uint32_t x = 360, y=107, z = 13, w=77;
+uint32_t x_rand = 360, y=107, z = 13, w=77;
 //FAST SINE APPROX
 float mySin(float x){
 	float sinr = 0;
@@ -72,18 +72,19 @@ float myAbs(float in){
 
 
 int myRand() {
-    uint32_t t = x ^ (x << 11);
-    x = y; y = z; z = w;
+    uint32_t t = x_rand ^ (x_rand << 11);
+    x_rand = y; y = z; z = w;
     return w = w ^ (w >> 19) ^ t ^ (t >> 8);
 }
 
 void xorBuff(uint16_t buff[SIZE][gsDataSize]){
 	for (int idx = 0; idx < SIZE; ++idx)
 	{
-		for (int jdx = 0; jdx < gsDataSize; ++jdx)
+		for (int jdx = 0; jdx < gsDataSize; jdx++)
 		{
 			//printf("b %d %d\n", gsData[idx][jdx], buff[idx][jdx]);
-			gsData[idx][jdx] ^= buff[idx][jdx];
+			gsData1[idx][jdx] ^= buff[idx][jdx];
+			buff[idx][jdx] ^= buff[idx][jdx];
 			//printf("a %d %d\n", gsData[idx][jdx], buff[idx][jdx]);
 		}
 	}
