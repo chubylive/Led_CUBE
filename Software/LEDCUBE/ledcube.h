@@ -1,11 +1,5 @@
 #ifndef __LEDCUBE_H_
 #define __LEDCUBE_H_
-#include "TLC5940.h"
-#include "utils.h"
-#define myPI  3.14159265358979323846
-#define MAX_8 255
-#define MAX_12 4095
-
 
 
 typedef struct {
