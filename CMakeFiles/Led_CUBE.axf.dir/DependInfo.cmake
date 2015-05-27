@@ -6,6 +6,10 @@ SET(CMAKE_DEPENDS_LANGUAGES
 SET(CMAKE_DEPENDS_CHECK_C
   "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/FastPWM/FastPWM.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/FastPWM/FastPWM.c.obj"
   "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ColourWheel.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ColourWheel.c.obj"
+<<<<<<< HEAD
+=======
+  "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/csumd.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/csumd.c.obj"
+>>>>>>> 2c9eb2bde0751c060fdb8c9cb47673bb574cd0f4
   "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj"
   "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sinWave.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj"
   "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/spiral.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj"

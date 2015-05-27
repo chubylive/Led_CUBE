@@ -250,6 +250,33 @@ Software/LEDCUBE/ColourWheel.c.s:
 	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ColourWheel.c.s
 .PHONY : Software/LEDCUBE/ColourWheel.c.s
 
+<<<<<<< HEAD
+=======
+Software/LEDCUBE/csumd.obj: Software/LEDCUBE/csumd.c.obj
+.PHONY : Software/LEDCUBE/csumd.obj
+
+# target to build an object file
+Software/LEDCUBE/csumd.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/csumd.c.obj
+.PHONY : Software/LEDCUBE/csumd.c.obj
+
+Software/LEDCUBE/csumd.i: Software/LEDCUBE/csumd.c.i
+.PHONY : Software/LEDCUBE/csumd.i
+
+# target to preprocess a source file
+Software/LEDCUBE/csumd.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/csumd.c.i
+.PHONY : Software/LEDCUBE/csumd.c.i
+
+Software/LEDCUBE/csumd.s: Software/LEDCUBE/csumd.c.s
+.PHONY : Software/LEDCUBE/csumd.s
+
+# target to generate assembly for a file
+Software/LEDCUBE/csumd.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/csumd.c.s
+.PHONY : Software/LEDCUBE/csumd.c.s
+
+>>>>>>> 2c9eb2bde0751c060fdb8c9cb47673bb574cd0f4
 Software/LEDCUBE/ledcube.obj: Software/LEDCUBE/ledcube.c.obj
 .PHONY : Software/LEDCUBE/ledcube.obj
 
@@ -608,6 +635,12 @@ help:
 	@echo "... Software/LEDCUBE/ColourWheel.obj"
 	@echo "... Software/LEDCUBE/ColourWheel.i"
 	@echo "... Software/LEDCUBE/ColourWheel.s"
+<<<<<<< HEAD
+=======
+	@echo "... Software/LEDCUBE/csumd.obj"
+	@echo "... Software/LEDCUBE/csumd.i"
+	@echo "... Software/LEDCUBE/csumd.s"
+>>>>>>> 2c9eb2bde0751c060fdb8c9cb47673bb574cd0f4
 	@echo "... Software/LEDCUBE/ledcube.obj"
 	@echo "... Software/LEDCUBE/ledcube.i"
 	@echo "... Software/LEDCUBE/ledcube.s"

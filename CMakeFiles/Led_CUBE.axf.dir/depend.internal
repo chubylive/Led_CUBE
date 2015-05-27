@@ -24,6 +24,25 @@ CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ColourWheel.c.obj
  Software/TLC5940/TLC5940.h
  Software/liblpc-inc/lpc17xx_gpdma.h
  Software/liblpc-inc/lpc_types.h
+<<<<<<< HEAD
+=======
+CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/csumd.c.obj
+ ../CMSISv2p00_LPC17xx/inc/LPC17xx.h
+ ../CMSISv2p00_LPC17xx/inc/core_cm3.h
+ ../CMSISv2p00_LPC17xx/inc/core_cmFunc.h
+ ../CMSISv2p00_LPC17xx/inc/core_cmInstr.h
+ ../CMSISv2p00_LPC17xx/inc/system_LPC17xx.h
+ /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ColourWheel.h
+ /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/csumd.c
+ /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/csumd.h
+ /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
+ /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/utils.h
+ Software/FastPWM/FastPWM.h
+ Software/SPI_SSP/spi.h
+ Software/TLC5940/TLC5940.h
+ Software/liblpc-inc/lpc17xx_gpdma.h
+ Software/liblpc-inc/lpc_types.h
+>>>>>>> 2c9eb2bde0751c060fdb8c9cb47673bb574cd0f4
 CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj
  ../CMSISv2p00_LPC17xx/inc/LPC17xx.h
  ../CMSISv2p00_LPC17xx/inc/core_cm3.h
@@ -61,6 +80,10 @@ CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj
  ../CMSISv2p00_LPC17xx/inc/core_cmInstr.h
  ../CMSISv2p00_LPC17xx/inc/system_LPC17xx.h
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ColourWheel.h
+<<<<<<< HEAD
+=======
+ /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/animate.h
+>>>>>>> 2c9eb2bde0751c060fdb8c9cb47673bb574cd0f4
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/spiral.c
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/spiral.h
@@ -148,8 +171,16 @@ CMakeFiles/Led_CUBE.axf.dir/Software/src/main.c.obj
  /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.h
  Software/FastPWM/FastPWM.h
  Software/LEDCUBE/ColourWheel.h
+<<<<<<< HEAD
  Software/LEDCUBE/ledcube.h
  Software/LEDCUBE/sinWave.h
+=======
+ Software/LEDCUBE/animate.h
+ Software/LEDCUBE/csumd.h
+ Software/LEDCUBE/ledcube.h
+ Software/LEDCUBE/sinWave.h
+ Software/LEDCUBE/spiral.h
+>>>>>>> 2c9eb2bde0751c060fdb8c9cb47673bb574cd0f4
  Software/LEDCUBE/utils.h
  Software/SPI_SSP/spi.h
  Software/TLC5940/TLC5940.h

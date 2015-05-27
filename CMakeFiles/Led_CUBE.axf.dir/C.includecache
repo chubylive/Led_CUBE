@@ -33,6 +33,7 @@ stdint.h
 -
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.c
 =======
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ColourWheel.h
@@ -56,6 +57,67 @@ lpc17xx_gpdma.h
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/TLC5940/lpc17xx_gpdma.h
 spi.h
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/TLC5940/spi.h
+=======
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ColourWheel.c
+ColourWheel.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ColourWheel.h
+utils.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/utils.h
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ColourWheel.h
+ledcube.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/animate.h
+stdint.h
+-
+ledcube.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/csumd.c
+csumd.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/csumd.h
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/csumd.h
+ledcube.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
+ColourWheel.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ColourWheel.h
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
+TLC5940.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/TLC5940.h
+utils.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/utils.h
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sinWave.c
+sinWave.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sinWave.h
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sinWave.h
+ledcube.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
+ColourWheel.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ColourWheel.h
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/spiral.c
+spiral.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/spiral.h
+stdio.h
+-
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/spiral.h
+ledcube.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
+ColourWheel.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ColourWheel.h
+animate.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/animate.h
+
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/utils.h
+ledcube.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
+>>>>>>> 2c9eb2bde0751c060fdb8c9cb47673bb574cd0f4
 
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/main.c
 LPC17xx.h
@@ -79,9 +141,23 @@ sinWave.h
 
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sinWave.h
 ledcube.h
+<<<<<<< HEAD
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.h
 ColourWheel.h
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ColourWheel.h
+=======
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/ledcube.h
+sinWave.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/sinWave.h
+spiral.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/spiral.h
+csumd.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/csumd.h
+ColourWheel.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/ColourWheel.h
+animate.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/animate.h
+>>>>>>> 2c9eb2bde0751c060fdb8c9cb47673bb574cd0f4
 
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/utils.h
 ledcube.h
@@ -91,6 +167,49 @@ Software/FastPWM/FastPWM.h
 LPC17xx.h
 Software/FastPWM/LPC17xx.h
 
+<<<<<<< HEAD
+=======
+Software/LEDCUBE/ColourWheel.h
+ledcube.h
+Software/LEDCUBE/ledcube.h
+
+Software/LEDCUBE/animate.h
+stdint.h
+-
+ledcube.h
+Software/LEDCUBE/ledcube.h
+
+Software/LEDCUBE/csumd.h
+ledcube.h
+Software/LEDCUBE/ledcube.h
+ColourWheel.h
+Software/LEDCUBE/ColourWheel.h
+
+Software/LEDCUBE/ledcube.h
+TLC5940.h
+Software/LEDCUBE/TLC5940.h
+utils.h
+Software/LEDCUBE/utils.h
+
+Software/LEDCUBE/sinWave.h
+ledcube.h
+Software/LEDCUBE/ledcube.h
+ColourWheel.h
+Software/LEDCUBE/ColourWheel.h
+
+Software/LEDCUBE/spiral.h
+ledcube.h
+Software/LEDCUBE/ledcube.h
+ColourWheel.h
+Software/LEDCUBE/ColourWheel.h
+animate.h
+Software/LEDCUBE/animate.h
+
+Software/LEDCUBE/utils.h
+ledcube.h
+Software/LEDCUBE/ledcube.h
+
+>>>>>>> 2c9eb2bde0751c060fdb8c9cb47673bb574cd0f4
 Software/SPI_SSP/spi.h
 LPC17xx.h
 Software/SPI_SSP/LPC17xx.h

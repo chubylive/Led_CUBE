@@ -41,3 +41,11 @@ COLOUR get_next_colour(void){
 	
 	return array[pos];
 }
+
+COLOUR get_random_colour(void){
+	unsigned int rand_int = myRand();
+	if(++rand_int >= COLOUR_WHEEL_LENGTH){
+		rand_int -= COLOUR_WHEEL_LENGTH;
+	}
+	return array[rand_int % COLOUR_WHEEL_LENGTH];
+}
