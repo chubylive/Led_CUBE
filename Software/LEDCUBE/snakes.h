@@ -6,7 +6,7 @@
 #define SOUTH 1
 #define EAST 2
 #define WEST 3
-
+#define MAX_SNAKES 10
 
 typedef struct snake_node {
 	uint8_t is_head;
@@ -14,5 +14,9 @@ typedef struct snake_node {
 	uint8_t y;
 	uint8_t z;
 	uint8_t direction;
+	uint8_t speed;
+	COLOUR clr;
 	struct snake_node *next_ptr;
 }s_node;
+
+s_node s_array[MAX_SNAKES]; 
