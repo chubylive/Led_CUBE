@@ -124,5 +124,5 @@ void clear3D(uint8_t x, uint8_t y, uint8_t z){
 	blank.r = 0;
 	blank.g = 0;
 	blank.b = 0;
-	SetColour3D_16(uint8_t x, uint8_t y, uint8_t z, blank);
+	SetColour3D_16(x, y, z, blank);
 }
