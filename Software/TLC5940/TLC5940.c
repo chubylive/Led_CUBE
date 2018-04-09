@@ -193,7 +193,7 @@ void TLC5940_ClockInDC(void){
 
 
 
-//This is not working at the moment need to be reviced for 16bit
+
 void TLC5940_SetAllGS(uint16_t value){
     uint8_t tmp1 = (value >> 4);
     uint8_t tmp2 = (uint8_t)(value << 4) | (tmp1 >> 4);
@@ -219,104 +219,114 @@ void TLC5940_SetGS(channel_t channel,uint8_t level,  uint16_t value) {
     channel = numChannels - 1 - channel;
     channel3_t i = (channel3_t)channel * 3 / 2;
     switch (channel % 2) {
-        case 0:    
-            gsData[level][i] = (value >> 4);
-            i++;
-            gsData[level][i] = (gsData[level][i] & 0x0F) | (uint8_t)(value << 4);
+        case 0:
+            #if !MUX
+                gsData[i] = (value >> 4);
+                i++;
+                gsData[i] = (gsData[i] & 0x0F) | (uint8_t)(value << 4);
+            #else
+                gsData[level][i] = (value >> 4);
+                i++;
+                gsData[level][i] = (gsData[level][i] & 0x0F) | (uint8_t)(value << 4);
+            #endif
             break;
         default: // case 1:
-            gsData[level][i] = (gsData[level][i] & 0xF0) | (value >> 8);
-            i++;
-            gsData[level][i] = (uint8_t)value;
+            #if MUX
+
+                gsData[level][i] = (gsData[level][i] & 0xF0) | (value >> 8);
+                i++;
+                gsData[level][i] = (uint8_t)value;
+            #else
+                gsData[i] = (gsData[i] & 0xF0) | (value >> 8);
+                i++;
+                gsData[i] = (uint8_t)value;
+            #endif
             break;
     }
 }
 
 
 void TLC5940_SetGS_16(channel_t channel, uint8_t level, uint16_t value){
-    //printf("channel before: %d", channel );
+    printf("channel before: %d", channel );
     channel = numChannels - 1 - channel; 
     channel3_t  i = (channel3_t) channel * 3/4;
-    //printf("channel_after: %d    index: %d\n",channel, i + 1);
+    printf("channel_after: %d    index: %d\n",channel, i + 1);
     switch((i + 1 ) % 3) {
        case 0:
-            gsData[level][i] = (gsData[level][i] & 0xF000) | ((value) & 0x0FFF);
+            #if !MUX
+                gsData[i] = (gsData[i] & 0xF000) | ((value) & 0x0FFF);
+               
+            #else
+                gsData[i][level] = (gsData[i][level] & 0xF000) | ((value) & 0x0FFF);
+               
+            #endif
             break;
 
        case 1:
-            switch(channel % 2){
-                case 0:
-                    gsData[level][i] = (gsData[level][i] & 0x000F) | ((value << 4) & 0xFFF0) ;
-                break;
-                case 1:
-                    gsData[level][i] = (gsData[level][i] & 0xFFF0) | ((value  >> 8) & 0x000F);
-                    i++;
-                    gsData[level][i] = (gsData[level][i] & 0x00FF) | ((value & 0x00FF) << 8);
-                break;
-            }
+
+
+            #if !MUX
+                switch(channel % 2){
+                    case 0:
+                        gsData[i] = (gsData[i] & 0x000F) | (value << 4);
+                    default:
+                        gsData[i] = (gsData[i] & 0xFFF0) | (value  >> 8);
+                        i++;
+                        gsData[i] = (gsData[i] & 0x00FF) | ((value & 0x00FF) << 8);
+                }
+                 
+            #else
+                switch(channel % 2){
+                    case 0:
+                        gsData[i][level] = (gsData[i][level] & 0x000F) | (value << 4);
+                    default:
+                        gsData[i][level] = (gsData[i][level] & 0xFFF0) | (value  >> 8);
+                        i++;
+                        gsData[i][level] = (gsData[i][level] & 0x00FF) | ((value & 0x00FF) << 8);
+                }
+
+            #endif
             break;
 
        case 2:
-            gsData[level][i] = (gsData[level][i] & 0xFF00) | ((value & 0x0FF0) >> 4);
-            i++;
-            gsData[level][i] = (gsData[level][i] & 0x0FFF) | (((value & 0x000F) << 12) & 0xF000);     
+           #if !MUX
+                gsData[i] = (gsData[i] & 0xFF00) | ((value & 0x0FF0) >> 4);
+                i++;
+                gsData[i] = (gsData[i] & 0x0FFF) | ((value & 0x000F) << 12);
+                
+            #else
+                gsData[i][level] = (gsData[i][level] & 0xFF00) | ((value & 0x0FF0) >> 4);
+                i++;
+                gsData[i][level] = (gsData[i][level] & 0x0FFF) | ((value & 0x000F) << 12);     
+            #endif
             break;
 
-    }
-}
-
-void TLC5940_SetGS_16_buff(channel_t channel, uint8_t level, uint16_t value, uint16_t buff[SIZE][gsDataSize]){
-    //printf("channel before: %d", channel );
-    channel = numChannels - 1 - channel; 
-    channel3_t  i = (channel3_t) channel * 3/4;
-    //printf("channel_after: %d    index: %d\n",channel, i + 1);
-    switch((i + 1 ) % 3) {
-       case 0:
-            buff[level][i] = (buff[level][i] & 0xF000) | ((value) & 0x0FFF);
-            break;
-
-       case 1:
-            switch(channel % 2){
-                case 0:
-                    buff[level][i] = (buff[level][i] & 0x000F) | ((value << 4) & 0xFFF0) ;
-                break;
-                case 1:
-                    buff[level][i] = (buff[level][i] & 0xFFF0) | ((value  >> 8) & 0x000F);
-                    i++;
-                    buff[level][i] = (buff[level][i] & 0x00FF) | ((value & 0x00FF) << 8);
-                break;
-            }
-            break;
-
-       case 2:
-            buff[level][i] = (buff[level][i] & 0xFF00) | ((value & 0x0FF0) >> 4);
-            i++;
-            buff[level][i] = (buff[level][i] & 0x0FFF) | (((value & 0x000F) << 12) & 0xF000);     
-            break;
 
     }
 }
 
 
 
-void TLC5940_ClearGsData(){
-    for (int level = 0; level < SIZE; level++)
-    {
-        memset(gsData[level], 0, sizeof(uint16_t) * gsDataSize);
-    }
-}
 
 
-void TLC5940_ClearGsData_buff(uint16_t buff[SIZE][gsDataSize]){
-    for (int level = 0; level < SIZE; level++)
-    {
-        memset(buff[level], 0, sizeof(uint16_t) * gsDataSize);
-    }
-}
+    
+  //  write(0);
 
-void TLC5940_CopyGsData(){
-    for (int level = 0; level < SIZE; level++)
-    {
-        memcpy(gsData[level],gsData1[level], sizeof(uint16_t) * gsDataSize);
-    }
-}
+    // //set BLANK pin high
+
+    // //select row
+    // /*might just let spi do this*/
+    // if(need_xlat){
+    //     //pulse xlat
+    //     need_xlat = 0;
+    // }
+
+    // //set BLANK low
+    // write(0.5);
+
+    // if(newGSData){
+    //     for (int i = (16 *  ); i < ; ++i)
+    //     {
+    //         /* code */
+    //     }
+    // }

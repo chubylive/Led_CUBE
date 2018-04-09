@@ -1,5 +1,6 @@
 #ifndef __LEDCUBE_H_
 #define __LEDCUBE_H_
+
 #include "TLC5940.h"
 #include "utils.h"
 
@@ -24,7 +25,7 @@ void SetColour(channel_t channel, COLOUR colour);
 void SetColour3D(uint8_t x, uint8_t y, uint8_t z, COLOUR colour);
 void SetColour3D_16(uint8_t x, uint8_t y, uint8_t z, COLOUR colour);
 void SetColour3D_16_buff(uint8_t x, uint8_t y, uint8_t z, COLOUR colour, uint16_t buff[SIZE][gsDataSize]);
-
+void clear3D(uint8_t x, uint8_t y, uint8_t z);
 
 
 
@@ -41,7 +42,6 @@ typedef struct {
 
 }MyVoxel;
 
-
 typedef struct {
 	MyVoxel vx_buffer[SIZE * SIZE];
 }MyLayer;
@@ -51,4 +51,10 @@ typedef struct {
 }MyCube;
 
 
+<<<<<<< HEAD
+
+
+#endif
+=======
 void SetAllColour()*/
+>>>>>>> a5f3cb984132ca9081c6fa4f1f4d730dbb30d21f

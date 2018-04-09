@@ -9115,14 +9115,14 @@ In this library the device names are the same as the pin names of the symbols, t
 </net>
 <net name="3SIN" class="0">
 <segment>
-<pinref part="IC8" gate="G$1" pin="SOUT"/>
-<wire x1="215.9" y1="86.36" x2="218.44" y2="86.36" width="0.1524" layer="91"/>
-<label x="220.98" y="86.36" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="JP20" gate="A" pin="8"/>
 <wire x1="17.78" y1="152.4" x2="25.4" y2="152.4" width="0.1524" layer="91"/>
 <label x="27.94" y="152.4" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC8" gate="G$1" pin="SOUT"/>
+<wire x1="215.9" y1="86.36" x2="218.44" y2="86.36" width="0.1524" layer="91"/>
+<label x="220.98" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -10156,7 +10156,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="220.98" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="3SIN_E" class="0">
+<net name="3SIN" class="0">
 <segment>
 <pinref part="JP31" gate="A" pin="5"/>
 <wire x1="10.16" y1="157.48" x2="2.54" y2="157.48" width="0.1524" layer="91"/>
@@ -10372,7 +10372,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="139.7" y="162.56" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="3SIN" class="0">
+<net name="4SIN" class="0">
 <segment>
 <pinref part="IC12" gate="G$1" pin="SOUT"/>
 <wire x1="215.9" y1="88.9" x2="218.44" y2="88.9" width="0.1524" layer="91"/>
@@ -10387,9 +10387,6 @@ In this library the device names are the same as the pin names of the symbols, t
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="113,1,153.628,-15.1088,JP6,,,,,"/>
-</errors>
 </schematic>
 </drawing>
 </eagle>

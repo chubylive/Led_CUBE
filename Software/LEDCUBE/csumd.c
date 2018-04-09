@@ -2,6 +2,7 @@
 
 COLOUR c;
 COLOUR s;
+
 COLOUR clear1;
 void csumd(){
 
@@ -33,6 +34,7 @@ void csumd(){
 		{
 			for (int y = 0; y < 5; y++)
 			{
+
 				SetColour3D_16(x, y, z, clear1);
 			}
 		}
@@ -61,7 +63,7 @@ void csumd(){
 			}
 		}
 	}
-	
+
 	for (int x = 2; x < SIZE; x++)
 	{
 		for (int y = 3; y < 5; y++)
@@ -72,6 +74,7 @@ void csumd(){
 			}
 		}
 	}
+
 
 for (int x = 0; x < 4; x++)
 	{
@@ -92,3 +95,4 @@ for (int x = 0; x < 4; x++)
 
 }
 
+ 
