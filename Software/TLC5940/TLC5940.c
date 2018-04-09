@@ -40,10 +40,10 @@ void tlcMuxInit(){
     {
         layers[jdx++].gpio_shift = idx;
         LPC_GPIO1->FIODIR |= _BV(idx);
-        LPC_GPIO1->FIOSET |= _BV(idx);
+        LPC_GPIO1->FIOSET &= ~(_BV(idx));
 
     }
-    
+    // LPC_PINCON->PINMODE3 =  1048560;
     //tlc_init();
 }
 
@@ -58,6 +58,7 @@ void TLC5940_Init(void) {
     LPC_GPIO0->FIODIR |= _BV(BLANK_PIN);
     //set SCLK_PIN to output
     LPC_GPIO0->FIODIR |= _BV(SCLK_PIN);
+
 
 
     tlcMuxInit();

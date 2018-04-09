@@ -83,7 +83,7 @@ int Spiral_animate(struct animation *in){
 		//printf("X %d, Y %d, Z%d\n", (int)in->X, (int)in->Y, (int)in->Z);
 		if (in->random_colour)
 		{
-			in->clr =get_next_colour();
+			in->clr = get_next_colour();
 			/* code */
 		}
 		return 1;
