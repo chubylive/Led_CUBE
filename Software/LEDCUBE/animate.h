@@ -15,6 +15,7 @@ struct animation
 	float X;
 	float Y;
 	float Z;
+	float r;
 	float phase;
 	float speed;
 	COLOUR clr;

@@ -8,6 +8,11 @@
 #include "main.h"
 #include "TLC5940.h"
 #include "ledcube.h"
+#include "sinWave.h"
+#include "spiral.h"
+#include "csumd.h"
+#include "ColourWheel.h"
+#include "animate.h"
 
 
 // Variable to store CRP value in. Will be placed automatically
@@ -78,17 +83,8 @@ void print_buff_binary_8(uint8_t *buff, size_t length){
   printf("$*********** End of Frame **************$\n");
 
 }
-#if !USE_16_BIT && !MUX
-void print_buff_temp(){
-  int j= 0;
-  for (int i = 0; i < gsDataSize; i+=2)
-  {
-    temp[j++] = ((uint16_t)gsData[i] << 8) | gsData[i+1];
-  }
-  print_buff_binary_16(temp, gsDataSize/2);
 
-}
-#endif
+
 void set_all(int level1){
   int idx, jdx;
   for (idx = 0; idx < SIZE; ++idx)
@@ -102,11 +98,20 @@ void set_all(int level1){
   }
 }
 
+void print_array(){
+  for (int i = 0; i < 512; ++i)
+  {
+    COLOUR cl = get_next_colour();
+   // printf("Red: %d Green: %d Blue: %d\n", cl.r, cl.g, cl.b);
+
+  }
+}
+
 int level= 0xFFF;
 
 int con = 0;
 int up = 0;
-int idx = 0;
+volatile uint_fast8_t row_index = 0;
 int vprg_pin =0;
 #define R1 1
 #define G1 2
@@ -117,28 +122,10 @@ int vprg_pin =0;
 #define R3 32
 #define G3 33
 #define B3 34
+int anim_index =0;
+volatile uint_fast8_t chg_buff = 0 ;
 
-<<<<<<< HEAD
-int main(void)
-{
-
-      tlcMuxInit();
-
-  while(1){
-
-    delay_call(5000);
-
-    LPC_GPIO1->FIOSET |= (_BV(GPIO1_1_18 + 2)) ;
-
-    delay_call(5000);
-
-    
-    LPC_GPIO1->FIOPIN &= ~(_BV(GPIO1_1_18 + 2)) ;
-    
-  }
-=======
 int main(void) {
-
    
    /* uint8_t layer ;  // //Setup GPIO pins
     LPC_GPIO0->FIODIR |= (1<<22);
@@ -152,348 +139,218 @@ int main(void) {
   TLC5940_Init();
   TLC5940_SetAllDC(0);
   TLC5940_ClockInDC();
-  vprg_pin = 1;
-
-
-
-
+  //vprg_pin = 1;
   TLC5940_SetAllGS(0x00);
 
+  fill_colour_wheel();
+  //print_array();
+  //exit(0);
+
   COLOUR cl ;
-  cl.r = 255; //green
-  cl.g = 0; //blue
-  cl.b = 0; //red 
-  #if USE_16_BIT
-  SetColour3D_16(0,0,0,cl);
-  SetColour3D_16(2,0,0,cl);
-  SetColour3D_16(4,0,0,cl);
-  SetColour3D_16(6,0,0,cl);
-  SetColour3D_16(8,0,0,cl);
-  SetColour3D_16(10,0,0,cl);
-  SetColour3D_16(12,0,0,cl);
-  SetColour3D_16(14,0,0,cl);
-  SetColour3D_16(0 + 1,0,0,cl);
-  SetColour3D_16(2 + 1,0,0,cl);
-  SetColour3D_16(4 + 1,0,0,cl);
-  SetColour3D_16(6 + 1,0,0,cl);
-  SetColour3D_16(8 + 1,0,0,cl);
-  SetColour3D_16(10 + 1,0,0,cl);
-  SetColour3D_16(12 + 1,0,0,cl);
-  SetColour3D_16(14 + 1,0,0,cl);
-
-  print_buff_binary_16(gsData[0], gsDataSize);
-  #else
-  SetColour3D(0,0,0,cl);
-  SetColour3D(2,0,0,cl);
-  SetColour3D(4,0,0,cl);
-  SetColour3D(6,0,0,cl);
-  SetColour3D(8,0,0,cl);
-  SetColour3D(10,0,0,cl);
-  SetColour3D(12,0,0,cl);
-  SetColour3D(14,0,0,cl);
-  SetColour3D(0 + 1,0,0,cl);
-  SetColour3D(2 + 1,0,0,cl);
-  SetColour3D(4 + 1,0,0,cl);
-  SetColour3D(6 + 1,0,0,cl);
-  SetColour3D(8 + 1,0,0,cl);
-  SetColour3D(10 + 1,0,0,cl);
-  SetColour3D(12 + 1,0,0,cl);
-  SetColour3D(14 + 1,0,0,cl);
-  print_buff_binary_8(gsData, gsDataSize);
-  print_buff_temp();
-  #endif
-  // SetColour3D_16(2,0,0,cl);
-  // SetColour3D_16(4,0,0,cl);
-  // SetColour3D_16(6,0,0,cl);
-  // SetColour3D_16(8,0,0,cl);
-  // SetColour3D_16(10,0,0,cl);
-  // SetColour3D_16(12,0,0,cl);
-  // SetColour3D_16(14,0,0,cl);
-
-  // SetColour3D_16(0 + 1,0,0,cl);
-  // SetColour3D_16(2 + 1,0,0,cl);
-  // SetColour3D_16(4 + 1,0,0,cl);
-  // SetColour3D_16(6 + 1,0,0,cl);
-  // SetColour3D_16(8 + 1,0,0,cl);
-  // SetColour3D_16(10 + 1,0,0,cl);
-  // SetColour3D_16(12 + 1,0,0,cl);
-  // SetColour3D_16(14 + 1,0,0,cl);
-
-  //SetColour3D_16(0,0,2,cl);
-
-  exit(0);
-  // print_buff_binary(gsData[1], gsDataSize);
-  // print_buff_binary(gsData[2], gsDataSize);
-  // TLC5940_SetGS(R1, 0,0xFFF);
-  // TLC5940_SetGS(G1,0, 0xFFF);
-  // TLC5940_SetGS(B1, 0, 0xFFF);
-  /*
-  TLC5940_SetGS(0, 0,0xFFF);
-  TLC5940_SetGS(16,0, 0xFFF);
-  TLC5940_SetGS(32, 0, 0xFFF);*/
-
-
-
-
-
-
-
+  cl.r = 255;//green
+  cl.g = 255; //blue
+  cl.b = 255; //red 
+ 
   PULSE_XLAT_PIN;
   PULSE_SCLK_PIN;
   VPRG_PIN_CLR;
-  #if USE_16_BIT 
-      LPC_SSP0->CR0 |= 0xF;
-  #else
-       LPC_SSP0->CR0 |= 0x7;
-  #endif   
-   NVIC_EnableIRQ(RIT_IRQn);
+  //switch ssp to send 16bit frames   
+  LPC_SSP0->CR0 |= 0xF;
+  
+  
+  int tdx = 0;
+  // for (int x = 0; x < 8; ++x)
+  //   {
+  //     for (int y = 0; y < 8; ++y)
+  //     {
+  //       for (int z = 0; z < 8; ++z)
+  //       {
+  //         SetColour3D_16(x,y,z, cl);
+                   
+  //       }
+  //     }
+  // }
 
+  SetColour3D_16(0,0,0, cl);
+  SetColour3D_16(1,1,1, cl);
+  SetColour3D_16(2,2,2, cl);
+  SetColour3D_16(3,3,3, cl);
+
+  SetColour3D_16(4,4,4, cl);
+  SetColour3D_16(5,5,5, cl);
+  SetColour3D_16(6,6,6, cl);
+  SetColour3D_16(7,7,7, cl);
+
+  //gsUpdateFlag = 0;
+    // TLC5940_ClearGsData();    
+    // SetColour3D_16(3, 0,tdx, cl);
+    // SetColour3D_16(3, 1,tdx, cl);
+    // SetColour3D_16(3, 2,tdx, cl);
+    // SetColour3D_16(3, 3,tdx, cl);
+    // SetColour3D_16(3, 4,tdx, cl);
+    // SetColour3D_16(3, 5,tdx, cl);
+    // SetColour3D_16(tdx, 6,0, cl);
+    // SetColour3D_16(tdx, tdx,tdx, cl);
+    // tdx = (tdx + 1) % SIZE;
+   //sinWave();
+   //Spiral();
+   // gsUpdateFlag = 1;
+  // struct animation cube_animation;
+  // cube_animation.animate = Spiral_animate;
+  // cube_animation.bottom = 0;
+  // cube_animation.top = 8; 
+  // cube_animation.narrow = 0;
+  // cube_animation.speed =1 ;
+  // cube_animation.phase = 0;
+  // cube_animation.X = 0;
+  // cube_animation.Y = 0;
+  // cube_animation.Z = 0;
+  // cube_animation.random_colour =1 ;
+  // cube_animation.overlay = 1;
+
+  // cube_animation.clr.r = 255;//green
+  // cube_animation.clr.g = 255; //blue
+  // cube_animation.clr.b = 255; //red 
+  // struct animation cube_animation1;
+  // cube_animation1.animate = Spiral_animate;
+  // cube_animation1.bottom = 0;
+  // cube_animation1.top = 8; 
+  // cube_animation1.narrow = 1;
+  // cube_animation1.speed =0.5 ;
+  // cube_animation1.phase = 0;
+  // cube_animation1.Y = 0;
+  // cube_animation1.Z = 0;  
+  // cube_animation1.overlay =1;
+  //  cube_animation1.clr.r = 255;//red
+  // cube_animation1.clr.g = 255; //blue
+  // cube_animation1.clr.b = 255; // gree
+  // TLC5940_ClearGsData_buff(cube_animation1.overlay_buff);
+
+
+  // struct animation cube_animation2;
+  // cube_animation2.animate = Spiral_animate;
+  // cube_animation2.bottom = 0;
+  // cube_animation2.top = 8; 
+  // cube_animation2.narrow = 2;
+  // cube_animation2.speed =0.25 ;
+  // cube_animation2.phase = 0;
+  // cube_animation2.Y = 0;
+  // cube_animation2.Z = 0;  
+  // cube_animation2.random_colour =0;
+  // cube_animation2.overlay =1;
+  //  cube_animation2.clr.r = 255;//green
+  // cube_animation2.clr.g = 255; //blue
+  // cube_animation2.clr.b = 255;
+  // TLC5940_ClearGsData_buff(cube_animation2.overlay_buff);
+  // TLC5940_ClearGsData();
+  //csumd();
+  NVIC_EnableIRQ(RIT_IRQn);
+ // csumd();
+  // int brigh = 0;
+  int count=0;
+  struct animation cube_animation;
+  cube_animation.animate = Spiral_animate;
+  cube_animation.bottom = 0;
+  cube_animation.top = 8; 
+  cube_animation.narrow = 0;
+  cube_animation.speed =0.5 ;
+  cube_animation.phase = 0.5;
+  cube_animation.X = 0;
+  cube_animation.Y = 0;
+  cube_animation.Z = 0;
+  cube_animation.random_colour =1 ;
+  cube_animation.overlay = 0;
+  struct animation cube_animation1;
+  cube_animation1.animate = Spiral_animate;
+  cube_animation1.bottom = 2;
+  cube_animation1.top = 6; 
+  cube_animation1.narrow = 2;
+  cube_animation1.speed =0.2 ;
+  cube_animation1.phase = 1;
+  cube_animation1.X = 0;
+  cube_animation1.Y = 0;
+  cube_animation1.Z = 0;
+  cube_animation1.random_colour =3 ;
+  cube_animation1.overlay = 1;
   while(1){
-   
+if (count < 1000)
+{
+  
+  cube_animation.animate(&cube_animation);
+    cube_animation1.animate(&cube_animation1);
 
-     
-    
+    // Spiral();
+}else if (count < 2000)
+{
 
-  }
-    return 0;
->>>>>>> 4014954bbd7b104543d73ceb62db529078fbca7e
+
+     sinWave();
+}else{
+  count = 0;
 }
-// int main(void) {
-   
-//    /* uint8_t layer ;  // //Setup GPIO pins
-//     LPC_GPIO0->FIODIR |= (1<<22);
-//     LPC_GPIO0->FIOSET |= (1<<22);
-//   */
-//   /*  
-//     set_all(level);
-//     tlcMuxInit();
+count++;
+    // if (row_index)
+    // {
+    //   /* code */
+    // }
+   // chg_buff = 1;
+  //   cube_animation.animate(&cube_animation);
+  // //  cube_animation1.animate(&cube_animation1);
+  //   cube_animation2.animate(&cube_animation2);
+    //switch back to buffer 0
     
-//   spi_txrx((uint16_t* )lys[rowSelect].buf,NULL, 16);*/
-//   TLC5940_Init();
-//   TLC5940_SetAllDC(0);
-//   TLC5940_ClockInDC();
-//   //vprg_pin = 1;
-//   TLC5940_SetAllGS(0x00);
+   // chg_buff = 0;
 
-//   fill_colour_wheel();
-//   //print_array();
-//   //exit(0);
+    delay_call(5000);
 
-//   COLOUR cl ;
-//   cl.r = 255;//green
-//   cl.g = 255; //blue
-//   cl.b = 255; //red 
- 
-//   PULSE_XLAT_PIN;
-//   PULSE_SCLK_PIN;
-//   VPRG_PIN_CLR;
-//   //switch ssp to send 16bit frames   
-//   LPC_SSP0->CR0 |= 0xF;
-  
-  
-//   int tdx = 0;
-//   for (int x = 0; x < 8; ++x)
-//     {
-//       for (int y = 0; y < 8; ++y)
-//       {
-//         for (int z = 0; z < 8; ++z)
-//         {
-//           SetColour3D_16(x,y,z, cl);
-//         }
-//       }
-//   }
+  //   switch (cube_animation[anim_index].animate(&(cube_animation[anim_index]))){
+  //     case 0:
+  //       continue;
+  //       break;
+  //     case 1:
+  //       anim_index++; 
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  //   cl.r = (brigh += 10 ) % 255;//green
+  // cl.g = 0; //blue
+  // cl.b = 0; //red 
 
-//   //gsUpdateFlag = 0;
-//     // TLC5940_ClearGsData();    
-//     // SetColour3D_16(3, 0,tdx, cl);
-//     // SetColour3D_16(3, 1,tdx, cl);
-//     // SetColour3D_16(3, 2,tdx, cl);
-//     // SetColour3D_16(3, 3,tdx, cl);
-//     // SetColour3D_16(3, 4,tdx, cl);
-//     // SetColour3D_16(3, 5,tdx, cl);
-//     // SetColour3D_16(tdx, 6,0, cl);
-//     // SetColour3D_16(tdx, tdx,tdx, cl);
-//     // tdx = (tdx + 1) % SIZE;
-//    //sinWave();
-//    //Spiral();
-//    // gsUpdateFlag = 1;
-//   // struct animation cube_animation;
-//   // cube_animation.animate = Spiral_animate;
-//   // cube_animation.bottom = 0;
-//   // cube_animation.top = 8; 
-//   // cube_animation.narrow = 0;
-//   // cube_animation.speed =1 ;
-//   // cube_animation.phase = 0;
-//   // cube_animation.X = 0;
-//   // cube_animation.Y = 0;
-//   // cube_animation.Z = 0;
-//   // cube_animation.random_colour =0 ;
-//   // cube_animation.overlay = 1;
-
-//   // cube_animation.clr.r = 255;//green
-//   // cube_animation.clr.g = 0; //blue
-//   // cube_animation.clr.b = 0; //red 
-//   // struct animation cube_animation1;
-//   // cube_animation1.animate = Spiral_animate;
-//   // cube_animation1.bottom = 0;
-//   // cube_animation1.top = 8; 
-//   // cube_animation1.narrow = 1;
-//   // cube_animation1.speed =0.5 ;
-//   // cube_animation1.phase = 0;
-//   // cube_animation1.Y = 0;
-//   // cube_animation1.Z = 0;  
-//   // cube_animation1.overlay =1;
-//   //  cube_animation1.clr.r = 255;//red
-//   // cube_animation1.clr.g = 255; //blue
-//   // cube_animation1.clr.b = 255; // gree
-//   // TLC5940_ClearGsData_buff(cube_animation1.overlay_buff);
-
-
-//   // struct animation cube_animation2;
-//   // cube_animation2.animate = Spiral_animate;
-//   // cube_animation2.bottom = 0;
-//   // cube_animation2.top = 8; 
-//   // cube_animation2.narrow = 2;
-//   // cube_animation2.speed =0.25 ;
-//   // cube_animation2.phase = 0;
-//   // cube_animation2.Y = 0;
-//   // cube_animation2.Z = 0;  
-//   // cube_animation2.random_colour =0;
-//   // cube_animation2.overlay =1;
-//   //  cube_animation2.clr.r = 255;//green
-//   // cube_animation2.clr.g = 255; //blue
-//   // cube_animation2.clr.b = 255;
-//   // TLC5940_ClearGsData_buff(cube_animation2.overlay_buff);
-//   // TLC5940_ClearGsData();
-//   //csumd();
-//   NVIC_EnableIRQ(RIT_IRQn);
-//       spi_txrx((uint16_t*) gsData[row_index], NULL, gsDataSize);
-
-//  // csumd();
-//   while(1){
-//     //Spiral();
-//     // if (row_index)
-//     // {
-//     //   /* code */
-//     // }
-//    // chg_buff = 1;
-//    // cube_animation.animate(&cube_animation);
-//   //  cube_animation1.animate(&cube_animation1);
-//     //cube_animation2.animate(&cube_animation2);
-//     //switch back to buffer 0
-    
-//    // chg_buff = 0;
-//   //TLC5940_ClearGsData();
-
-//   //  delay_call(5000);
-
-//   //   switch (cube_animation[anim_index].animate(&(cube_animation[anim_index]))){
-//   //     case 0:
-//   //       continue;
-//   //       break;
-//   //     case 1:
-//   //       anim_index++; 
-//   //       break;
-//   //     default:
-//   //       break;
-//   //   }
-
-//   int tdx = 0;
-//   // for (int x = 0; x < 8; ++x)
-//   //   {
-//   //     for (int y = 0; y < 8; ++y)
-//   //     {
-//   //       for (int z = 0; z < 8; ++z)
-//   //       {
-//   //         SetColour3D_16(x,y,z, cl);
-//   //       }
-//   //     }
-//   // }
-//    }
-//     return 0;
-// }
+  //   int tdx = 0;
+  // for (int x = 0; x < 8; ++x)
+  //   {
+  //     for (int y = 0; y < 8; ++y)
+  //     {
+  //       for (int z = 0; z < 8; ++z)
+  //       {
+  //         SetColour3D_16(0,y,z, cl);
+                   
+  //       }
+  //     }
+  // }
+   }
+    return 0;
+}
 
 void RIT_IRQHandler(){
-    //clear interrupt
-    LPC_RIT->RICTRL |= _BV(0);
+  //clear interrupt
+  LPC_RIT->RICTRL |= _BV(0);
 
- 
-    
-    static uint8_t xlatNeedsPulse = 0;
+PULSE_BLANK_PIN;
 
-<<<<<<< HEAD
   
- // LPC_GPIO1->FIOPIN = ~(_BV(GPIO1_1_18 + row_index)) ;
+  LPC_GPIO1->FIOPIN = ~(_BV(GPIO1_1_18 + row_index));
 
   // if (!chg_buff) //Switch buffers
   // {
-    // spi_txrx((uint16_t*) gsData[row_index], NULL, gsDataSize);
-=======
-    BLANK_PIN_SET;
-    if (vprg_pin){
-      
-      if (xlatNeedsPulse){
-        PULSE_XLAT_PIN;
-        xlatNeedsPulse = 0;
-      }
-      PULSE_SCLK_PIN;
-      vprg_pin =0;
-
-    }else if (xlatNeedsPulse)
-    {
-      
-      xlatNeedsPulse = 0;
-    }
-    BLANK_PIN_CLR;
-
-    #if MUX 
-      #if USE_16_BIT 
-        spi_txrx((uint16_t*) gsData[0], NULL, gsDataSize);
-      #else
-        dcspi_txrx((uint8_t*) gsData[0], NULL, gsDataSize);
-      #endif
-    #else
-      #ifdef USE_16_BIT
-        spi_txrx((uint16_t*) gsData, NULL, gsDataSize);
-      #else
-        dcspi_txrx((uint8_t*) gsData, NULL, gsDataSize);
-      #endif
-
-
-
-       if(rowSelect > GPIO1_1_25){
-            //set row 
-            rowSelect = GPIO1_1_18;
-            LPC_GPIO1->FIOPIN = _BV(rowSelect++);
-            //reset row select
-            
-        }else{
-           
-            LPC_GPIO1->FIOPIN = _BV(rowSelect++);
-         
-        }
-       
-    #endif
-    PULSE_XLAT_PIN;
->>>>>>> 4014954bbd7b104543d73ceb62db529078fbca7e
+    spi_txrx((uint16_t*) gsData[row_index], NULL, gsDataSize);
     
-  //   // write(0.0);
-  
-  // BLANK_PIN_SET;
-  // if (t)
-  // {
-  // VPRG_PIN_CLR;
-  // PULSE_XLAT_PIN;
-  // t = 0;
-  //   /* code */
+  // }else{
+  //   spi_txrx((uint16_t*) gsData1[row_index], NULL, gsDataSize);
   // }
+  PULSE_XLAT_PIN; 
 
-  // BLANK_PIN_CLR;
-
-    //select Row to be one
-    
-   //delay_call(10000);
-    
-    
+  row_index = (row_index + 1) % SIZE;
 
 }

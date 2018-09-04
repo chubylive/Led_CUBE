@@ -51,10 +51,5 @@ typedef struct {
 }MyCube;
 
 
-<<<<<<< HEAD
 
-
-#endif
-=======
 void SetAllColour()*/
->>>>>>> a5f3cb984132ca9081c6fa4f1f4d730dbb30d21f

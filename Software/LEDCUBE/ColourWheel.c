@@ -4,6 +4,7 @@
 
 COLOUR array[COLOUR_WHEEL_LENGTH];
 int pos;
+int posNeg;
 
 void fill_colour_wheel(void){
 	//float red, green, blue;
@@ -40,6 +41,15 @@ COLOUR get_next_colour(void){
 	}
 	
 	return array[pos];
+}
+
+COLOUR get_next_colourNeg(){
+	if (--posNeg <= 0)
+	{
+				posNeg += COLOUR_WHEEL_LENGTH;
+
+	}
+	return array[posNeg];
 }
 
 COLOUR get_random_colour(void){
