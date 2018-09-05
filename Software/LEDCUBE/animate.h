@@ -16,6 +16,7 @@ struct animation
 	float Y;
 	float Z;
 	float r;
+	uint8_t bounce;
 	float phase;
 	float speed;
 	COLOUR clr;

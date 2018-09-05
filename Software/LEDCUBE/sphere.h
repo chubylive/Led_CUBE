@@ -1,8 +1,8 @@
 
-#ifndef SINEWAVE_h
-#define SINEWAVE_h
-#include "ledcube.h"
+#ifndef SPHERE_h
+#define SPHERE_h
 #include "ColourWheel.h"
+#include "animate.h"
 
 uint8_t bottom, top; 
 		float narrow;

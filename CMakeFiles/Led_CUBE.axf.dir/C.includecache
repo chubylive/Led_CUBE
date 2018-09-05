@@ -49,6 +49,8 @@ sinWave.h
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/sinWave.h
 spiral.h
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/spiral.h
+sphere.h
+/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/sphere.h
 csumd.h
 /home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/src/csumd.h
 ColourWheel.h
@@ -91,6 +93,12 @@ ledcube.h
 Software/LEDCUBE/ledcube.h
 ColourWheel.h
 Software/LEDCUBE/ColourWheel.h
+
+Software/LEDCUBE/sphere.h
+ColourWheel.h
+Software/LEDCUBE/ColourWheel.h
+animate.h
+Software/LEDCUBE/animate.h
 
 Software/LEDCUBE/spiral.h
 ledcube.h

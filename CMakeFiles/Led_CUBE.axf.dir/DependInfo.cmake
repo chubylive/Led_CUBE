@@ -9,6 +9,7 @@ SET(CMAKE_DEPENDS_CHECK_C
   "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/csumd.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/csumd.c.obj"
   "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/ledcube.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/ledcube.c.obj"
   "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sinWave.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.obj"
+  "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/sphere.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sphere.c.obj"
   "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/spiral.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/spiral.c.obj"
   "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/LEDCUBE/utils.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/utils.c.obj"
   "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/Software/SPI_SSP/spi.c" "/home/chuby/local_prj/umd-lpc1769/Led_CUBE/CMakeFiles/Led_CUBE.axf.dir/Software/SPI_SSP/spi.c.obj"

@@ -10,6 +10,7 @@
 #include "ledcube.h"
 #include "sinWave.h"
 #include "spiral.h"
+#include "sphere.h"
 #include "csumd.h"
 #include "ColourWheel.h"
 #include "animate.h"
@@ -272,22 +273,78 @@ int main(void) {
   cube_animation1.Z = 0;
   cube_animation1.random_colour =3 ;
   cube_animation1.overlay = 1;
+
+
+  struct animation cube_animation2;
+  cube_animation2.animate = sphere_animate;
+  cube_animation2.bottom = 2;
+  cube_animation2.top = 6; 
+  cube_animation2.narrow = 2;
+  cube_animation2.speed =0.2 ;
+  cube_animation2.phase = 0;
+  cube_animation2.X = 4;
+  cube_animation2.Y = 4;
+  cube_animation2.Z = 4;
+  cube_animation2.r = 1;
+  cube_animation2.random_colour = 1 ;
+  cube_animation2.overlay = 0;
+  cube_animation2.clr = get_next_colour();
+
+ struct animation cube_animation3;
+  cube_animation3.animate = sphere_animate;
+  cube_animation3.bottom = 2;
+  cube_animation3.top = 6; 
+  cube_animation3.narrow = 2;
+  cube_animation3.speed =0.2 ;
+  cube_animation3.phase = 0;
+  cube_animation3.X = 4;
+  cube_animation3.Y = 4;
+  cube_animation3.Z = 4;
+  cube_animation3.r = 0;
+  cube_animation3.bounce =0;
+  cube_animation3.random_colour = 1 ;
+  cube_animation3.overlay = 1;
+  cube_animation3.clr = get_next_colour();
+
   while(1){
+    //spiral
 if (count < 1000)
 {
   
-  cube_animation.animate(&cube_animation);
-    cube_animation1.animate(&cube_animation1);
+  // cube_animation.animate(&cube_animation);
+  //   cube_animation1.animate(&cube_animation1);
+    cube_animation3.bounce = 1;
+  cube_animation2.bounce = 1;
+
+  cube_animation2.animate(&cube_animation2);
+  cube_animation3.animate(&cube_animation3);
 
     // Spiral();
-}else if (count < 2000)
+}
+  // sphere
+  else if (count < 2000)
 {
+  cube_animation3.bounce = 1;
+  cube_animation2.animate(&cube_animation2);
+  cube_animation3.animate(&cube_animation3);
+     // sinWave();
 
-
-     sinWave();
-}else{
+}
+  // sine
+else{
   count = 0;
 }
+
+//all rainbow
+
+//random blue
+
+//random red
+
+//random yellow 
+
+// random colour
+
 count++;
     // if (row_index)
     // {

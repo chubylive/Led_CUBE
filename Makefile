@@ -322,6 +322,30 @@ Software/LEDCUBE/sinWave.c.s:
 	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sinWave.c.s
 .PHONY : Software/LEDCUBE/sinWave.c.s
 
+Software/LEDCUBE/sphere.obj: Software/LEDCUBE/sphere.c.obj
+.PHONY : Software/LEDCUBE/sphere.obj
+
+# target to build an object file
+Software/LEDCUBE/sphere.c.obj:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sphere.c.obj
+.PHONY : Software/LEDCUBE/sphere.c.obj
+
+Software/LEDCUBE/sphere.i: Software/LEDCUBE/sphere.c.i
+.PHONY : Software/LEDCUBE/sphere.i
+
+# target to preprocess a source file
+Software/LEDCUBE/sphere.c.i:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sphere.c.i
+.PHONY : Software/LEDCUBE/sphere.c.i
+
+Software/LEDCUBE/sphere.s: Software/LEDCUBE/sphere.c.s
+.PHONY : Software/LEDCUBE/sphere.s
+
+# target to generate assembly for a file
+Software/LEDCUBE/sphere.c.s:
+	$(MAKE) -f CMakeFiles/Led_CUBE.axf.dir/build.make CMakeFiles/Led_CUBE.axf.dir/Software/LEDCUBE/sphere.c.s
+.PHONY : Software/LEDCUBE/sphere.c.s
+
 Software/LEDCUBE/spiral.obj: Software/LEDCUBE/spiral.c.obj
 .PHONY : Software/LEDCUBE/spiral.obj
 
@@ -641,6 +665,9 @@ help:
 	@echo "... Software/LEDCUBE/sinWave.obj"
 	@echo "... Software/LEDCUBE/sinWave.i"
 	@echo "... Software/LEDCUBE/sinWave.s"
+	@echo "... Software/LEDCUBE/sphere.obj"
+	@echo "... Software/LEDCUBE/sphere.i"
+	@echo "... Software/LEDCUBE/sphere.s"
 	@echo "... Software/LEDCUBE/spiral.obj"
 	@echo "... Software/LEDCUBE/spiral.i"
 	@echo "... Software/LEDCUBE/spiral.s"
